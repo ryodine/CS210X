@@ -1,4 +1,5 @@
 
-public interface OwnedObjects {
+interface OwnedObjects {
 	void setOwner (Person owner);
+	Person getOwner();
 }

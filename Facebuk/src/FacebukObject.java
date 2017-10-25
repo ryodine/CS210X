@@ -3,16 +3,16 @@ public class FacebukObject {
 	private String name; 
 	private Image image;
 	
-	public FacebukObject (String name, Image image) {
+	FacebukObject (String name, Image image) {
 		this.name = name;
 		this.image = image;
 	}
 	
-	public String getName() {
+	String getName() {
 		return this.name;
 	}
 	
-	public Image getImage() {
+	Image getImage() {
 		return this.image;
 	}
 	

@@ -2,7 +2,7 @@
 public class Pet extends LiveObject implements OwnedObjects {
 	private Person owner;
 	
-	public Pet (String name, Image image) {
+	Pet (String name, Image image) {
 		super (name, image);
 	}
 	

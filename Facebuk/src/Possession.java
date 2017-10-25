@@ -3,16 +3,16 @@ public class Possession extends FacebukObject implements OwnedObjects {
 	private float price;
 	private Person owner;
 	
-	public Possession (String name, Image image, float price) {
+	Possession (String name, Image image, float price) {
 		super (name, image);
 		this.price = price;
 	}
 	
-	protected void setPrice(float price) {
+	void setPrice(float price) {
 		this.price = price;
 	}
 	
-	public float getPrice() {
+	float getPrice() {
 		return this.price;
 	}
 	
