@@ -151,7 +151,7 @@ public class FacebukPartialTester {
 	
 	@Test
 	public void testFindBestMoment () {
-		assertEquals(_michelle.getOverallHappiestMoment(), _meAndBarack);
+		(_michelle.getOverallHappiestMoment(), _meAndBarack);
 	}
 	
 	
