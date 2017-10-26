@@ -1,20 +1,20 @@
 import java.util.*;
 
 class Moment extends FacebukObject{
-	private ArrayList<Person> _participants;
-	private ArrayList<Float> _smileValues;
+	private ArrayList _participants;
+	private ArrayList _smileValues;
 	
-	Moment (String name, Image image, ArrayList<Person> participants, ArrayList<Float> smileValues) {
+	Moment (String name, Image image, ArrayList participants, ArrayList smileValues) {
 		super (name, image);
 		this._participants = participants;
 		this._smileValues = smileValues;
 	}
 	
-	ArrayList<Person> getParticipants() {
+	ArrayList getParticipants() {
 		return this._participants;
 	}
 	
-	ArrayList<Float> getSmileValues () {
+	ArrayList getSmileValues () {
 		return this._smileValues;
 	}
 }

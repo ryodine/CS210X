@@ -7,6 +7,10 @@ public class FacebukObject {
 		this._name = name;
 		this._image = image;
 	}
+
+	public String toString() {
+		return _name;
+	}
 	
 	String getName() {
 		return this._name;
