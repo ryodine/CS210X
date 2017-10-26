@@ -24,4 +24,16 @@ class LiveObject extends FacebukObject {
 	ArrayList getMoments() {
 		return this._moments;
 	}
+	
+	// !!!
+	// Need to implement
+	LiveObject getFriendWithWhomIAmHappiest () {
+		return null;
+	}
+	
+	// !!!
+	// Need to implement
+	Moment getOverallHappiestMoment () {
+		return null;
+	}
 }
