@@ -1,27 +1,27 @@
 import java.util.*;
 class LiveObject extends FacebukObject {
-	private ArrayList friends;
-	private ArrayList moments;
+	private ArrayList _friends;
+	private ArrayList _moments;
 	
 	LiveObject (String name, Image image) {
 		super (name, image);
-		friends = new ArrayList();
-		moments = new ArrayList();
+		_friends = new ArrayList();
+		_moments = new ArrayList();
 	}
 	
 	void setFriends (ArrayList friends) {
-		this.friends = friends;
+		this._friends = friends;
 	}
 	
 	void setMoments (ArrayList moments) {
-		this.moments = moments;
+		this._moments = moments;
 	}
 	
 	ArrayList getFriends() {
-		return this.friends;
+		return this._friends;
 	}
 	
 	ArrayList getMoments() {
-		return this.moments;
+		return this._moments;
 	}
 }

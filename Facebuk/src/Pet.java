@@ -1,16 +1,16 @@
 
 public class Pet extends LiveObject implements OwnedObjects {
-	private Person owner;
+	private Person _owner;
 	
 	Pet (String name, Image image) {
 		super (name, image);
 	}
 	
 	public void setOwner (Person owner) {
-		this.owner = owner;
+		this._owner = owner;
 	}
 	
 	public Person getOwner() {
-		return this.owner;
+		return this._owner;
 	}
 }

@@ -1,24 +1,24 @@
 
 public class FacebukObject {
-	private String name; 
-	private Image image;
+	private String _name;
+	private Image _image;
 	
 	FacebukObject (String name, Image image) {
-		this.name = name;
-		this.image = image;
+		this._name = name;
+		this._image = image;
 	}
 	
 	String getName() {
-		return this.name;
+		return this._name;
 	}
 	
 	Image getImage() {
-		return this.image;
+		return this._image;
 	}
 	
 	public boolean equals (Object o) {
 		if (o instanceof FacebukObject) {
-			return (((FacebukObject) o).getName().equals(this.name));
+			return (((FacebukObject) o).getName().equals(this._name));
 		}
 		else
 			return false;
