@@ -151,7 +151,7 @@ public class FacebukPartialTester {
 	
 	@Test
 	public void testFindBestMoment () {
-		//assertEquals(_michelle.getOverallHappiestMoment(), _meAndBarack);
+		assertEquals(_michelle.getOverallHappiestMoment(), _meAndBarack);
 	}
 	
 	
@@ -159,6 +159,7 @@ public class FacebukPartialTester {
 	public void testGetFriendWithWhomIAmHappiest () {
 		assertEquals(_michelle.getFriendWithWhomIAmHappiest(), _barack);
 		assertEquals(_bo, _malia.getFriendWithWhomIAmHappiest());
+		assertNull(_kevin.getFriendWithWhomIAmHappiest());
 	}
 	
 

@@ -80,7 +80,21 @@ class LiveObject extends FacebukObject {
 	// !!!
 	// Need to implement
 	Moment getOverallHappiestMoment() {
-		return null;
+		Moment happiestM = null;
+		Float highest = Float.MIN_VALUE;
+		for (Object m: getMoments()) {
+		    Moment temp = (Moment) m;
+		    Float sum = 0.0f;
+            for (Object f: temp.getSmileValues()) {
+                sum += (Float) f;
+            }
+		    Float avg = sum/temp.getSmileValues().size();
+            if(avg > highest || happiestM == null){
+                happiestM = temp;
+                highest = avg;
+            }
+        }
+        return happiestM;
 	}
 	
 	/*
