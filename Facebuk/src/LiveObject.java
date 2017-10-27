@@ -141,6 +141,20 @@ class LiveObject extends FacebukObject {
 	 * Even though this is a helper method, make sure it is declared public so we can test it!
 	 */
 	static boolean isClique (ArrayList set) {
+		LiveObject oneFriend;
+		ArrayList listOfFriend;
+		for (int i = 0; i < set.size(); i ++) {
+			oneFriend = (LiveObject) (set.get(i));
+			listOfFriend = oneFriend.getFriends();
+			for (int j = 0; j < set.size(); j ++) {
+				if (oneFriend.equals(set.get(j))) {
+					continue;
+				}
+				else if (! (listOfFriend.contains(set.get(j)))) {
+					return false;
+				}
+			}
+		}
 		return true;
 	}
 }
