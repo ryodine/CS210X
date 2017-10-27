@@ -104,8 +104,34 @@ class LiveObject extends FacebukObject {
 	 * such that each of his/her friends is also friends with everyone else in the set.
 	 */
 	ArrayList findMaximumCliqueOfFriends () {
-		return null;
+		return powerSet(_friends);//cliqueFinder(new ArrayList(), this);
 	}
+
+	/**
+	 * Generates the Power Set of a given ArrayList. This method uses patterns in binary to generate the power set
+	 * @param input An array list to generate the power set from
+	 * @return
+	 */
+	private ArrayList powerSet(ArrayList input) {
+		ArrayList allsets = new ArrayList();
+
+		// Iterate from 0 to 2^(list length) - 1, since power sets have 2^(list length) subsets
+		for (int i = 0; i < (1 << input.size()); i++) {
+			ArrayList setbuilder = new ArrayList();
+
+			//Iterate from 0 to list length - 1, each time building a bit mask of that position
+			for (int j = 0; j < input.size(); j++) {
+				int bitmask = (1 << j);
+
+				//if i & bitmask returns nonzero, there is a 1 at the 2^j position of i, then add jth element of input
+				if ((i & bitmask) > 0) {
+					setbuilder.add(input.get(j));
+				}
+			}
+			allsets.add(setbuilder);
+		}
+		return allsets;
+    }
 	
 	/*
 	 * !!!

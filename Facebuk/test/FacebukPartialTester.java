@@ -1,4 +1,6 @@
 import static org.junit.Assert.*;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +19,7 @@ public class FacebukPartialTester {
 	private ArrayList _michelleAndBarack, _michelleJoeBoAndMalia;
 
 	@Before
-	public void setUp () {
+	public void setUp() {
 		initPeople();
 		initPets();
 		initGroups();
@@ -25,7 +27,7 @@ public class FacebukPartialTester {
 		initMoments();
 	}
 
-	private void initPeople () {
+	private void initPeople() {
 		_michelle = new Person("Michelle", new Image("Michelle.png"));
 		_barack = new Person("Barack", new Image("Barack.png"));
 		_kevin = new Person("Kevin", new Image("Kevin.png"));
@@ -34,7 +36,7 @@ public class FacebukPartialTester {
 		_malia = new Person("Malia", new Image("Malia.png"));
 	}
 
-	private void initPets () {
+	private void initPets() {
 		_bo = new Pet("Bo", new Image("Bo.png"));
 		_sunny = new Pet("Sunny", new Image("Sunny.png"));
 
@@ -42,7 +44,7 @@ public class FacebukPartialTester {
 		_sunny.setOwner(_michelle);
 	}
 
-	private void initGroups () {
+	private void initGroups() {
 		// Kevin, Barack, and Ina
 		final ArrayList michelleFriends = new ArrayList();
 		michelleFriends.add(_kevin);
@@ -86,7 +88,7 @@ public class FacebukPartialTester {
 		_barack.setFriends(michelleList);
 		_kevin.setFriends(michelleList);
 		_ina.setFriends(michelleList);
-	
+
 		// Finish configuring pets
 		_bo.setFriends(maliaAndSunny);
 		_sunny.setFriends(maliaAndBo);
@@ -96,7 +98,7 @@ public class FacebukPartialTester {
 		_michelle.setPets(boAndSunny);
 	}
 
-	private void initPossessions () {
+	private void initPossessions() {
 		final Possession boxingBag = new Possession("BoxingBag", new Image("BoxingBag.png"), 20.0f);
 		boxingBag.setOwner(_michelle);
 		final ArrayList michellePossessions = new ArrayList();
@@ -104,7 +106,7 @@ public class FacebukPartialTester {
 		_michelle.setPossessions(michellePossessions);
 	}
 
-	private void initMoments () {
+	private void initMoments() {
 		// Smiles
 		final ArrayList michelleAndBarackSmiles = new ArrayList();
 		michelleAndBarackSmiles.add(0.25f);
@@ -143,29 +145,35 @@ public class FacebukPartialTester {
 	}
 
 	@Test
-	public void testEquals () {
+	public void testEquals() {
 		assertEquals(_michelle, new Person("Michelle", new Image("Michelle.png")));
 		assertEquals(_michelle, new Person("Michelle", new Image("Michelle2.png")));  // should still work
 		assertNotEquals(_michelle, _barack);
 	}
-	
+
 	@Test
-	public void testFindBestMoment () {
+	public void testFindBestMoment() {
 		assertEquals(_michelle.getOverallHappiestMoment(), _meAndBarack);
 	}
-	
-	
+
+
 	@Test
-	public void testGetFriendWithWhomIAmHappiest () {
+	public void testGetFriendWithWhomIAmHappiest() {
 		assertEquals(_michelle.getFriendWithWhomIAmHappiest(), _barack);
 		assertEquals(_bo, _malia.getFriendWithWhomIAmHappiest());
 		assertNull(_kevin.getFriendWithWhomIAmHappiest());
 	}
-	
+
 
 	// TODO: write more methods to test getFriendWithWhomIAmHappiest 
 	// TODO: write more methods to test getOverallHappiestMoment 
-	
+
 	// TODO: write methods to test isClique 
 	// TODO: write methods to test findMaximumCliqueOfFriends
+
+	@Test
+	public void findMaximumCliqueOfFriends() {
+		System.out.println(_michelle.findMaximumCliqueOfFriends());
+	}
+
 }
