@@ -1,0 +1,111 @@
+// !!!
+	// Need to implement
+	Moment getOverallHappiestMoment() {
+		Moment happiestM = null;
+		Float highest = Float.MIN_VALUE;
+		for (Object m: getMoments()) {
+		    Moment temp = (Moment) m;
+		    Float sum = 0.0f;
+            for (Object f: temp.getSmileValues()) {
+                sum += (Float) f;
+            }
+		    Float avg = sum/temp.getSmileValues().size();
+            if(avg > highest || happiestM == null){
+                happiestM = temp;
+                highest = avg;
+            }
+        }
+        return happiestM;
+	}
+	
+	/*
+	 * !!!
+	 * Need to implement
+	 * return a list containing the maximum clique of friends with whom the target person/pet could go out, 
+	 * such that each of his/her friends is also friends with everyone else in the set.
+	 */
+	ArrayList findMaximumCliqueOfFriends () {
+		ArrayList result = new ArrayList();
+		result.add(this);
+		int max = 0;
+		for (int i = 0; i < this._friends.size(); i ++) {
+			result.add(this._friends.get(i));
+			if (LiveObject.isClique(result)) {
+				max ++;
+				continue;				
+			}
+			else {
+				result.remove(this._friends.get(i));
+			}
+		}
+		return result;
+	}
+	
+	/*
+	 * !!!
+	 * Need to implement
+	 * returns true if and only if all the people/pets in the specified set are all friends with each other. 
+	 * Since this is a helper method that should not depend on any instance variables of the target object, it can (and should) be declared static. 
+	 * Even though this is a helper method, make sure it is declared public so we can test it!
+	 */
+	static boolean isClique (ArrayList set) {
+		LiveObject oneFriend;
+		ArrayList listOfFriend;
+		for (int i = 0; i < set.size(); i ++) {
+			oneFriend = (LiveObject) (set.get(i));
+			listOfFriend = oneFriend.getFriends();
+			for (int j = 0; j < set.size(); j ++) {
+				if (oneFriend.equals(set.get(j))) {
+					continue;
+				}
+				else if (! (listOfFriend.contains(set.get(j)))) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+}
+
+
+
+
+
+
+
+
+People
+
+michelle - friends: kevin, barack, ina - pets: bo, sunny
+barack - friends: michelle
+kevin - friends: michelle 
+ina - friends: michelle
+joe - friends: 
+malia - friends: bo
+
+
+Pets:
+
+bo - owner: barack - friends: malia, sunny
+sunny - owner: michelle - friends: malia, bo
+
+
+Concern: 
+Problem with setPets (when we passed in a Pet in setPets, do we also need to set the owner of that pet) ?
+Problem with getOverallHappiestMoment (): division by zero, line 91.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
