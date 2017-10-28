@@ -104,28 +104,7 @@ class LiveObject extends FacebukObject {
 	 * such that each of his/her friends is also friends with everyone else in the set.
 	 */
 	ArrayList findMaximumCliqueOfFriends () {
-
-		ArrayList maxSet = new ArrayList();
-
-		// Iterate from 0 to 2^(list length) - 1, since power sets have 2^(list length) subsets
-		for (int i = 0; i < (1 << _friends.size()); i++) {
-			ArrayList setbuilder = new ArrayList();
-
-			//Iterate from 0 to list length - 1, each time building a bit mask of that position
-			for (int j = 0; j < _friends.size(); j++) {
-				int bitmask = (1 << j);
-
-				//if i & bitmask returns nonzero, there is a 1 at the 2^j position of i, then add jth element of input
-				if ((i & bitmask) > 0) {
-					setbuilder.add(_friends.get(j));
-				}
-			}
-			setbuilder.add(this);
-			if (isClique(setbuilder) && setbuilder.size() > maxSet.size()) {
-				maxSet = setbuilder;
-			}
-		}
-		return maxSet;
+		return powerSet(_friends);//cliqueFinder(new ArrayList(), this);
 	}
 
 	/**
@@ -133,7 +112,7 @@ class LiveObject extends FacebukObject {
 	 * @param input An array list to generate the power set from
 	 * @return
 	 */
-	/*private ArrayList powerSet(ArrayList input) {
+	private ArrayList powerSet(ArrayList input) {
 		ArrayList allsets = new ArrayList();
 
 		// Iterate from 0 to 2^(list length) - 1, since power sets have 2^(list length) subsets
@@ -152,7 +131,7 @@ class LiveObject extends FacebukObject {
 			allsets.add(setbuilder);
 		}
 		return allsets;
-    }*/
+    }
 	
 	/*
 	 * returns true if and only if all the people/pets in the specified set are all friends with each other. 
