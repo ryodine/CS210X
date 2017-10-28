@@ -17,14 +17,51 @@ public class FacebukPartialTester {
 	private Pet _bo, _sunny;
 	private Moment _meAndBarack;
 	private ArrayList _michelleAndBarack, _michelleJoeBoAndMalia;
-
+	
+	// added private variables to test isClique
+	private ArrayList cliqueSet;
+	private ArrayList notCliqueSet;
+	private ArrayList cliqueSet2;
+	private ArrayList notCliqueSet2;
+	
 	@Before
 	public void setUp() {
 		initPeople();
 		initPets();
 		initGroups();
 		initPossessions();
-		initMoments();
+		initMoments();	
+		
+		// a set of friends
+		
+				// true clique:
+				cliqueSet = new ArrayList();
+				cliqueSet.add(_malia);
+				cliqueSet.add(_barack);
+				cliqueSet.add(_kevin);
+				cliqueSet.add(_michelle);
+				
+				// not a clique
+				notCliqueSet = new ArrayList();
+				notCliqueSet.add(_malia);
+				notCliqueSet.add(_barack);
+				notCliqueSet.add(_michelle);
+				notCliqueSet.add(_kevin);
+				notCliqueSet.add(_ina);
+				
+				// true clique:
+				cliqueSet2 = new ArrayList();
+				cliqueSet2.add(_michelle);
+				cliqueSet2.add(_malia);
+				cliqueSet2.add(_kevin);
+				
+				// not clique:
+				notCliqueSet2 = new ArrayList();
+				notCliqueSet2.add(_malia);
+				notCliqueSet2.add(_bo);
+				notCliqueSet2.add(_joe);
+				notCliqueSet2.add(_sunny);
+				
 	}
 
 	private void initPeople() {
@@ -50,6 +87,10 @@ public class FacebukPartialTester {
 		michelleFriends.add(_kevin);
 		michelleFriends.add(_barack);
 		michelleFriends.add(_ina);
+		
+		// added
+		michelleFriends.add(_joe);
+		michelleFriends.add(_malia);
 
 		// Michelle and Barack
 		_michelleAndBarack = new ArrayList();
@@ -80,15 +121,65 @@ public class FacebukPartialTester {
 		// Bo
 		final ArrayList boList = new ArrayList();
 		boList.add(_bo);
-
+		
+		
+		
+		// added
+		// barack friends
+		final ArrayList barackFriends = new ArrayList();
+		barackFriends.add(_michelle);
+		barackFriends.add(_ina);
+		barackFriends.add(_malia);
+		barackFriends.add(_kevin);
+		
+		
+		// added 
+		// kevin friends
+		final ArrayList kevinFriends = new ArrayList();
+		kevinFriends.add(_michelle);
+		kevinFriends.add(_barack);
+		kevinFriends.add(_joe);
+		kevinFriends.add(_malia);
+		
+		// added 
+		// ina's friends
+		final ArrayList inaFriends = new ArrayList();
+		inaFriends.add(_michelle);
+		inaFriends.add(_barack);
+		
+		
+		// added
+		// joe's friends
+		final ArrayList joeFriends = new ArrayList();
+		joeFriends.add(_michelle);
+		joeFriends.add(_kevin);
+		
+		// added
+		// malia's friends
+		final ArrayList maliaFriends = new ArrayList();
+		maliaFriends.add(_bo);
+		maliaFriends.add(_michelle);
+		maliaFriends.add(_barack);
+		maliaFriends.add(_kevin);
+		
 		// Set people's friend lists
+		/*
 		_michelle.setFriends(michelleFriends);
 		_malia.setFriends(boList);
 		_sunny.setFriends(boList);
 		_barack.setFriends(michelleList);
 		_kevin.setFriends(michelleList);
 		_ina.setFriends(michelleList);
-
+		*/
+		
+		_michelle.setFriends(michelleFriends);
+		_malia.setFriends(maliaFriends);
+		_sunny.setFriends(boList);
+		_barack.setFriends(barackFriends);
+		_kevin.setFriends(kevinFriends);
+		_ina.setFriends(inaFriends);
+		_joe.setFriends(joeFriends);
+		
 		// Finish configuring pets
 		_bo.setFriends(maliaAndSunny);
 		_sunny.setFriends(maliaAndBo);
@@ -156,14 +247,12 @@ public class FacebukPartialTester {
 		assertEquals(_michelle.getOverallHappiestMoment(), _meAndBarack);
 	}
 
-
 	@Test
 	public void testGetFriendWithWhomIAmHappiest() {
 		assertEquals(_michelle.getFriendWithWhomIAmHappiest(), _barack);
 		assertEquals(_bo, _malia.getFriendWithWhomIAmHappiest());
 		assertNull(_kevin.getFriendWithWhomIAmHappiest());
 	}
-
 
 	// TODO: write more methods to test getFriendWithWhomIAmHappiest 
 	// TODO: write more methods to test getOverallHappiestMoment 
@@ -175,5 +264,18 @@ public class FacebukPartialTester {
 	public void findMaximumCliqueOfFriends() {
 		System.out.println(_michelle.findMaximumCliqueOfFriends());
 	}
-
+	
+	@Test public void testIsClique() {
+		assertEquals(LiveObject.isClique(new ArrayList()), false);
+		assertEquals(LiveObject.isClique(cliqueSet), true);
+		assertEquals(LiveObject.isClique(notCliqueSet), false);
+		assertEquals(LiveObject.isClique(cliqueSet2), true);
+		assertEquals(LiveObject.isClique(notCliqueSet2), false);
+		
+		
+		System.out.println(LiveObject.isClique(cliqueSet2));
+		System.out.println(cliqueSet2.toString());
+		System.out.println(cliqueSet.toString());
+		System.out.println(notCliqueSet2.toString());
+	}
 }

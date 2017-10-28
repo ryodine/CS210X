@@ -134,13 +134,14 @@ class LiveObject extends FacebukObject {
     }
 	
 	/*
-	 * !!!
-	 * Need to implement
 	 * returns true if and only if all the people/pets in the specified set are all friends with each other. 
 	 * Since this is a helper method that should not depend on any instance variables of the target object, it can (and should) be declared static. 
 	 * Even though this is a helper method, make sure it is declared public so we can test it!
 	 */
 	static boolean isClique (ArrayList set) {
+		if (set.size() <= 0) {
+			return false;
+		}
 		LiveObject oneFriend;
 		ArrayList listOfFriend;
 		for (int i = 0; i < set.size(); i ++) {

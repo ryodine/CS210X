@@ -76,12 +76,12 @@
 
 People
 
-michelle - friends: kevin, barack, ina - pets: bo, sunny
-barack - friends: michelle
-kevin - friends: michelle 
-ina - friends: michelle
-joe - friends: 
-malia - friends: bo
+michelle - friends: kevin, barack, ina    // , joe, malia    // - pets: bo, sunny
+barack - friends: michelle,  // ina, malia, kevin //       
+kevin - friends: michelle     // ,barack , joe, malia //
+ina - friends: michelle       // barack //
+joe - friends:               // michelle, kevin //
+malia - friends: bo            // michelle, barack, kevin //
 
 
 Pets:
@@ -93,6 +93,12 @@ sunny - owner: michelle - friends: malia, bo
 Concern: 
 Problem with setPets (when we passed in a Pet in setPets, do we also need to set the owner of that pet) ?
 Problem with getOverallHappiestMoment (): division by zero, line 91.
+
+
+
+Call barack: michelle, malia, kevin (get ina out)
+
+return michelle, malia, kevin
 
 
 
