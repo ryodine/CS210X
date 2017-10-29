@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
 
+
 /**
  * This is a SUBSET of the unit tests with which we will grade your code.
  *
@@ -266,7 +267,14 @@ public class FacebukPartialTester {
 		expectedBarackFriendClique.add(_michelle);
 		expectedBarackFriendClique.add(_malia);
 		expectedBarackFriendClique.add(_kevin);
-		assertEquals(_barack.findMaximumCliqueOfFriends(), expectedBarackFriendClique);
+		ArrayList barackFriends = _barack.findMaximumCliqueOfFriends();
+		assertTrue(barackFriends.containsAll(expectedBarackFriendClique) && expectedBarackFriendClique.containsAll(barackFriends));
+
+		ArrayList expectedJoeFriendClique = new ArrayList();
+		expectedJoeFriendClique.add(_kevin);
+		expectedJoeFriendClique.add(_michelle);
+		ArrayList joeFriends = _joe.findMaximumCliqueOfFriends();
+		assertTrue(joeFriends.containsAll(expectedJoeFriendClique) && expectedJoeFriendClique.containsAll(joeFriends));
 	}
 	
 	@Test public void testIsClique() {
