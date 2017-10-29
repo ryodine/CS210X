@@ -255,11 +255,7 @@ public class FacebukPartialTester {
 		assertNull(_kevin.getFriendWithWhomIAmHappiest());
 	}
 
-	// TODO: write more methods to test getFriendWithWhomIAmHappiest 
-	// TODO: write more methods to test getOverallHappiestMoment 
-
-	// TODO: write methods to test isClique 
-	// TODO: write methods to test findMaximumCliqueOfFriends
+	// TODO: write more methods to test getOverallHappiestMoment
 
 	@Test
 	public void findMaximumCliqueOfFriends() {
