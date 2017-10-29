@@ -26,6 +26,8 @@ class LiveObject extends FacebukObject {
 	}
 
 	/**
+	 * Looks through every moment that a LiveObject appears in to find the person with the highest average happiness
+	 * in those moments
 	 *
 	 * @return LiveObject of person (or animal) who this person (or animal) is happiest with
 	 */
@@ -96,12 +98,14 @@ class LiveObject extends FacebukObject {
         }
         return happiestM;
 	}
-	
-	/*
-	 * !!!
-	 * Need to implement
-	 * return a list containing the maximum clique of friends with whom the target person/pet could go out, 
-	 * such that each of his/her friends is also friends with everyone else in the set.
+
+	/**
+	 * Finds a clique by testing if every element of a Power Set of the freinds of this LiveObject is a clique, and
+	 * keeps the clique found with the maximum size
+	 *
+	 * Power Set of a given ArrayList is determined by using patterns in binary
+	 *
+	 * @return a list containing the maximum clique of friends with whom the target person/pet could go out
 	 */
 	ArrayList findMaximumCliqueOfFriends () {
 
@@ -129,35 +133,11 @@ class LiveObject extends FacebukObject {
 	}
 
 	/**
-	 * Generates the Power Set of a given ArrayList. This method uses patterns in binary to generate the power set
-	 * @param input An array list to generate the power set from
-	 * @return
-	 */
-	/*private ArrayList powerSet(ArrayList input) {
-		ArrayList allsets = new ArrayList();
-
-		// Iterate from 0 to 2^(list length) - 1, since power sets have 2^(list length) subsets
-		for (int i = 0; i < (1 << input.size()); i++) {
-			ArrayList setbuilder = new ArrayList();
-
-			//Iterate from 0 to list length - 1, each time building a bit mask of that position
-			for (int j = 0; j < input.size(); j++) {
-				int bitmask = (1 << j);
-
-				//if i & bitmask returns nonzero, there is a 1 at the 2^j position of i, then add jth element of input
-				if ((i & bitmask) > 0) {
-					setbuilder.add(input.get(j));
-				}
-			}
-			allsets.add(setbuilder);
-		}
-		return allsets;
-    }*/
-	
-	/*
-	 * returns true if and only if all the people/pets in the specified set are all friends with each other. 
-	 * Since this is a helper method that should not depend on any instance variables of the target object, it can (and should) be declared static. 
-	 * Even though this is a helper method, make sure it is declared public so we can test it!
+	 * Since this is a helper method that should not depend on any instance variables of the target object, it can
+	 * (and should) be declared static) Even though this is a helper method, make sure it is declared public so
+	 * we can test it!
+	 *
+	 * @return true if and only if all the people/pets in the specified set are all friends with each other.
 	 */
 	static boolean isClique (ArrayList set) {
 		if (set.size() <= 0) {
