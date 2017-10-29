@@ -129,7 +129,6 @@ class LiveObject extends FacebukObject {
 					setbuilder.add(_friends.get(j));
 				}
 			}
-			setbuilder.add(this);
 			if (isClique(setbuilder) && setbuilder.size() > maxSet.size()) {
 				maxSet = setbuilder;
 			}

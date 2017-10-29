@@ -262,7 +262,11 @@ public class FacebukPartialTester {
 
 	@Test
 	public void findMaximumCliqueOfFriends() {
-		System.out.println(_michelle.findMaximumCliqueOfFriends());
+		ArrayList expectedBarackFriendClique = new ArrayList();
+		expectedBarackFriendClique.add(_michelle);
+		expectedBarackFriendClique.add(_malia);
+		expectedBarackFriendClique.add(_kevin);
+		assertEquals(_barack.findMaximumCliqueOfFriends(), expectedBarackFriendClique);
 	}
 	
 	@Test public void testIsClique() {
@@ -287,9 +291,9 @@ public class FacebukPartialTester {
 		
 		assertEquals(LiveObject.isClique(cliqueSet4), false);
 		
-		System.out.println(LiveObject.isClique(cliqueSet2));
+		/*System.out.println(LiveObject.isClique(cliqueSet2));
 		System.out.println(cliqueSet2.toString());
 		System.out.println(cliqueSet.toString());
-		System.out.println(notCliqueSet2.toString());
+		System.out.println(notCliqueSet2.toString());*/
 	}
 }
