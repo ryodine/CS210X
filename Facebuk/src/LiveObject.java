@@ -79,6 +79,11 @@ class LiveObject extends FacebukObject {
 	
 	// !!!
 	// Need to implement
+
+	/**
+	 *
+	 * @return Moment in LiveObject with highest average SmileValue, or null if number of Moments in LiveObject is zero
+	 */
 	Moment getOverallHappiestMoment() {
 		Moment happiestM = null;
 		Float highest = Float.MIN_VALUE;
