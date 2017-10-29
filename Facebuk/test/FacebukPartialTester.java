@@ -272,6 +272,20 @@ public class FacebukPartialTester {
 		assertEquals(LiveObject.isClique(cliqueSet2), true);
 		assertEquals(LiveObject.isClique(notCliqueSet2), false);
 		
+		ArrayList cliqueSet3 = new ArrayList();
+		cliqueSet3.add(_kevin);
+		cliqueSet3.add(_michelle);
+		
+		assertEquals(LiveObject.isClique(cliqueSet3), true);
+		
+		ArrayList cliqueSet4 = new ArrayList();
+		cliqueSet4.add(_kevin);
+		cliqueSet4.add(_michelle);
+		cliqueSet4.add(_barack);
+		cliqueSet4.add(_malia);
+		cliqueSet4.add(_joe);
+		
+		assertEquals(LiveObject.isClique(cliqueSet4), false);
 		
 		System.out.println(LiveObject.isClique(cliqueSet2));
 		System.out.println(cliqueSet2.toString());
