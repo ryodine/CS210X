@@ -244,6 +244,7 @@ public class FacebukPartialTester {
 		assertEquals(_michelle, new Person("Michelle", new Image("Michelle.png")));
 		assertEquals(_michelle, new Person("Michelle", new Image("Michelle2.png")));  // should still work
 		assertNotEquals(_michelle, _barack);
+		assertNotEquals(_michelle, new ArrayList());
 	}
 
 	@Test
