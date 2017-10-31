@@ -22,6 +22,9 @@ class Person extends LiveObject {
 	
 	// Added methods according to the test file
 	void setPets (ArrayList<Pet> pets) {
+		for (int i = 0; i < pets.size(); i ++) {
+			pets.get(i).setOwner(this);
+		}
 		this._pets = pets;
 	}
 	
