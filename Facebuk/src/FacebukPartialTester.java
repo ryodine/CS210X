@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class FacebukPartialTester {
 	private Person _barack, _michelle, _kevin, _ina, _joe, _malia;
-	private Pet _bo, _sunny;
+	private Pet _bo, _sunny,_buddy;
 	private Moment _meAndBarack;
 	private ArrayList _michelleAndBarack, _michelleJoeBoAndMalia;
 	
@@ -80,6 +80,9 @@ public class FacebukPartialTester {
 
 		_bo.setOwner(_barack);
 		_sunny.setOwner(_michelle);
+		
+		
+		_buddy = new Pet("Buddy", new Image("Buddy.png"));
 	}
 
 	private void initGroups() {
@@ -241,6 +244,7 @@ public class FacebukPartialTester {
 		assertEquals(_michelle, new Person("Michelle", new Image("Michelle.png")));
 		assertEquals(_michelle, new Person("Michelle", new Image("Michelle2.png")));  // should still work
 		assertNotEquals(_michelle, _barack);
+		assertNotEquals(_michelle, new ArrayList());
 	}
 
 	@Test
@@ -273,6 +277,8 @@ public class FacebukPartialTester {
 		expectedJoeFriendClique.add(_michelle);
 		ArrayList joeFriends = _joe.findMaximumCliqueOfFriends();
 		assertTrue(joeFriends.containsAll(expectedJoeFriendClique) && expectedJoeFriendClique.containsAll(joeFriends));
+	
+		assertEquals(_buddy.findMaximumCliqueOfFriends(), new ArrayList());	
 	}
 	
 	@Test public void testIsClique() {
@@ -281,6 +287,11 @@ public class FacebukPartialTester {
 		assertEquals(LiveObject.isClique(notCliqueSet), false);
 		assertEquals(LiveObject.isClique(cliqueSet2), true);
 		assertEquals(LiveObject.isClique(notCliqueSet2), false);
+		
+		ArrayList notClique = new ArrayList();
+		notClique.add(_buddy);
+		
+		assertEquals(LiveObject.isClique(notClique), true);
 		
 		ArrayList cliqueSet3 = new ArrayList();
 		cliqueSet3.add(_kevin);
