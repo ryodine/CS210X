@@ -26,4 +26,19 @@ public class CacheTest {
 		
 		assertEquals(true, true);
 	}
+
+	@Test
+	public void cacheTestThree () {
+		TestDataProvider provider = new TestDataProvider();
+		Cache<Integer, Integer> cache = new LRUCache<Integer, Integer>(provider, 2);
+		assertEquals(cache.get(10), (Integer)20); //insert A and test 10 -> 20
+		assertEquals(cache.getNumMisses(), 1); //1 miss
+		cache.get(10);//insert A again
+		assertEquals(cache.getNumMisses(), 1); //still only 1 miss
+		assertEquals(cache.get(0), (Integer)0); //insert B and test 0 -> 0
+		assertEquals(cache.getNumMisses(), 2); //2 misses
+		cache.get(10); //insert A again
+		assertEquals(cache.getNumMisses(), 2); //still only 2 misses
+		assertEquals(provider.numCalls, cache.getNumMisses()); //NumMisses = number of calls to data provider
+	}
 }
