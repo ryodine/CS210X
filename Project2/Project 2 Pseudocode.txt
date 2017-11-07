@@ -1,0 +1,63 @@
+
+Pseudocode for LRU Cache
+
+I. Implementing a doubly-linked list:
+	1. Create inner class called Node:
+	a. Fields: a key, a value, next (which is a Node), and previous(which is a Node)).
+	b. Constructor
+	c. getKey(), getValue(), getNext(), and getPrevious().
+
+	2. Create a doublylinkedList. 
+
+After instantiating a new object of cache: 
+1. Create a new HashMap() with size specified ---> main data structure for the cache storage
+2. At the same time, create a DoublyLinkedList ---> enforce the eviction policy
+	Note: use a static int counter to keep track of the size of this list.
+
+(Note: need to specify to others what order the linkedlist should be)
+
+3. Call get method:   U get (K key)
+	Still empty:
+		- Have to call to the DataProvider.
+		- Get the value
+		- Use put(k, new Node(key, val)) method to put that key and value 
+		in the cache (both hashMap() and the linkedlist).
+		*** note: the value specified above can be extracted from the DataProvider.
+		- return the value.
+
+4. If call U get (K key):
+	- Use get() method of HashMap to get value. 
+		- If the value is already there, swap it to head. 
+			** How? Use get() method to get the node, update it!!!
+			** Be careful when swap!!! Easy to make mistake!!!
+		- If the value is at head then do nothing.
+		 
+	- If the value is not there, update it (increment counter)
+	- Check the capacity! See if eviction is needed. 
+	- If eviction is needed, then kick out the last value and update the head
+	- Should be easy!
+
+	- If we kick out a value, remember to update the HashMap as well. 
+
+
+
+In general, it might be something like: 
+
+If (the key is in cache) -- move that key to the front of linked list and return it.
+
+
+Else (key is not in cache) 
+	If (list is not full) -- simply get the data (value) from the provider
+				 add that key at the end of linked list
+				 at the same time add that key and node (key, value) to the hashMap
+				 return the value
+	else (if list if full) -- fun part here!!!
+			       -- kick out the last element maybe ? 
+					** Note: this depends on how you insert the key to the linked list (addFirst or addLast)
+			       -- at the same time, kick out that element from the hashMap too!!!
+			       -- go to data provider, get value, store that at the beginning of the linked list.
+			       -- also store that key in the hashmap !!!
+			       -- return the value. 
+						
+
+ 
