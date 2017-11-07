@@ -136,6 +136,7 @@ public class LRUCache<T, U> implements Cache<T, U> {
 			tail = tail.previous;
 			tail.next = null;
 		}
+		this.currentSize --;
 
 	}
 	

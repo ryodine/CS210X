@@ -99,5 +99,50 @@ public class CacheTest {
 		assertEquals(7, cache.getNumMisses());
 		assertEquals(provider.numCalls, cache.getNumMisses());
 	}
+
+	@Test
+	public void TestLongOperationSet() {
+		TestDataProvider provider = new TestDataProvider();
+		Cache<Integer, Integer> cache = new LRUCache<Integer, Integer>(provider, 5);
+
+		assertEquals((Integer) 2, cache.get(1));
+		assertEquals((Integer) 4, cache.get(2));
+		assertEquals((Integer) 6, cache.get(3));
+		assertEquals((Integer) 8, cache.get(4));
+		assertEquals((Integer) 10, cache.get(5));
+		assertEquals((Integer) 12, cache.get(6));
+		assertEquals((Integer) 14, cache.get(7));
+		assertEquals((Integer) 16, cache.get(8));
+		assertEquals((Integer) 18, cache.get(9));
+		assertEquals((Integer) 20, cache.get(10));
+		assertEquals(10, cache.getNumMisses());
+		assertEquals(provider.numCalls, cache.getNumMisses());
+
+		assertEquals((Integer) 12, cache.get(6));
+		assertEquals((Integer) 14, cache.get(7));
+		assertEquals((Integer) 16, cache.get(8));
+		assertEquals((Integer) 18, cache.get(9));
+		assertEquals((Integer) 20, cache.get(10));
+		assertEquals(10, cache.getNumMisses());
+		assertEquals(provider.numCalls, cache.getNumMisses());
+
+		assertEquals((Integer) 14, cache.get(7));
+		assertEquals((Integer) 12, cache.get(6));
+		assertEquals((Integer) 18, cache.get(9));
+		assertEquals((Integer) 20, cache.get(10));
+		assertEquals((Integer) 16, cache.get(8));
+		assertEquals(10, cache.getNumMisses());
+		assertEquals(provider.numCalls, cache.getNumMisses());
+
+		assertEquals((Integer) 2, cache.get(1));
+		assertEquals((Integer) 4, cache.get(2));
+		assertEquals((Integer) 6, cache.get(3));
+		assertEquals((Integer) 8, cache.get(4));
+		assertEquals((Integer) 10, cache.get(5));
+		assertEquals(15, cache.getNumMisses());
+		assertEquals(provider.numCalls, cache.getNumMisses());
+
+
+	}
 }
 
