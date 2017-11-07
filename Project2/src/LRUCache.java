@@ -87,10 +87,20 @@ public class LRUCache<T, U> implements Cache<T, U> {
 	 * @return the value associated with the key
 	 */
 	public U get (T key) {
-		if (cache.containsKey(key)) {
-			
+		final Node<T, U> result = cache.get(key);
+		if (result != null) {
+			this.moveNodeToFirst(result);
+			return result.getValue();
 		}
-		return null;  // TODO -- implement!
+		else {
+			final Node<T, U> newNode = new Node (key, this.provider.get(key));
+			if (this.currentSize >= this.capacity) {
+				this.removeLast();
+			}
+			this.numMisses ++;
+			this.addFirst(newNode);
+			return newNode.getValue();
+		}
 	}
 	
 	private void addFirst(Node<T, U> node){
@@ -123,9 +133,24 @@ public class LRUCache<T, U> implements Cache<T, U> {
 		}
 	}
 	
-	// !!!
-	private void moveNodeToFirst() {
-		return;
+	private void moveNodeToFirst(Node<T, U> node) {
+		final Node<T, U> before = node.previous;
+		final Node<T, U> after = node.next;
+
+		if (node == head) {
+			return;
+		}
+		else if (node == tail) {
+			before.next = null;
+			tail = before;
+			
+		} else {
+			before.next = after;
+			after.previous = before;
+		}
+		head.previous = node;
+		node.next = head;
+		head = node;
 	}
 	
 	/**
