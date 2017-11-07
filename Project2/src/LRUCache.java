@@ -13,11 +13,14 @@ public class LRUCache<T, U> implements Cache<T, U> {
 	
 	private HashMap<T, Node<T, U>> cache = new HashMap<>();
 	
-	private class Node<T, U> {
+	private static class Node<T, U> {
 		private T key;
 		private U value;
 		private Node<T, U> next, previous;
 		
+		/**
+		 * Default constructor
+		 */
 		public Node () {
 			key = null;
 			value = null;
@@ -25,6 +28,11 @@ public class LRUCache<T, U> implements Cache<T, U> {
 			previous = null;
 		}
 		
+		/**
+		 * Constructor - will mainly use this
+		 * @param key: the key
+		 * @param value: the value
+		 */
 		public Node (T key, U value){
 			this.key = key;
 			this.value = value;
@@ -32,6 +40,13 @@ public class LRUCache<T, U> implements Cache<T, U> {
 			previous = null;
 		}
 		
+		/**
+		 * Constructor
+		 * @param key: the key
+		 * @param value: the value
+		 * @param next: the next node which this node is pointing to 
+		 * @param previous: the previous node which this node is pointing to 
+		 */
 		public Node(T key, U value, Node next, Node previous){
 			this.key = key;
 			this.value = value;
@@ -98,7 +113,7 @@ public class LRUCache<T, U> implements Cache<T, U> {
 			return result.getValue();
 		}
 		else {
-			final Node<T, U> newNode = new Node (key, this.provider.get(key));
+			final Node<T, U> newNode = new Node<T, U> (key, this.provider.get(key));
 			if (this.currentSize >= this.capacity) {
 				this.removeLast();
 			}
@@ -108,6 +123,10 @@ public class LRUCache<T, U> implements Cache<T, U> {
 		}
 	}
 	
+	/**
+	 * Add a node to the beginning of the "linked-list".
+	 * @param node: the node to be added.
+	 */
 	private void addFirst(Node<T, U> node){
 		cache.put(node.getkey(), node);
 		if (head == null) {
@@ -122,6 +141,9 @@ public class LRUCache<T, U> implements Cache<T, U> {
 		this.currentSize ++;
 	}
 	
+	/**
+	 * remove the last element of the "linked list". 
+	 */
 	private void removeLast(){
 		if (head == null) {
 			return;
@@ -140,6 +162,13 @@ public class LRUCache<T, U> implements Cache<T, U> {
 
 	}
 	
+	/**
+	 * move a node specified from its current position to the beginning
+	 * if the node is a head node, than do nothing
+	 * Can assume that the "linked list" is not empty 
+	 * Can also assume that the node specified will be in the "linked list"
+	 * @param node: node to move
+	 */
 	private void moveNodeToFirst(Node<T, U> node) {
 		final Node<T, U> before = node.previous;
 		final Node<T, U> after = node.next;
