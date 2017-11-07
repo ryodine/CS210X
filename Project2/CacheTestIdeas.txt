@@ -1,0 +1,13 @@
+Test cases: 
+
+
+
+Cache's capacity is 2. Called same key (2) 100 times -> should only miss once. 
+
+Cache's capacity is 1. Called 2 seperate -> 2 misses. 
+
+Caches's capacity is 2. Request a - a - b - a --> 2 misses.
+
+Capacity: 5. Test the shift. Say call cache with 1-2-3-4-5()-1(*) then call 6 --- kick out 2 --> if call 2 -> should miss.
+                                                         **(): call cache's miss here should be 5.
+						 	 **(*): call cache's miss here should be 5. 

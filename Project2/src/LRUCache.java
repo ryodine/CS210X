@@ -5,20 +5,27 @@ import java.util.HashMap;
  * eviction policy.
  */
 public class LRUCache<T, U> implements Cache<T, U> {
+	private DataProvider<T, U> provider;
+	private int capacity;
+	private Node<T, U> head, tail;
+	private int currentSize;
+	private int numMisses;
 	
-	class Node {
-		protected T key;
-		protected U value;
-		protected Node next, previous;
+	private HashMap<T, Node<T, U>> cache = new HashMap<>();
+	
+	private class Node<T, U> {
+		private T key;
+		private U value;
+		private Node<T, U> next, previous;
 		
-		public Node() {
+		public Node () {
 			key = null;
 			value = null;
 			next = null;
 			previous = null;
 		}
 		
-		public Node(T key, U value){
+		public Node (T key, U value){
 			this.key = key;
 			this.value = value;
 			next = null;
@@ -70,6 +77,8 @@ public class LRUCache<T, U> implements Cache<T, U> {
 	 * @param capacity the exact number of (key,value) pairs to store in the cache
 	 */
 	public LRUCache (DataProvider<T, U> provider, int capacity) {
+		this.provider = provider;
+		this.capacity = capacity;
 	}
 
 	/**
@@ -78,14 +87,52 @@ public class LRUCache<T, U> implements Cache<T, U> {
 	 * @return the value associated with the key
 	 */
 	public U get (T key) {
+		if (cache.containsKey(key)) {
+			
+		}
 		return null;  // TODO -- implement!
 	}
-
+	
+	private void addFirst(Node<T, U> node){
+		cache.put(node.getkey(), node);
+		if (head == null) {
+			head = node;
+			tail = node;
+		}
+		else {
+			head.previous = node;
+			node.next = head;
+			head = node;
+		}
+		this.currentSize ++;
+	}
+	
+	private void removeLast(){
+		if (head == null) {
+			return;
+		}
+		else if (head == tail) {
+			cache.remove(tail);
+			head = null;
+			tail = null;
+		}
+		else {
+			cache.remove(tail);
+			tail = tail.previous;
+			tail.next = null;
+		}
+	}
+	
+	// !!!
+	private void moveNodeToFirst() {
+		return;
+	}
+	
 	/**
 	 * Returns the number of cache misses since the object's instantiation.
 	 * @return the number of cache misses since the object's instantiation.
 	 */
 	public int getNumMisses () {
-		return 0;
+		return this.numMisses;
 	}
 }
