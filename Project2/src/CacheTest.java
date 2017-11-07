@@ -20,10 +20,31 @@ public class CacheTest {
 	
 	@Test
 	public void leastRecentlyUsedIsCorrect () {
-		DataProvider<Integer, Integer> provider = new TestDataProvider();
+		TestDataProvider provider = new TestDataProvider();
 		Cache<Integer, Integer> cache = new LRUCache<Integer, Integer>(provider, 5);
-		
 		
 		assertEquals(true, true);
 	}
+	
+	@Test
+	public void leastRecentlyUsedIsCorrect2 () {
+		TestDataProvider provider = new TestDataProvider();
+		Cache<Integer, Integer> cache = new LRUCache<Integer, Integer>(provider, 2);
+		
+		assertEquals(cache.getNumMisses(), 0);
+		assertEquals(cache.get(2), (Integer) 4);
+		assertEquals(cache.getNumMisses(), 1);
+		
+		for (int i = 0; i < 100; i++){
+			assertEquals(cache.get(2), (Integer) 4);
+			assertEquals(cache.getNumMisses(), 1);
+		}
+		
+		assertEquals(cache.getNumMisses(), provider.numCalls);
+		
+		assertEquals(cache.get(3), (Integer) 6);
+		assertEquals(cache.getNumMisses(), 2);
+		assertEquals(cache.getNumMisses(), provider.numCalls);
+	}
+
 }
