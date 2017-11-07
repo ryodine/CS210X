@@ -70,6 +70,11 @@ public class LRUCache<T, U> implements Cache<T, U> {
 		public U getValue(){
 			return this.value;
 		}
+
+		@Override
+		public String toString() {
+			return key + ": " + value;
+		}
 	}
 	
 	/**
@@ -122,15 +127,16 @@ public class LRUCache<T, U> implements Cache<T, U> {
 			return;
 		}
 		else if (head == tail) {
-			cache.remove(tail);
+			cache.remove(tail.getkey());
 			head = null;
 			tail = null;
 		}
 		else {
-			cache.remove(tail);
+			cache.remove(tail.getkey());
 			tail = tail.previous;
 			tail.next = null;
 		}
+
 	}
 	
 	private void moveNodeToFirst(Node<T, U> node) {
@@ -147,6 +153,7 @@ public class LRUCache<T, U> implements Cache<T, U> {
 		} else {
 			before.next = after;
 			after.previous = before;
+
 		}
 		head.previous = node;
 		node.next = head;
