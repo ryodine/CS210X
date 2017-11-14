@@ -1,0 +1,1001 @@
+CRC: 0x3D236E91  File: actresses.list  Date: Fri Aug 26 00:00:00 2016
+
+Copyright 1993-2007 The Internet Movie Database, Inc.  All rights reserved.
+
+COPYING POLICY: Internet Movie Database (IMDb)
+==============================================
+
+    This is a  database  of  movie  related  information  compiled  by
+    Internet  Movie  Database  Ltd (IMDb). While every effort has been
+    made to  ensure  the  accuracy  of  the  database  IMDb  gives  no
+    warranty  as  to  the accuracy of the information contained in the
+    database.  IMDb  reserves  the  right  to   withdraw   or   delete
+    information at any time. 
+       
+    This service is provided for the information of users only. It  is
+    not   provided  with  the  intention  that  users  rely  upon  the
+    information for any purposes. Accordingly,  IMDb  shall  under  no
+    circumstances  be liable for any loss or damage, including but not
+    limited to loss of profits, goodwill or indirect or  consequential
+    loss   arising   out   of  any  use  of  or  inaccuracies  in  the
+    information. All warranties express or  implied  are  excluded  to
+    the fullest extent permissible by law. 
+       
+    All information in this file  is  Copyright  2005  Internet  Movie
+    Database  Limited.  Reproduction,  distribution or transmission by
+    any means without the prior permission of IMDb is prohibited.  All
+    rights reserved. 
+
+    For further info visit http://www.imdb.com/licensing/contact
+       
+         -------------------------------------------------------
+   
+    All data and software released by Internet Movie Database  Ltd  is
+    freely  available  to  anyone  within certain limitations. You are
+    encouraged to quote subsets of the database  in  USENET  articles,
+    movie  related  FAQs,  magazine  articles etc. We do ask, however,
+    that you make reference to the source of the data  and  provide  a
+    pointer to the database for the benefit of the reader. 
+       
+    Permission is granted  by  the  copyright  holder  to  allow  free
+    distribution  of  this  file  and  any  other part of the Internet
+    Movie  Database  in  an  ELECTRONIC  FORM  ONLY,   providing   the
+    following conditions are met: 
+       
+         1. NO FEE OF ANY KIND, however indirect, will be  charged
+            for  its  distribution.  If  this file is being stored
+            for  later  distribution  to  anyone   that   can   be
+            construed   as   a   customer   of  yourself  or  your
+            organisation YOU MUST contact Internet Movie  Database
+            Ltd for permission. 
+            
+         2. Each  of  the  database  files  may   be   distributed
+            individually  but  only  in an unaltered form. All the
+            header and trailer information, including this  notice
+            and  the  details  on how to access the database, must
+            remain intact. 
+            
+         3. Specifically the files may NOT be  used  to  construct
+            any  kind  of  on-line database (except for individual
+            personal use). Clearance for  ALL  such  on-line  data
+            resources   must  be  requested  from  Internet  Movie
+            Database Ltd 
+            
+         4. In addition, copies of  the  Internet  Movie  Database
+            frequently  asked  questions  list and additions guide
+            must be made available in the same area / by the  same
+            method as the other database files. 
+
+         5. CD-ROM  distribution  is  prohibited  without  written
+            permission from the Internet Movie Database Ltd 
+            
+    Distribution by e-mail, BBS and  Internet  systems  is  positively
+    encouraged within these limitations. 
+       
+    The files and software which make up the  movie  database  may  be
+    uploaded  to  commercial  BBS  systems  providing  that  the above
+    conditions are met and no *additional* fees are applied above  the
+    standard connect time or downloading charges. 
+
+    For further info visit http://www.imdb.com/licensing/contact
+
+         -------------------------------------------------------
+
+Welcome to the latest version of the actresses list. 
+
+Please feel free to submit entries for actresses not already on the list,
+or new entries for existing actresses.
+
+This list is managed by Giancarlo Cairella;
+from 1993-1998 it was managed by Col Needham;
+from 1990-1993 it was managed by Andy Krieg.
+
+If you have any additions or corrections please use
+http://imdb.com/updates only. The section at the end of the list contains
+details on the formats to use. The copying policy is also described at
+the end of the list.
+
+  
+The Internet Movie Database consists of the following lists:               
+             
+ List                 | Maintained by                             | Updated
+ ---------------------|-------------------------------------------|----------
+ Actors               | Giancarlo Cairella http://imdb.com/contact| 24-06-05
+ Actresses            | Giancarlo Cairella http://imdb.com/contact| 24-06-05
+ Alternative Names    | Duncan Smith http://imdb.com/contact/     | 24-06-05
+ Alternative Titles   | Michel Hafner http://imdb.com/contact/    | 17-06-05
+ Alternative Versions | Giancarlo Cairella http://imdb.com/contact| 17-06-05
+ Biographies          | Geoff Leonard http://imdb.com/contact/    | 24-06-05
+ Business             | Giancarlo Cairella http://imdb.com/contact| 17-06-05
+ Cast Completion      | Giancarlo Cairella http://imdb.com/contact| 17-06-05
+ Certificates         | Peter Simeon http://imdb.com/contact/     | 24-06-05
+ Cinematographers     | Michel Hafner http://imdb.com/contact/    | 17-06-05
+ Color Information    | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ Composers            | Michel Hafner http://imdb.com/contact/    | 17-06-05
+ Costume Designers    | Duncan Smith http://imdb.com/contact/     | 17-06-05
+ Countries            | Peter Simeon http://imdb.com/contact/     | 17-06-05
+ Crazy Credits        | Mark Bailey http://imdb.com/contact/      | 17-06-05
+ Crew Completion      | Giancarlo Cairella http://imdb.com/contact| 17-06-05
+ Directors            | Duncan Smith http://imdb.com/contact/     | 17-06-05
+ Distributors         | Peter Simeon http://imdb.com/contact/     | 24-06-05
+ Editors              | Duncan Smith http://imdb.com/contact/     | 17-06-05
+ Genres               | Jake Dias http://imdb.com/contact/        | 24-06-05
+ Goofs                | Col Needham http://imdb.com/contact/      | 24-06-05
+ Keywords             | Jake Dias http://imdb.com/contact/        | 24-06-05
+ Languages            | Peter Simeon http://imdb.com/contact/     | 24-06-05
+ Laser Discs          | Peter Simeon http://imdb.com/contact/     | 07-21/00
+ Literature           | Giancarlo Cairella http://imdb.com/contact| 17-06-05
+ Locations            | Mark Bailey http://imdb.com/contact/      | 17-06-05
+ MPAA Ratings Reasons | Jon Reeves http://imdb.com/contact/       | 17-06-05
+ Misc. Companies      | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ Misc. Filmography    | Peter Simeon http://imdb.com/contact/     | 24-06-05
+ Movie Links          | Ron Higgins http://imdb.com/contact/      | 24-06-05
+ Movies               | Michel Hafner http://imdb.com/contact/    | 17-06-05
+ Plot Summaries       | Colin Tinto http://imdb.com/contact/      | 24-06-05
+ Producers            | Andre Bernhardt http://imdb.com/contact/  | 17-06-05
+ Production Companies | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ Production Designers | Duncan Smith http://imdb.com/contact/     | 17-06-05
+ Quotes               | Col Needham http://imdb.com/contact/	  | 24-06-05
+ Ratings              | IMDb Helpdesk http://imdb.com/contact/    | 24-06-05
+ Release Dates        | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ Running Times        | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ SFX Companies        | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ Sound Mix            | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ Soundtracks          | Ron Higgins http://imdb.com/contact/      | 24-06-05
+ Tag Lines            | Mark Bailey http://imdb.com/contact/      | 24-06-05
+ Technical Info       | Peter Simeon http://imdb.com/contact/     | 24-06-05
+ Trivia               | Tim Norris http://imdb.com/contact/	  | 24-06-05
+ Writers              | Duncan Smith http://imdb.com/contact/     | 17-06-05
+ ----------------------------------------------------------------------------
+  								    dd/mm/yy
+  
+SEARCHING THE DATABASE
+======================
+
+The movie database frequently asked questions list contains more information
+on the whole movie database project. For a copy send an e-mail message with
+the subject "HELP FAQ" to <mail-server@imdb.com>. Here is a summary of the
+ways to access the database:
+
+(1) WWW interface
+
+    The Internet Movie Database is available over the WWW. The following sites
+    are owned and operated by or for the IMDb:
+
+        http://us.imdb.com/                                 [USA]
+        http://uk.imdb.com/                                 [UK]
+
+    News and pointers to all IMDb sites are available at IMDb HQ:
+
+        http://www.imdb.com/
+
+(2) e-mail interface
+  
+    For details send a message with the subject HELP to <mail-server@imdb.com>
+
+(3) local installation (Unix/Amiga)
+
+    The movie database package enables you to install the data locally and
+    provides a variety of search tools. It is available via anonymous FTP:
+
+ uiarchive.cso.uiuc.edu  in  /pub/info/imdb/tools/moviedb-3.4a.tar.gz
+
+ ftp.funet.fi  in  /pub/culture/tv+film/database/tools/moviedb-3.4a.tar.gz
+
+ ftp.fu-berlin.de  in  /pub/misc/movies/database/tools/moviedb-3.4a.tar.gz
+
+ ftp.sunet.se  in  /pub/tv+movies/imdb/tools/moviedb-3.4a.tar.gz
+
+    see the README file in the same directories for more information. The 
+    Amiga version is in the file imdb3_5_Amiga.lha
+
+(4) local installation (OS/2)
+
+    The Alternative Movie Database package provides a graphical and text
+    based interface for OS/2:
+
+     uiarchive.cso.uiuc.edu  in  /pub/info/imdb/tools/os2/
+
+     ftp.funet.fi  in  /pub/culture/tv+film/database/tools/os2/
+
+     ftp.fu-berlin.de  in  pub/misc/movies/database/tools/os2/
+
+     ftp.sunet.se  in  /pub/tv+movies/imdb/tools/os2/
+
+(5) local installation (Windows 9x/Windows NT)
+
+    The Alternative Movie Database package is also available as a text only
+    interface for Win-32 systems (9x/NT):
+
+     uiarchive.cso.uiuc.edu  in  /pub/info/imdb/tools/w32/
+
+     ftp.funet.fi  in  /pub/culture/tv+film/database/tools/w32/
+
+     ftp.fu-berlin.de  in  pub/misc/movies/database/tools/w32/
+
+     ftp.sunet.se  in  /pub/tv+movies/imdb/tools/w32/
+
+
+
+
+-----------------------------------------------------------------------------
+RULES:
+1       Movies and recurring TV roles only, no guest appearances
+2       Please submit entries in the format outlined at the end of the list
+3       Feel free to submit new actresses
+
+"xxxxx"        = a television series
+"xxxxx" (mini) = a television mini-series
+[xxxxx]        = character name
+<xx>           = number to indicate billing position in credits
+(TV)           = TV movie, or made for cable movie
+(V)            = made for video movie (this category does NOT include TV 
+                 episodes repackaged for video, guest appearances in 
+                 variety/comedy specials released on video, or 
+                 self-help/physical fitness videos)
+
+THE ACTRESSES LIST
+==================
+
+Name			Titles 
+----			------
+"Steff", Stefanie Oxmann Mcgaha	Night of the Demons (2009)  (uncredited)  [Goth raver]
+			The Bad Lieutenant: Port of Call - New Orleans (2009)  (uncredited)  [Gambler/Bar patron]
+
+$haniqua		"Please Like Me" (2013) {All You Can Eat (#1.4)}  [$haniqua the Rabbit]  <16>
+			"Please Like Me" (2013) {French Toast (#1.2)}  [$haniqua the Rabbit]  <12>
+			"Please Like Me" (2013) {Horrible Sandwiches (#1.6)}  [$haniqua the Rabbit]  <12>
+			"Please Like Me" (2013) {Portuguese Custard Tarts (#1.3)}  [$haniqua the Rabbit]  <13>
+			"Please Like Me" (2013) {Rhubarb and Custard (#1.1)}  [$haniqua the Rabbit]  <12>
+			"Please Like Me" (2013) {Spanish Eggs (#1.5)}  [$haniqua the Rabbit]  <13>
+
+& Ashour, Lucienne	A Woman of Distinction (1950)  (uncredited)  [Apache Dancers]
+			Around the World (1943)  (uncredited)  [Apache Dancers]
+			Chain Lightning (1950)  (uncredited)  [Apache Dancers]
+			O-Kay for Sound (1937)  [Apache Dancers]
+			"Cabaret" (1936) {(1938-01-12)}  [Themselves - Apache Dancers]
+			"Four Star Revue" (1950) {(#1.15)}  [Guest Apache Dancers]
+			"Music-Hall" (1949) {(#2.5)}  [Themselves]
+			"Variety" (1936) {(1937-06-05)}  [Themselves - Dancers]
+
+& Company, Monica Bill Barnes	This American Life Live! (2012) (TV)  [Dancers]
+
+&Aacutelvarez, Michelle	Mímesis (2012)  [Sonia]
+
+' Betty' Strohfus, Elizabeth	Broads & Bombers, a War Time Experiment in Man Power (2016)  [Herself]
+
+' Scotty'Gough, Virgina	Broads & Bombers, a War Time Experiment in Man Power (2016)  [Herself]
+
+'67 Impala		"Supernatural" (2005) {99 Problems (#5.17)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {A Very Supernatural Christmas (#3.8)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Abandon All Hope (#5.10)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {After School Special (#4.13)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {All Dogs Go to Heaven (#6.8)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {All Hell Breaks Loose: Part 1 (#2.21)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {All Hell Breaks Loose: Part 2 (#2.22)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {And Then There Were None (#6.16)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Appointment in Samarra (#6.11)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Are You There, God? It's Me, Dean Winchester (#4.2)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Asylum (#1.10)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Bad Day at Black Rock (#3.3)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Bedtime Stories (#3.5)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Bloodlust (#2.3)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Bloody Mary (#1.5)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Born Under a Bad Sign (#2.14)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Bugs (#1.8)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Caged Heat (#6.10)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Changing Channels (#5.8)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Children Shouldn't Play with Dead Things (#2.4)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Clap Your Hands If You Believe (#6.9)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Criss Angel Is a Douche Bag (#4.12)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Croatoan (#2.9)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Crossroad Blues (#2.8)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Dark Side of the Moon (#5.16)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Dead in the Water (#1.3)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Dead Man's Blood (#1.20)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Dead Men Don't Wear Plaid (#5.15)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Death Takes a Holiday (#4.15)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Devil's Trap (#1.22)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Dream a Little Dream of Me (#3.10)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Everybody Loves a Clown (#2.2)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Exile on Main St. (#6.1)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Faith (#1.12)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Fallen Idols (#5.5)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Family Matters (#6.7)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Family Remains (#4.11)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Folsom Prison Blues (#2.19)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Free to Be You and Me (#5.3)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Fresh Blood (#3.7)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Frontierland (#6.18)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Ghostfacers (#3.13)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Good God, Y'All (#5.2)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Hammer of the Gods (#5.19)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Heart (#2.17)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Heaven and Hell (#4.10)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Hell House (#1.17)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Hollywood Babylon (#2.18)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Home (#1.9)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Hook Man (#1.7)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Houses of the Holy (#2.13)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Hunted (#2.10)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {I Believe the Children Are Our Future (#5.6)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {I Know What You Did Last Summer (#4.9)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {In My Time of Dying (#2.1)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {In the Beginning (#4.3)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {It's a Terrible Life (#4.17)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {It's the Great Pumpkin, Sam Winchester (#4.7)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Jump the Shark (#4.19)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Jus in Bello (#3.12)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Lazarus Rising (#4.1)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Let It Bleed (#6.21)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Like a Virgin (#6.12)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Live Free or Twihard (#6.5)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Long Distance Call (#3.14)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Lucifer Rising (#4.22)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Malleus Maleficarum (#3.9)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Mannequin 3: The Reckoning (#6.14)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Metamorphosis (#4.4)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Mommy Dearest (#6.19)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Monster Movie (#4.5)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {My Bloody Valentine (#5.14)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {My Heart Will Go On (#6.17)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Mystery Spot (#3.11)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Nightmare (#1.14)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Nightshifter (#2.12)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {No Exit (#2.6)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {No Rest for the Wicked (#3.16)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {On the Head of a Pin (#4.16)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Phantom Traveler (#1.4)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Pilot (#1.1)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Playthings (#2.11)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Point of No Return (#5.18)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Provenance (#1.19)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Red Sky at Morning (#3.6)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Roadkill (#2.16)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Route 666 (#1.13)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Salvation (#1.21)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Sam, Interrupted (#5.11)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Scarecrow (#1.11)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Sex and Violence (#4.14)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Shadow (#1.16)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Simon Said (#2.5)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Sin City (#3.4)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Skin (#1.6)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Something Wicked (#1.18)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Swan Song (#5.22)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Swap Meat (#5.12)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Sympathy for the Devil (#5.1)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Tall Tales (#2.15)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Benders (#1.15)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Curious Case of Dean Winchester (#5.7)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Devil You Know (#5.20)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The End (#5.4)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The French Mistake (#6.15)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Kids Are Alright (#3.2)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Man Who Would Be King (#6.20)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Monster at the End of This Book (#4.18)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Rapture (#4.20)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Real Ghostbusters (#5.9)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Song Remains the Same (#5.13)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Third Man (#6.3)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {The Usual Suspects (#2.7)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Time Is on My Side (#3.15)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Two and a Half Men (#6.2)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Two Minutes to Midnight (#5.21)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Unforgiven (#6.13)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Weekend at Bobby's (#6.4)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Wendigo (#1.2)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {What Is and What Should Never Be (#2.20)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {When the Levee Breaks (#4.21)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Wishful Thinking (#4.8)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {Yellow Fever (#4.6)}  (uncredited)  [Herself]
+			"Supernatural" (2005) {You Can't Handle the Truth (#6.6)}  (uncredited)  [Herself]
+
+'Barry' Vincent, Mabel	Broads & Bombers, a War Time Experiment in Man Power (2016)  [Herself]
+
+'Dot' Lewis, Dorthy	Broads & Bombers, a War Time Experiment in Man Power (2016)  [Herself]
+
+'Electric Nana'. Vázquez, Mónica	"El hormiguero" (2006) {(2011-03-23)}  [Herself]
+
+'Gaby' Goff, Mary	Welcome to My Darkside! (2009)  [Herself]
+
+'J.T.' Thompson, Julie	The Shrink (????)  [Janet]  <7>
+
+'La Mueque'		Los tarantos (1963)  [Cantaor]  <17>
+
+'La Tata' Castro, Maria Tereza	"La granja tolima" (2004)  [Herself]
+
+'La Veneno', Cristina	El secreto de la Veneno (1997) (V)  <1>
+			La venganza de la Veneno (1997) (V)  <1>
+			"Aquí hay tomate" (2003) {(2006-10-11)}  [Herself]
+
+'Mickey''Brown, Eleanor	Broads & Bombers, a War Time Experiment in Man Power (2016)  [Herself]
+
+'Misschiviss		Portland Hip Hop: Lifting as We Climb (2016)  [Herself]
+
+'Noble Julz'Hamilton, Ulia	StudZmen (2013)  (as Noble Julz)  [Deacon]
+			"Between Women" (2011) {(#1.1)}  [Brooke Scott]
+			"Between Women" (2011) {(#1.10)}  [Brooke Scott]
+			"Between Women" (2011) {(#1.11)}  [Brooke Scott]
+			"Between Women" (2011) {(#1.2)}  [Brooke Scott]
+			"Between Women" (2011) {(#1.6)}  [Brooke Scott]
+			"Between Women" (2011) {(#1.7)}  [Brooke Scott]
+			"Between Women" (2011) {(#1.8)}  [Brooke Scott]
+			"Between Women" (2011) {(#1.9)}  [Brooke Scott]
+			"Between Women" (2011) {(#2.1)}  [Brooke Scott]
+			"Between Women" (2011) {(#2.2)}  [Brooke Scott]
+			"Between Women" (2011) {(#2.3)}  [Brooke Scott]
+			"Between Women" (2011) {(#2.4)}  [Brooke Scott]
+			"Between Women" (2011) {(#2.5)}  [Brooke Scott]
+			"Between Women" (2011) {I Can See Right Through You (#1.5)}  [Brooke Scott]
+			"Between Women" (2011) {I Can't Believe You! (#1.4)}  [Brooke Scott]
+			"Between Women" (2011) {I'm Dying on the Inside (#1.3)}  [Brooke Scott]
+
+'Rosalie' Sadlik, Peggy	Welcome to Slab City (2012)  [Herself]
+
+'Rovel' Torres, Crystal	"The Tonight Show Starring Jimmy Fallon" (2014) {Ice T/Andrew Rannells/Lupe Fiasco (#2.105)}  [Herself - Musical Support]
+
+'s Gravemade, Nienke	Criss Cross (2010)  [Annie]
+			Exorsister (2012)  [Sister]
+			Magistratus: Overtura (2012) (V)  [Naneke]
+			Souvent sur les dents (2015)
+			Splitter (2011/I)  [Kidnapped Girl]
+			Toxhibition (2011)  [Friend]
+			Tweeduizendseks (2010) (TV)  [Yolanda van der Graaf]
+
+'t Hart, Josine		De nieuwe moeder (1996)  [Vrouw in trein]  <23>
+			Il barbiere di Siviglia (1992) (TV)  [Mime artists]  <11>
+
+'t Hart, Marieke	"De wereld draait door" (2005) {(2013-09-20)}  [Herself - Hoofdredacteur VROUW - De Telegraaf]
+
+'t Jolle, Mira		"Aspe" (2004) {De architect - Deel 1 (#6.12)}  (uncredited)  [Juliette De Baetselier]
+			"Aspe" (2004) {De architect - Deel 2 (#6.13)}  [Juliette De Baetselier]  <15>
+
+'t Seyen, Hilda		De moedige bruidegom (1952)  [De moeder van Tinneke]
+
+'Tay' Listenbee, Shacetta	South of Sanity (2016) (TV)  [Frita Clark]  <10>
+
+'The Queen' Williams, Toni	Welcome to Slab City (2012)  [Herself]
+
+'Tush' Harris, Tymisha	Blood of the Tribades (2016)  [The Great One]  <4>
+			Grindsploitation 2: The Lost Reels (2017)  [The Great One (segment "Blood of the Tribades trailer")]
+
+'Twinkie' Bird, Tracy	"Casting Qs" (2010) {An Interview with Tracy 'Twinkie' Byrd (#2.14)}  (as Twinkie Byrd)  [Herself]
+			"Casting Qs" (2010) {An Interview with Tracy 'Twinkie' Byrd: Part 2 (#3.4)}  (as Twinkie Byrd)  [Herself]
+
+'ya, Moni		Fillet of Soul (2001) (V)
+
+, Manjula Rai		Naya Samaj (1976)
+
+-, Anna			Llamada (2011)
+
+-, Mieke		People in White (2011) (V)  [Herself]  <5>
+
+--, Mónica		Plato Para Dos (2015)
+
+-Birch, Beth Chisholm	The Story of Peter Pendragon: Knight Out - Chapter One (2016)  [Clementine]
+
+-Durell, Kisha Emanuel	In Sheep's Clothing (2016)  [Lawyer]
+
+-fox, Katherine Bennet	Love Online (2014)
+
+-James, Bethan Williams	Social Suicide (2015)  [Baked Bean Girl]
+
+., Alicetogizzelle (II)	ENSEMBLE episode movies (2015)
+			"Ensemble" (2014) {Cut in the Chat (#1.2)}  [The Woman]
+
+., Miss Marsha		Challenger: Voices from the Street (2016)  [Herself]
+
+., Pia			Four Wise Monkeys (2016)  [Shawn's Mom]  <18>
+
+.C., Favour Shedrack	Snake Ladies (2015) (V)  [Chief Cook]
+
+1, Girl			Hustler's Untrue Hollywood Stories: Angelina vs. Jennifer (2009) (V)  <12>
+
+1, Miss			Black Tranny Whackers 12 (2009) (V)
+
+10 Soprano		"Davno ne videlis" (2011) {(#1.13)}  (uncredited)  [Themselves]
+			"Davno ne videlis" (2011) {(#1.15)}  (uncredited)  [Themselves]
+			"Davno ne videlis" (2011) {(#1.2)}  (uncredited)  [Themselves]
+			"Davno ne videlis" (2011) {(#1.3)}  (uncredited)  [Themselves]
+			"Davno ne videlis" (2011) {(#1.6)}  [Themselves - Guest Performer]  <17>
+			"Davno ne videlis" (2011) {(#1.7)}  (uncredited)  [Themselves]
+
+103, Martha		Anna II (2005)  [Anna II]
+
+10X, Sharon		"American Experience" (1988) {Malcolm X: Make It Plain (#6.5)}  [Herself - Nation of Islam]  <130>
+
+11, College		Meus Prêmios Nick 2012 (2012) (TV)  [Themselves]
+
+12 Elite Girls, Die	Holzapfel weiß alles (1932)  [Tänzer]  <24>
+
+18, Rachel		Lightspeed University: Cheerleader Power (2005) (V)  <7>
+
+1934 Goldwyn Girls, The	Kid Millions (1934)  (uncredited)  [Themselves]
+
+1988 Montclair Squad	Monster High (1989)  [Cheerleaders]  <38>
+
+2 Shoes			"Big Brother's Bit on the Side" (2011) {(2012-08-09)}  [Themselves]
+			"The Only Way Is Essex" (2010) {Live Special 2012 (#7.12)}  [Themselves]
+			"The X Factor" (2004) {Auditions 6 (#8.6)}  [Themselves - Auditionees]
+			"The X Factor" (2004) {Bootcamp 2 (#8.9)}  [Themselves - Contestants]
+			"The X Factor" (2004) {Judges' Houses 1 (#8.10)}  [Themselves - Contestants]
+			"The X Factor" (2004) {Judges' Houses 2 (#8.11)}  [Themselves - Contestants]
+			"The X Factor" (2004) {Live Final (#10.31)}  [Themselves - Performers]
+			"The X Factor" (2004) {Live Final Results (#8.31)}  [Themselves - Opening Show]
+			"The X Factor" (2004) {Live Results Show 1 (#8.13)}  [Themselves - Contestants]  <11>
+			"The X Factor" (2004) {Live Show 1 (#8.12)}  [Themselves - Contestants]  <8>
+			"The X Factor" (2004) {Live Show 6 (#8.22)}  [Themselves - Contestants]  <13>
+			"The Xtra Factor" (2004) {(#8.10)}  [Themselves]
+			"The Xtra Factor" (2004) {(#8.11)}  [Themselves]
+			"The Xtra Factor" (2004) {(#8.12)}  [Themselves]
+			"The Xtra Factor" (2004) {(#8.13)}  [Themselves]
+			"The Xtra Factor" (2004) {(#8.22)}  [Themselves]
+			"The Xtra Factor" (2004) {(#8.9)}  [Themselves]
+			"The Xtra Factor" (2004) {Tulisa's Best and Worst (#8.34)}  (archive footage)  [Themselves]
+
+2's Country		"Britain's Got Talent" (2007) {2013: Auditions 1 (#7.1)}  [Themselves - Contestants]
+
+2-Ply			Nice Shoes... Wanna Fuck? (2012) (V)  [Paparazzo]  <13>
+			Taboo 22 (2006) (V)  (as 2-ply)
+			This Ain't Cops XXX (2010) (V)  (as 2Ply)  [Assistant]  <12>
+			This Ain't the Expendables XXX (2012) (V)  [Munroe]
+
+20 Wienerinnen, Die	Heut' kommt's drauf an (1933)
+
+2004 Buffalo Jills Cheerleaders	Buffalo Jill's on DVD 2004: Swimsuit Edition (2004) (V)  [Themselves]
+
+21 Japonesas		"Sigue, sigue Plàstic" (1991) {(#1.4)}  [Themselves]
+
+2Hypa			"Move Like Michael Jackson" (2009) {(#1.6)}  [Themselves - Contestants]
+			"Move Like Michael Jackson" (2009) {Auditions (#1.2)}  [Themselves - Contestants]
+
+2ne1			"America's Next Top Model" (2003) {Finale Part Two: America's Next Top Model Is... (#21.16)}  (as 2NE1)  [Themselves]  <22>
+			"The Bachelor" (2002) {(#18.4)}  (as 2NE1)  [Themselves]  <17>
+
+2Squar'd		"The X Factor" (2011) {Auditions #2 (#1.2)}  [Themselves - Auditionee]  <17>
+			"The X Factor" (2011) {Judges' Home #2 (#1.8)}  [Themselves - Contestant]
+			"The X Factor" (2011) {Judges' Home #3 (#1.9)}  [Themselves - Contestant]
+
+3 Little Women		2nd Annual BET Awards (2002) (TV)  (as 3LW)  [Themselves]
+			3LW: Live on Sunset (2002) (V)  (as 3LW)  [Themselves]  <1>
+			3rd Annual BET Awards (2003) (TV)  [Themselves]
+			4th Annual BET Awards (2004) (TV)  (as 3LW)  [Themselves]
+			BET Awards 2006 (2006) (TV)  (as 3LW)  [Themselves]
+			Nickelodeon Kids' Choice Awards 2000 (2000) (TV)  (as 3LW)  [Themselves]
+			The 16th Annual Soul Train Music Awards (2002) (TV)  (as 3LW)  [Themselves]
+			The 17th Annual Soul Train Music Awards (2003) (TV)  (as 3LW)  [Themselves]
+			The Teen Choice Awards 2001 (2001) (TV)  (as 3LW)  [Themselves]
+			"Diamond Life" (2005)
+			"Soul Train" (1971) {(#32.10)}  (as 3LW)  [Themselves]
+			"Soul Train" (1971) {DJ Quik/Naughty by Nature/3LW/Mario (#31.24)}  (as 3LW)  [Themselves - Musical Guest]
+			"Taina" (2001) {Blue Mascara (#1.2)}  (as 3LW)  [Themselves]  <13>
+			"The Rosie O'Donnell Show" (1996) {(2001-03-23)}  (as 3LW)  [Themselves]
+			"Top of the Pops" (1964) {(2001-06-01)}  [Themselves]
+
+3-Stah			"Pilipinas Got Talent" (2010) {Audition Day 12 (#3.12)}  [Themselves - Auditionee]  <13>
+
+314			"Infernal Restraints" (2006) {Ingenue}
+			"Infernal Restraints" (2006) {Locked and Stocked}
+
+34D, Mary		Fahrenheit 69 (2004) (V)  [Liberated Iraqi #2]  <7>
+
+38G, Samantha		2 Tons of Fun (2010) (V)
+			2 Tons of Fun 3 (2012) (V)
+			2 Tons of Fun 4 (2014) (V)
+			Backdoor BBWs (2011) (V)
+			Big Bad Mamas (2006) (V)
+			Big Bad Mamas 3 (2006) (V)
+			Big Bad Mamas 7 (2007) (V)
+			Big Girl Workout 3 (2010) (V)
+			Cash for Chunkers 2 (2010) (V)
+			Cream Filled Chubbies (2012) (V)
+			Evil BBW Gold (2012) (V)
+			Evil Cuckold 6 (2012) (V)  [Miss G]  <3>
+			Fuck a Fan 18 (2012) (V)
+			Hot Sexy Plumpers 14 (2008) (V)  (as Samantha 38GG)
+			Lesbian Love Connections (2012) (V)  [Samantha Anderson]  <5>
+			Miami MILFS 2 (2015) (V)  <4>
+			Mom Banged My Girlfriend (2010) (V)
+			My Big Plump Wedding (2009) (V)  (as Samantha)
+			My Friend's Hot Mom 42 (2014) (V)
+			Put It Between My Tits (2014) (V)
+			Raw 4 (2010) (V)  <4>
+			Sister Wives XXX: A Porn Parody (2011) (V)  [Janelle]  <4>
+			Stacked & Packed Volume 2 (2001) (V)
+			The Complete Mommy X-Perience (2014) (V)  (archive footage)
+			Voluptuous XL Xtra (2002) (V)
+			Voluptuous Xtra 3 (2001) (V)
+			XL Girls: Home Alone (2002) (V)
+			XL Xtra Volume III (2003) (V)
+			"Monsters of Cock" (2003) {Samantha}
+			"Plumper Pass" (2006) {Boob Bumpin}
+			"Plumper Pass" (2006) {Titanic Tit Lezzin}
+
+3am			"Cut N' Dry Talent TV" (2014) {(#1.5)}  [Band - Music Video]
+
+4 Ever, Diamond		18 and Nasty 18 (2000) (V)
+			50 to 1 (2005) (V)
+			A Perverted Point of View (2001) (V)  [Diamond]
+			Barely Legal 8 (2000) (V)  (as Diamond)  [Blonde Canadian Teen]  <2>
+			Blowjob Adventures of Dr. Fellatio 22 (2000) (V)
+			Boobstravaganza 3 (2006) (V)  (archive footage)
+			Bruno B.: The World's Luckiest Guy 1 (2003) (V)  (as Diamond 4Ever)  <9>
+			Buttman & Rocco Go to Montreal (2000) (V)  (as Diamond Forever)  [Beaver 2]
+			Cumback Pussy 39 (2000) (V)  (as Diamond)  <6>
+			Deep Cheeks Six (2000) (V)  (as Diamond 4Ever)  [Diamond Forever]  <2>
+			Devil in Disguise (2001) (V)  [Envy]
+			Down the Hatch 5 (2001) (V)  [Herself (Diamond)]
+			Initiations 5 (2000) (V)  (as Diamond)  <3>
+			Initiations 6 (2001) (V)  [Diamond]
+			North Pole #19 (2000) (V)  [Diamond]  <4>
+			Oral Consumption 3 (2000) (V)  [Canadian Teen]
+			Sodomania Slop Shots 9 (2001) (V)
+			Un-Natural Sex 3 (2001) (V)  [Diamond, Canadian Teen]
+			World Sex Tour 25: Canada (2001) (V)  [Diamond 4 Ever]
+			Young and Tight (2001) (V)
+
+4 Non Blondes		50 Most Awesomely Bad Songs... Ever (2004) (TV)  (archive footage)  [Themselves]
+			Encomium: A Tribute to Led Zeppelin (1995) (V)  [Themselves - Performer]
+			"Late Night with Conan O'Brien" (1993) {(#1.23)}  [Themselves - Musical Guest]
+			"Late Show with David Letterman" (1993) {(1994-01-04)}  [Themselves - Musical Guest]
+			"Top of the Pops" (1964) {(1993-07-01)}
+			"Top of the Pops" (1964) {(1993-07-15)}
+			"Tu cara me suena - Argentina" (2013) {(#3.21)}  (archive footage)  [Themselves]
+
+40 B.A.R.R.S.		"RapFix Live" (2010) {Troy Ave, Wu-Tang (#4.35)}  [Herself]  <9>
+
+412			"Hardtied" (2005) {MudPie}
+			"Infernal Restraints" (2006) {Anticipation}
+			"TopGrl" (2009) {412}
+			"TopGrl" (2009) {Definitions: Part Two}
+			"TopGrl" (2009) {Definitions}
+
+42, Charla Miss		Babyface (1977)  (uncredited)  [Shirley]
+			Count the Ways (1975)  (as Charla Miss '42')  [Number 42]  <3>
+
+45, Colt		Big Bust Bash (1999) (V)
+			Big Busted Goddesses of Las Vegas (2000) (V)
+			Busty Debutantes (1995) (V)
+			Busty Dildo Lovers #4 (2003) (V)
+			Girls Around the World 25 (1995) (V)
+			Letha Weapons and Friends (1994) (V)
+			Score Classics 2 (2005) (V)
+			Score Xtra 2 (1999) (V)
+			The Greatest Big Bust Video Volume 2 (2001) (V)
+			"Jenny Jones" (1991) {I Got No Shame, 'Cuz My Chest Gives Me All Game!}  [Herself]
+
+4Minute			"Weekly Idol" (2011) {(#1.141)}  [Themselves]
+			"Weekly Idol" (2011) {(#1.185)}  [Themselves]
+			"Weekly Idol" (2011) {(#1.43)}  [Themselves]
+			"Weekly Idol" (2011) {(#1.87)}  [Themselves]
+			"Weekly Idol" (2011) {(#1.88)}  [Themselves]
+			"Weekly Idol" (2011) {(#1.9)}  [Themselves]
+			"Weekly Idol" (2011) {100th Episode Special, Part 1 (#1.100)}  [Themselves]
+			"Weekly Idol" (2011) {100th Episode Special, Part 2 (#1.101)}  [Themselves]
+			"Weekly Idol" (2011) {Weekly Idol 3rd Anniversary, Part 2 (#1.157)}  [Themselves]
+
+4th Impact		"Pinoy Idol" (2008) {Auditions: Metro Manila (#1.4)}  (as The Cercado Sisters)  [Themselves - Guest]  <37>
+			"The X Factor" (2004) {Auditions 1 (#12.1)}  (as 4th Power)  [Themselves - Auditionee]  <14>
+			"The X Factor" (2004) {Bootcamp 1 (#12.8)}  (as 4th Power)  [Themselves - Contestants]
+			"The X Factor" (2004) {Bootcamp 2 (#12.9)}  (as 4th Power)  [Themselves - Contestants]
+			"The X Factor" (2004) {Judges' Houses 1 (#12.13)}  (as 4th Power)  [Themselves - Contestant]
+			"The X Factor" (2004) {Judges' Houses 2 (#12.14)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Results Show 1 (#12.16)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Results Show 2 (#12.18)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Results Show 3 (#12.20)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Results Show 4 (#12.22)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Results Show 5 (#12.24)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Show 1 (#12.15)}  [Themselves - Contestant]  <16>
+			"The X Factor" (2004) {Live Show 2 (#12.17)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Show 3 (#12.19)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Show 4 (#12.21)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Live Show 5 (#12.23)}  [Themselves - Contestant]
+			"The X Factor" (2004) {Six-Chair Challenge 2 (#12.11)}  (as 4th Power)  [Themselves - Contestant]
+			"The X Factor" (2004) {Six-Chair Challenge 3 (#12.12)}  (as 4th Power)  [Themselves - Contestants]
+			"The Xtra Factor" (2004) {Auditions 1 (#12.1)}  (uncredited)  [Themselves - Auditionee]
+			"The Xtra Factor" (2004) {Live Show 1 (#12.15)}  [Themselves - Featuring]  <8>
+
+69, Jane		Ibéria (2007) (V)  [A Muse]
+
+69, Puta		Prof. F. Stein oder Ich baue mir meine Traumfrau (2006) (V)
+
+7 Year Bitch		Hype! (1996)  [Themselves]
+			Toast with the Gods (1995)  [The Lotus Eaters]
+
+7, Lucky		Gendernauts - Eine Reise durch die Geschlechter (1999)  <15>
+			"Real Sex" (1990) {Real Sex 24: Different Strokes/Dirty Words/Footsies/Bon Appetit (#1.24)}  [Herself - Poet]  <3>
+			"Real Sex" (1990) {Real Sex 26: Lessons in Love & Lust (#1.26)}  [Herself]
+
+702			"All That" (1994) {(#3.8)}  [Themselves - Musical Guest]  <8>
+			"Moesha" (1996) {Moesha Meets Brandy (#4.1)}  [Themselves]  <11>
+			"Sister, Sister" (1994) {The Laws (#5.13)}  [Themselves]  <6>
+			"Soul Train" (1971) {Montell Jordan/Dru Hill/702 (#26.2)}  [Themselves]
+			"The Video Pool" (1984) {(#1.150)}  (archive footage)  [Themselves]
+
+9, Cat			Domina's Daydream (2001) (V)
+
+9, Kat			Brittany's Bitch Boyz 2 (2004) (V)
+			Destined for Pain (2002) (V)
+
+95, Jardar		Amors baller (2011)  [Jentelaget]  <25>
+
+@You			Itazura kaseifu: Ijimete shibatte (2007)
+			Paizuri paradise 5 (2009) (V)
+			Yuuwaku kyoushi maruhi kyonyuu ressun (2009)
+
+A qui Avec Gabriel	April's Shadows (2013)  [Herself]
+
+a Tricoche, Zoe		Littie Red White & Blue (2009)
+
+A'Alitaleb, Suilma	Amor-Love (2002)  [Zaida]
+
+A'Costa, Mrs.		The Mints of Hell (1919)  [Tete]  <10>
+
+A'Court, Michele	Happy Birthday 2 You (2000) (TV)  [Herself]
+			Murder on the Blade? (2003) (TV)
+			TV2 Big Comedy Gala (2000) (TV)  [Host]  <2>
+			What Now! 20th Birthday Special (2001) (TV)
+			"7 Days" (2009) {(#1.11)}  [Herself - Team Member]
+			"7 Days" (2009) {(#1.8)}  [Herself - Team Member]
+			"7 Days" (2009) {(#2.13)}  [Herself - Team Member]
+			"7 Days" (2009) {(#2.21)}  [Herself - Team 2 Member]
+			"7 Days" (2009) {(#2.24)}  [Herself - Team 1 Member]
+			"7 Days" (2009) {(#2.28)}  [Herself - Team Member]
+			"7 Days" (2009) {(#3.2)}  [Herself - Team Member]
+			"7 Days" (2009) {(#3.6)}  [Herself - Team Member]
+			"7 Days" (2009) {(#3.9)}  [Herself - Team Member]
+			"7 Days" (2009) {(#5.5)}  [Herself - Team Member]  <5>
+			"7 Days" (2009) {(#6.17)}  [Herself - Team Member]
+			"7 Days" (2009) {Episode #1.5 (#1.5)}  [Herself - Team Member]
+			"Go Girls" (2009) {Pushing Buttons (#5.4)}  [Miriam]
+			"Go Girls" (2009) {Relativity (#5.10)}  [Miriam]
+			"Pulp Comedy" (1997)  [Herself (1998-)]
+			"Shortland Street" (1992)  (as Michelle A'Court)  [Julie-Anne Adams (2000)]
+			"Shortland Street" (1992) {(#17.191)}  [Helen Carson]
+			"Shortland Street" (1992) {(#17.234)}  (as Michelle A'Court)  [Helen Carson]
+			"Shortland Street" (1992) {(#17.235)}  [Helen Carson]
+			"Shortland Street" (1992) {(#17.236)}  [Helen Carson]
+			"Shortland Street" (1992) {(#17.245)}  [Helen Carson]
+			"Shortland Street" (1992) {(#18.2)}  [Helen Carson]
+			"Shortland Street" (1992) {(#18.24)}  [Helen Carson]
+			"Shortland Street" (1992) {(#18.3)}  [Helen Carson]
+			"Shortland Street" (1992) {(#18.45)}  [Helen Carson]
+			"Shortland Street" (1992) {(#18.50)}  [Helen Carson]
+			"Shortland Street" (1992) {(#18.76)}  [Helen Carson]
+			"Shortland Street" (1992) {(#18.77)}  [Helen Carson]
+			"What Now?" (1981)  (as Michelle A'Court)  [Herself - Presenter (1984-1987)]
+
+A'Court, Susan		"The Kids of Degrassi Street" (1979) {Cookie Goes to Hospital (#1.2)}  [Nurse Trish]
+
+A'Dair, Michelle	Sierra Spirits (2009)  [Saloon Lady #2]
+
+A'Dair, Renee		Sierra Spirits (2009)  [Inga]
+
+A'Deane, Sam		"Family Affairs" (1949) {Bunty Makes a Book (#1.5)}  [Marion]  <4>
+			"Family Affairs" (1949) {Henry Breaks the News (#1.1)}  [Marion]  <4>
+			"Family Affairs" (1949) {Henry Tries His Hand (#1.8)}  [Marion]  <4>
+			"Family Affairs" (1949) {Linda and the Love Racket (#1.2)}  [Marion]  <4>
+			"Family Affairs" (1949) {Linda Lays a Ghost (#1.6)}  [Marion]  <4>
+			"Family Affairs" (1949) {Marion Digs for Gold (#1.4)}  [Marion]  <4>
+			"Family Affairs" (1949) {Tony Buys a Hypnotist (#1.3)}  [Marion]  <4>
+			"Family Affairs" (1949) {Tony Cultivates Some Swedes (#1.7)}  [Marion]  <4>
+
+A'Hern, Basia		Bitter & Twisted (2008)  [Lisa Lombard]  <8>
+			Disappearance (2002) (TV)  [Kate Henley]  <4>
+			Good As New (2010)  [Lilly]
+			Super Glue and Angel's Wings (2001) (TV)  [Viola]
+			The Pact (2003/III)  [Brittany Vickson]  <4>
+			"Don't Blame the Koalas" (2002) {A Snake in the Class (#1.6)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {A Star Is Born (#1.19)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {All for a Good Cause (#1.16)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {All Kings Together (#1.2)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Animal Art (#1.8)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Best Foot Forward (#1.14)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Billy Cart Madness (#1.17)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Dropped in It (#1.20)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Fate Steps In (#1.1)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Greg Scores a Goal (#1.4)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Guru Mark (#1.9)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Happy Families (#1.11)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Hoop Dreams (#1.23)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Jemma Makes Her Mark (#1.3)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Jinxed (#1.24)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Justice for All (#1.26)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Kate's Greatest Fan (#1.21)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Liar Liar (#1.18)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Murder, Mystery, Mayhem (#1.22)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Suspicious Minds (#1.12)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {The Burger Master (#1.15)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {The Dingo Made Me Do It (#1.13)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {The Monster of Wallaby Park (#1.7)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {The Old Devil Music (#1.5)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Things That Go Bump (#1.10)}  [Kate King]  <2>
+			"Don't Blame the Koalas" (2002) {Who's Who? (#1.25)}  [Kate King]  <2>
+			"Double Trouble" (2008) {Alien Alert (#1.8)}  (credit only)  [Sasha]  <10>
+			"Double Trouble" (2008) {Best Laid Plans (#1.3)}  [Sasha]  <10>
+			"Double Trouble" (2008) {Bush Tucker (#1.4)}  [Sasha]  <10>
+			"Double Trouble" (2008) {Double Dancing (#1.11)}  [Sasha]  <10>
+			"Double Trouble" (2008) {Going Home (#1.12)}  [Sasha]  <10>
+			"Double Trouble" (2008) {Lost in the Desert (#1.7)}  [Sasha]  <10>
+			"Double Trouble" (2008) {Mean Girls (#1.6)}  [Sasha]  <10>
+			"Double Trouble" (2008) {Sand and Surf (#1.13)}  (archive footage)  [Sasha]  <10>
+			"Double Trouble" (2008) {The Audition (#1.10)}  [Sasha]  <10>
+			"Double Trouble" (2008) {The First Test (#1.2)}  [Sasha]  <10>
+			"Double Trouble" (2008) {The Twins (#1.1)}  [Sasha]  <10>
+			"Double Trouble" (2008) {The Water Hole (#1.5)}  (credit only)  [Sasha]  <10>
+			"Double Trouble" (2008) {Two Dollars (#1.9)}  [Sasha]  <10>
+			"Farscape" (1999) {...Different Destinations (#3.5)}  [Cyntrina]  <13>
+			"Flat Chat" (2001) {Break-Up (#1.4)}
+			"McLeod's Daughters" (2001) {A Spark from Heaven (#7.21)}  [Rose Hall]
+			"McLeod's Daughters" (2001) {All's Fair in Love and War (#7.15)}  [Rose Hall-Smith]
+			"McLeod's Daughters" (2001) {Betwixt and Between (#5.24)}  [Rose Hall]
+			"McLeod's Daughters" (2001) {Ever After (#7.16)}  [Rose Hall-Smith]
+			"McLeod's Daughters" (2001) {Guess Who's Coming to Dinner? (#6.27)}  [Rose Hall-Smith]  <11>
+			"McLeod's Daughters" (2001) {Handle with Care (#6.26)}  [Rose Hall-Smith]
+			"McLeod's Daughters" (2001) {Leaving the Nest (#7.20)}  [Rose Hall-Smith]
+			"McLeod's Daughters" (2001) {Magnetic Attraction (#4.16)}  [Rose Hall]
+			"McLeod's Daughters" (2001) {Old Wrongs (#6.25)}  [Rose Hall-Smith]
+			"McLeod's Daughters" (2001) {One Perfect Day (#6.28)}  [Rose Hall-Smith]
+			"McLeod's Daughters" (2001) {Out of Time (#5.23)}  [Rose Hall]
+			"McLeod's Daughters" (2001) {The Courage Within (#7.22)}  [Rose Hall-Smith]
+			"McLeod's Daughters" (2001) {The Long Paddock (#8.22)}  [Rose Hall-Smith]
+			"Out of the Blue" (2008) {(#1.1)}  [Lucia Jones]  <1>
+			"Out of the Blue" (2008) {(#1.100)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.102)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.103)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.104)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.105)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.107)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.114)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.115)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.119)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.120)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.122)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.126)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.127)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.128)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.129)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.18)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.2)}  [Lucia Jones]  <1>
+			"Out of the Blue" (2008) {(#1.22)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.24)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.27)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.33)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.34)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.35)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.36)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.38)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.39)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.4)}  [Lucia Jones]  <1>
+			"Out of the Blue" (2008) {(#1.40)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.41)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.43)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.44)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.47)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.48)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.53)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.54)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.55)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.58)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.62)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.64)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.66)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.70)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.73)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.74)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.77)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.78)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.81)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.84)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.88)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.89)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.92)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.93)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.98)}  [Lucia Jones]
+			"Out of the Blue" (2008) {(#1.99)}  [Lucia Jones]
+			"The Sleepover Club" (2003) {Agony Aunt (#1.19)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Beach Hut (#1.3)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Blind Date (#1.21)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Car Wash (#1.11)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Changing Rooms (#1.9)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Election (#1.15)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {End of an Era (#1.26)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Family Ties (#1.18)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Fearlotto (#1.4)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Fight for Kenny (#1.13)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Graffiti (#1.25)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Greek Sleepover (#1.22)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Happy Birthday Rosie (#1.6)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Horseback (#1.17)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Makeover (#1.8)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Outdoor Trip (#1.12)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Perfect Match (#1.1)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Price of Success (#1.23)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Scary Movie (#1.2)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Shoot to Win (#1.16)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Starring (#1.7)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Swim Carnival (#1.10)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {The Great Debate (#1.5)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {The Winning Ticket (#1.20)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Third Time Unlucky (#1.14)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {Trapped (#1.24)}  [Lydnsey 'Lyndz' Collins]  <1>
+			"The Sleepover Club" (2003) {What Are Friends For? (#2.1)}  (archive footage)  [Lydnsey 'Lyndz' Collins]
+
+A'Kimmi, Courtenay	King of the Game (2014)  [Truck Stop Strutter]
+			Studio Gangster (2015)  [Ms Nae]
+
+A'Leur, Aurora		Brew City Bombshells Burlesque (2011)  [Aurora A'Leur]
+
+A'Moore, Erin		Submerge: Ni're Reborn (2015)  [Ni're]
+
+A'ngelique, J'avona	Echoes (2010/III)  [Jesse]
+			Our Last Day (2012)  [Megan]  <4>
+			Pocket Full of Gold (2009)  [Cowgirl]
+
+A'Virmond, Tatiana	How to Dance Through Time, Vol III: The Majesty of Renaissance Dance (2003) (V)  [Herself]
+
+A, Isabelle		Sterrencircus (1991) (TV)  [Herself]
+			"De foute quiz" (2007) {(#1.1)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.2)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.3)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.4)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.5)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.6)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.7)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.8)}  [Herself - Team Captain]
+			"De foute quiz" (2007) {(#1.9)}  [Herself - Team Captain]
+			"De kotmadam" (1991) {Isabelle (#7.8)}  [Isabelle]
+			"Eurosong 1999" (1999)  [Herself]
+			"Het swingpaleis" (1996)  [Herself (1996-2000, 2002-)]
+			"Het swingpaleis" (1996) {(2006-03-24)}  [Herself]
+			"Samson en Gert" (1990) {Isabelle A (#1.29)}  [Herself]
+			"TV Tam Tam" (1987) {Pestering (#2.6)}  (as Isabelle Adam)  [Isabelle]
+			"Zo is er maar één" (2006) {Afscheid (#2.8)}  [Herself - Candidate]
+			"Zo is er maar één" (2006) {De nummer 1 (#4.2)}  [Herself - Jury]
+			"Zo is er maar één" (2006) {Liefde (#1.4)}  [Herself - Candidate]
+
+A. Casares, Marilia	De todo corazón (2000) (TV)  (as Ella Baila Sola)  [Herself - Performer]
+			Especial Nochevieja 1996: Somos la primera (1997) (TV)  (as Ella Baila Sola)  [Herself]
+			Gala FAO 2000 (2000) (TV)  (as Ella Baila Sola)  [Herself]
+			Gala Miss España 1997 (1997) (TV)  (as Ella Baila Sola)  [Herself]
+			Gala por los pueblos indígenas iberoamericanos (2001) (TV)  (as Ella Baila Sola)  [Herself]
+			Gala TP de Oro 1998 (1999) (TV)  (as Ella Baila Sola)  [Herself]
+			Hay que volver a empezar (2001) (TV)  [Herself]
+			II edición de los 'Premios de la música' (1998) (TV)  (as Ella Baila Sola)  [Herself]
+			Lo echamos a suertes (2005) (V)  (as Ella Baila Sola)  [Herself]
+			Miss España 2001 (2001) (TV)  (as Ella Baila Sola)  [Herself]
+			Murcia, ¡qué hermosa eres! (1999) (TV)  (as Ella Baila Sola)  [Herself]
+			Por El Salvador, una noche solidaria (2001) (TV)  (as Ella Baila Sola)  [Herself]
+			Premios Amigo 2000 (2000) (TV)  (as Ella Baila Sola)  [Herself]
+			Premios Amigo 98 (1998) (TV)  (as Ella Baila Sola)  [Herself]
+			Todos con El Salvador (2001) (TV)  (as Ella Baila Sola)  [Herself]
+			"Això no és tot!" (1996) {(1996-10-21)}  (as Ella Baila Sola)  [Herself]
+			"Al salir de clase" (1997) {Solteras en acción (#8.114)}  (as Ella Baila Sola)  [Herself]
+			"Continuarà..." (1996) {(1999-01-16)}  (as Ella Baila Sola)  [Herself]
+			"Corazón, corazón" (1993) {(1996-11-02)}  (as Ella Baila Sola)  [Herself]
+			"De domingo a domingo" (1997) {(1997-12-14)}  (as Ella Baila Sola)  [Herself]
+			"El séptimo de caballería" (1998) {(1998-09-14)}  (as Ella Baila Sola)  [Herself]
+			"Furor" (1998/I) {(1998-12-19)}  (as Ella Baila Sola)  [Herself]
+			"Hoy es posible" (1997) {(1997-04-13)}  (as Ella Baila Sola)  [Herself]
+			"Hoy es posible" (1997) {(1997-07-01)}  (as Ella Baila Sola)  [Herself]
+			"La noche abierta" (1997) {(1998-12-01)}  (as Ella Baila Sola)  [Herself]
+			"La noche abierta" (1997) {(2001-02-22)}  (as Ella Baila Sola)  [Herself]
+			"La tele de tu vida" (2007) {(#1.3)}  (as Ella Baila Sola) (archive footage)  [Herself]
+			"La tierra de las 1000 músicas" (2005) {La balada (#1.4)}  (archive footage)  [Herself]
+			"Loops!" (2005) {(2007-10-10)}  (as Ella Baila Sola) (archive footage)  [Herself]
+			"Música sí" (1997) {(1997-12-13)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(1998-10-17)}  [Herself]
+			"Música sí" (1997) {(1999-04-03)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(1999-05-29)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(1999-07-10)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(1999-09-05)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(2000-11-18)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(2001-01-13)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(2001-02-10)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(2001-03-10)}  (as Ella Baila Sola)  [Herself]
+			"Música sí" (1997) {(2001-09-08)}  (as Ella Baila Sola)  [Herself]
+			"Risas y estrellas" (1997) {(1999-01-16)}  (as Ella Baila Sola)  [Himself]
+			"Waku waku" (1989/I) {(1999-05-09)}  [Herself]
+			"Yo quisiera" (2015) {El primer concierto (#1.3)}
+
