@@ -12,6 +12,6 @@ public class IMDBActorsGraph extends IMDBGraph{
 	}
 	
 	public Node getNodeByName (String name){
-		return null;
+		return actormap.get(name);
 	}
 }

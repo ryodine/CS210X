@@ -47,6 +47,7 @@ public class GraphPartialTester {
 	 */
 	public void testSpecificMovie () {
 		testFindNode(moviesGraph, "Echoes (2010/III)");
+		assertEquals("Echoes (2010/III)", moviesGraph.getNodeByName("Echoes (2010/III)").getName());
 	}
 
 	@Test
@@ -55,6 +56,7 @@ public class GraphPartialTester {
 	 */
 	public void testSpecificActress () {
 		testFindNode(actorsGraph, "2 Shoes");
+		assertEquals("2 Shoes", actorsGraph.getNodeByName("2 Shoes").getName());
 	}
 
 	/**
@@ -65,6 +67,7 @@ public class GraphPartialTester {
 	private static void testFindNode (Graph graph, String name) {
 		final Collection<? extends Node> nodes = graph.getNodes();
 		boolean found = false;
+
 		for (Node node : nodes) {
 			if (node.getName().trim().equals(name)) {
 				found = true;
