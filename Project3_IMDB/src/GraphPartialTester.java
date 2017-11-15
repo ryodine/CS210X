@@ -27,8 +27,8 @@ public class GraphPartialTester {
 	 * Instantiates the actors and movies graphs
 	 */
 	public void setUp () throws IOException {
-		actorsGraph = new IMDBActorsGraph("actors_test.list", "actresses_test.list");
-		moviesGraph = new IMDBMoviesGraph("actors_test.list", "actresses_test.list");
+		actorsGraph = new IMDBActorsGraph("TestActor2.txt", "testActresses.txt");
+		moviesGraph = new IMDBMoviesGraph("TestActor2.txt", "testActresses.txt");
 		searchEngine = new GraphSearchEngineImpl();
 	}
 	
@@ -46,7 +46,8 @@ public class GraphPartialTester {
 	 * Verifies that a specific movie has been parsed.
 	 */
 	public void testSpecificMovie () {
-		testFindNode(moviesGraph, "Movie1 (2001)");
+		testFindNode(moviesGraph, "Echoes (2010/III)");
+		assertEquals("Echoes (2010/III)", moviesGraph.getNodeByName("Echoes (2010/III)").getName());
 	}
 
 	@Test
@@ -54,7 +55,8 @@ public class GraphPartialTester {
 	 * Verifies that a specific actress has been parsed.
 	 */
 	public void testSpecificActress () {
-		testFindNode(actorsGraph, "Actress2");
+		testFindNode(actorsGraph, "2 Shoes");
+		assertEquals("2 Shoes", actorsGraph.getNodeByName("2 Shoes").getName());
 	}
 
 	/**
@@ -65,6 +67,7 @@ public class GraphPartialTester {
 	private static void testFindNode (Graph graph, String name) {
 		final Collection<? extends Node> nodes = graph.getNodes();
 		boolean found = false;
+
 		for (Node node : nodes) {
 			if (node.getName().trim().equals(name)) {
 				found = true;
