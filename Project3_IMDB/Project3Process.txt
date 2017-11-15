@@ -1,0 +1,115 @@
+
+1. Superclass abstract IMDBNode implements Node
+-- Field: 
+-- String name;
+
+-- Behavior:
+-- getName()
+-- getneighbors() -- abstract method -- maybe don't need to declare
+
+2. Class ActorsNode extends IMDBNode 
+-- Field:
+-- ArrayList<MoviesNode> neighbors;
+
+-- Constructor
+
+-- ArrayList<MoviesNode> getNeighbors()
+** Add more methods 
+
+3. Class MoviesNode extends IMDBNode 
+-- Field: 
+-- ArrayList<ActorsNode> neighbors;
+
+-- Constructor
+
+-- ArrayList<ActorsNode> getNeighbors()
+** Add more methods
+
+4. Create an IMDBGraph class:
+-- Fields:
+-- ArrayList<ActorsNode> actors;
+-- ArrayList<MoviesNode> movies;
+-- HashMap<String, ActorsNode> mapActors; -- where String here is the actor's name
+-- HashMap<String, MoviesNode> mapMovies; -- where String here is the movie's name
+
+-- Constructor:
+-- Do the parsing part here !!!  (should be fast and simple)
+-- Create a common graph!!!
+** May add more methods
+
+-- Advice for parsing from professor: 
+1. Make a smaller test set (e.g., 10,000 lines of each actors/actresses file) to work with! 
+Don't torture yourself with the entire 30M lines of IMDB until your code is actually working.
+
+2. Here is the gist of my parsing code's entire logic:
+
+For each line:
+
+  - If the first tab is not at the beginning of the line, then we have a new actor.
+
+  - If the line contains “(TV)” or a quotation mark (“\””), then it’s a TV show or TV movie -- skip
+
+  - Parse the movie title: everything *after* the last tab and *up through* the “)” character.
+
+5. Create an IMDBActorsGraph class extends IMDBGraph 
+
+-- implements getNodes (return type Arraylist<ActorsNode>)
+-- implements getNodeByName  (???: should it only return Actor too?)
+
+6. Create an IMDBMoviesGraph class extends IMDBGraph 
+
+-- implements getNodes (return type Arraylist<MoviesNode>)
+-- implements getNodeByName (???: should it only return Movies too?)
+
+7. Create a class called GraphSearchEngineImpl implements GraphSearchEngine
+
+-- implement method findShortestPath (return type List<Node>)
+-- Specifications: first element in the list is Node s
+		   last element in the list is Node t
+		   whatever Node connects them is in the middle
+
+-- If no shortest path exist, return null.
+-- Important!!! 
+-- Make sure that your GraphSearchEngineImpl is not "tied" to the IMDB data in any way
+-- the search engine should be useful for any graph of Node objects.
+
+Pseudocode of BFS only (NEED TO FIND A WAWY TO DO SHORTEST PATH)
+
+List bfs (Node s) {
+ 	List visitedNodes;
+ 	Queue nodesToVisit;
+
+ 	nodesToVisit.enqueue(s);
+
+ 	while (nodesToVisit.size() > 0) {
+ 		n = nodesToVisit.dequeue();
+ 		visitedNodes.add(n);
+
+ 		for each neighbor n' of n:
+ 			if (nodesToVisit doesn’t already contain n'
+ 			&& we have not yet visited n'):
+ 				nodesToVisit.enqueue(n');
+ 	}
+ 	return visitedNodes;
+}
+
+-- How to do shortest path? BACKTRACKING!!!
+-- Use HashMap to keep track of its descendants. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

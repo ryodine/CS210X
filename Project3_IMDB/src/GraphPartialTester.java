@@ -31,7 +31,7 @@ public class GraphPartialTester {
 		moviesGraph = new IMDBMoviesGraph("actors_test.list", "actresses_test.list");
 		searchEngine = new GraphSearchEngineImpl();
 	}
-
+	
 	@Test
 	/**
 	 * Just verifies that the graphs could be instantiated without crashing.
