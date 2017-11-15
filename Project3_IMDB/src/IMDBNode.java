@@ -9,4 +9,6 @@ public abstract class IMDBNode implements Node{
 	public String getName(){
 		return this.name;
 	}
+
+	public String toString() { return this.name; }
 }

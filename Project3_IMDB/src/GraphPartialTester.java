@@ -16,8 +16,8 @@ public class GraphPartialTester {
 	 * Verifies that there is no shortest path between a specific and actor and actress.
 	 */
 	public void findShortestPath () {
-		final Node actor1 = actorsGraph.getNodeByName("Actor1");
-		final Node actress2 = actorsGraph.getNodeByName("Actress2");
+		final Node actor1 = actorsGraph.getNodeByName("ab");
+		final Node actress2 = actorsGraph.getNodeByName("qq");
 		final List<Node> shortestPath = searchEngine.findShortestPath(actor1, actress2);
 		assertNull(shortestPath);  // there is no path between these people
 	}
@@ -27,9 +27,12 @@ public class GraphPartialTester {
 	 * Instantiates the actors and movies graphs
 	 */
 	public void setUp () throws IOException {
-		actorsGraph = new IMDBActorsGraph("TestActor2.txt", "testActresses.txt");
-		moviesGraph = new IMDBMoviesGraph("TestActor2.txt", "testActresses.txt");
+		//actorsGraph = new IMDBActorsGraph("TestActor2.txt", "testActresses.txt");
+		//moviesGraph = new IMDBMoviesGraph("TestActor2.txt", "testActresses.txt");
+		actorsGraph = new IMDBActorsGraph("testActor.txt", "testActresses.txt");
+		moviesGraph = new IMDBMoviesGraph("testActor.txt", "testActresses.txt");
 		searchEngine = new GraphSearchEngineImpl();
+
 	}
 	
 	@Test
