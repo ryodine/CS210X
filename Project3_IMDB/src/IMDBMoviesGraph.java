@@ -8,7 +8,7 @@ public class IMDBMoviesGraph extends IMDBGraph{
 	}
 	
 	public Collection<? extends Node> getNodes (){
-		return movies;
+		return moviemap.values();
 	}
 	
 	public Node getNodeByName (String name){

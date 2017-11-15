@@ -11,10 +11,8 @@ import java.util.Scanner;
  *
  */
 public abstract class IMDBGraph implements Graph {
-    ArrayList<ActorsNode> actors = new ArrayList<>();
-    ArrayList<MoviesNode> movies = new ArrayList<>();
-
-    private HashMap<String, MoviesNode> moviemap = new HashMap<>();
+    HashMap<String, MoviesNode> moviemap = new HashMap<>();
+    HashMap<String, ActorsNode> actormap = new HashMap<>();
 
 	public IMDBGraph(String actorFileName, String actressFileName) {
         parse(actorFileName);
@@ -49,7 +47,7 @@ public abstract class IMDBGraph implements Graph {
                         //System.out.println("New actor: " + name);
                         actor = new ActorsNode(name);
 
-                        actors.add(actor);
+                        actormap.put(name, actor);
 
                         // this is the movie
                         String movie = newLine.substring(tabIndex,newLine.indexOf(")") + 1);

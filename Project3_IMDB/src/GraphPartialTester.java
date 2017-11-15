@@ -54,7 +54,7 @@ public class GraphPartialTester {
 	 * Verifies that a specific actress has been parsed.
 	 */
 	public void testSpecificActress () {
-		testFindNode(actorsGraph, "A, Isabelle");
+		testFindNode(actorsGraph, "2 Shoes");
 	}
 
 	/**
@@ -66,7 +66,6 @@ public class GraphPartialTester {
 		final Collection<? extends Node> nodes = graph.getNodes();
 		boolean found = false;
 		for (Node node : nodes) {
-			System.out.println(node.getName().trim());
 			if (node.getName().trim().equals(name)) {
 				found = true;
 			}
