@@ -6,7 +6,7 @@ public class GraphSearchEngineImpl implements GraphSearchEngine{
     HashMap<Node, LinkedList<Node>> paths = new HashMap<>();
 
     /**
-     * A Dynamic programing breadth first search approach to finding the shortest path
+     * A Dynamic programming breadth first search approach to finding the shortest path
      *
      * @param s the start node.
      * @param t the target node.
