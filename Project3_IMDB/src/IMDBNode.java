@@ -1,4 +1,7 @@
 
+/**
+ * Superclass for ActorsNode and MoviesNode
+ */
 public abstract class IMDBNode implements Node{
 	private String name;
 
@@ -8,7 +11,6 @@ public abstract class IMDBNode implements Node{
 	}
 
 	/**
-	 *
 	 * @return This IMDBNode's name
 	 */
 	public String getName(){

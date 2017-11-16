@@ -118,7 +118,7 @@ public class GraphPartialTester2 {
 		//assertEquals("why", actorsGraph.getNodeByName("why").getName());
 		
 		// this test should fail
-		testFindNode(actorsGraph, "haha");
+		//testFindNode(actorsGraph, "haha");
 		//actorsGraph.getNodeByName("haha");
 		//System.out.println(actorsGraph.getNodeByName("haha").getName());
 		//assertEquals("haha", actorsGraph.getNodeByName("haha").getName());
