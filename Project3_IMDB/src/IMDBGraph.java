@@ -1,3 +1,4 @@
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,9 +22,9 @@ public abstract class IMDBGraph implements Graph {
     }
 
     private void parse(String filename) throws IOException{
-
         Scanner file = new Scanner(new File(filename), "ISO-8859-1");
         ActorsNode actor = null;
+        
         while (file.hasNextLine()){
             String newLine = file.nextLine();
             int tabIndex2 = newLine.indexOf("\t");
@@ -34,16 +35,51 @@ public abstract class IMDBGraph implements Graph {
                     }
                     // skip this
                 }
+                
                 if (newLine.trim().isEmpty()){
                     continue;
                     // skip this
                 }
+                
                 if (tabIndex2 != 0) {
+                	
+                	
+                	// Add more code to eliminate actors without any movies 
+                    // 
+                	if (actor != null){
+                		ArrayList<MoviesNode> a = actor.getNeighbors();
+                		
+                		if (actor.getNeighbors().size() == 0){
+                        	actormap.remove(actor.getName());
+                        }
+                		/*
+                		for (int i = 0; i < a.size(); i++){
+                    		System.out.println(a.get(i).getName());
+                    	}
+                    	*/
+                	}
+                	
+                	/*
+                    
+                    
+                    
+                	
+                    */
+                    
+                	
+                    
+                    // End of added code
+                    
+                	
+                	
                     // this is the new actor
-                    //System.out.println();
                     int tabIndex = newLine.indexOf("\t");
                     String name = newLine.substring(0,tabIndex);
                     //System.out.println("New actor: " + name);
+                    
+                 
+                    
+                    
                     actor = new ActorsNode(name);
 
                     actormap.put(name, actor);
