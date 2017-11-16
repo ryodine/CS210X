@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,95 +20,51 @@ public abstract class IMDBGraph implements Graph {
         parse(actressFileName);
     }
 
-    private void parse(String filename) throws IOException{
+    private void parse(String filename) throws IOException {
         Scanner file = new Scanner(new File(filename), "ISO-8859-1");
         ActorsNode actor = null;
         
         while (file.hasNextLine()){
             String newLine = file.nextLine();
             int tabIndex2 = newLine.indexOf("\t");
-            if (tabIndex2 >= 0 && newLine.contains("(") && newLine.contains(")")) {
-                if (newLine.contains("(TV)") || newLine.contains("\"")){
-                    if (tabIndex2 == 0) {
-                        continue;
-                    }
-                    // skip this
-                }
-                
-                if (newLine.trim().isEmpty()){
-                    continue;
-                    // skip this
-                }
-                
-                if (tabIndex2 != 0) {
-                	
-                	
-                	// Add more code to eliminate actors without any movies 
-                    // 
-                	if (actor != null){
-                		ArrayList<MoviesNode> a = actor.getNeighbors();
-                		
-                		if (actor.getNeighbors().size() == 0){
-                        	actormap.remove(actor.getName());
-                        }
-                		/*
-                		for (int i = 0; i < a.size(); i++){
-                    		System.out.println(a.get(i).getName());
-                    	}
-                    	*/
-                	}
-                	
-                	/*
-                    
-                    
-                    
-                	
-                    */
-                    
-                	
-                    
-                    // End of added code
-                    
-                	
-                	
-                    // this is the new actor
-                    int tabIndex = newLine.indexOf("\t");
-                    String name = newLine.substring(0,tabIndex);
-                    //System.out.println("New actor: " + name);
-                    
-                 
-                    
-                    
-                    actor = new ActorsNode(name);
+            
+            if (tabIndex2 >= 0 && newLine.contains("(") && newLine.contains(")") && !newLine.trim().isEmpty()){
+            	if (tabIndex2 > 0){
+            		String name = newLine.substring(0, tabIndex2);
+            		
+            		removeTVActor (actor);
+            		
+            		actor = new ActorsNode(name);
+            		System.out.println(actor.getName());
+            		actormap.put(name, actor);	
+            		
+            		int index = newLine.indexOf(")") + 1;
 
-                    actormap.put(name, actor);
-
-                    int index = newLine.indexOf(")") + 1;
-
-                    while (index < tabIndex) {
-                        index = newLine.indexOf(")", index - 1) + 1;
-                    }
-                    // this is the movie
-                    //System.out.println(newLine);
-                    //System.out.println("ti:" + tabIndex);
-                    //System.out.println(index);
-                    String movie = newLine.substring(tabIndex,index);
-                    if (newLine.contains("(TV)") || newLine.contains("\"")) {
-                        continue;
-                    } else {
-                        movie = movie.replaceAll("\t", "");
-                        //System.out.println(/*"Movie: " + */movie);
-                        movieHelperMethod(movie, actor);
-                    }
-                }
-                else {
-                    // no new actor, just a movie
-                    String newMovie = newLine.substring(0,newLine.indexOf(")") + 1);
+                  	while (index < tabIndex2) {
+                       		 index = newLine.indexOf(")", index - 1) + 1;
+                   	}
+            		
+            		String afterName = newLine.substring(tabIndex2).replaceAll(" ", "");
+            		if (newLine.contains("(TV)") || afterName.contains("\"")){
+            			continue;
+            		}
+            		else {
+            			String movie = newLine.substring(tabIndex2,index);
+        				movie = movie.replaceAll("\t", "");
+        				movieHelperMethod(movie, actor);
+            		}
+            	}
+            	
+            	else {
+            		if (newLine.contains("(TV)") || newLine.contains("\"")) {
+            			continue;
+            		}
+            		String newMovie = newLine.substring(0,newLine.indexOf(")") + 1);
                     newMovie = newMovie.replaceAll("\t", "");
-                    //System.out.println(/*"Movie: " + */newMovie);
                     movieHelperMethod(newMovie, actor);
-                }
+            	}
             }
+            removeTVActor (actor);
         }
     }
 
@@ -124,6 +79,15 @@ public abstract class IMDBGraph implements Graph {
 
         movienode.addActors(actor);
         actor.addMovies(movienode);
+    }
+    
+    private void removeTVActor (ActorsNode actor) {
+    	if (actor != null){
+    		ArrayList<MoviesNode> a = actor.getNeighbors();
+    		if (actor.getNeighbors().size() == 0) {
+            	actormap.remove(actor.getName());
+            }
+    	}
     }
 
 }

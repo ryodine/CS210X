@@ -105,7 +105,7 @@ public class GraphPartialTester2 {
 		System.out.println(actorsGraph.getNodeByName("v").getName());
 		assertEquals("v", actorsGraph.getNodeByName("v").getName());
 		
-		// This test shows that if the line contains "", then it automatically kick out the whole line
+		// This test shows that if the line contains "", then it automatically kick out the whole line -- bug fixed
 		//testFindNode(actorsGraph, "\"t\"");
 		//actorsGraph.getNodeByName("\"t\"");
 		//System.out.println(actorsGraph.getNodeByName("\"t\"").getName());
@@ -117,6 +117,7 @@ public class GraphPartialTester2 {
 		//System.out.println(actorsGraph.getNodeByName("why").getName());
 		//assertEquals("why", actorsGraph.getNodeByName("why").getName());
 		
+		// this test should fail
 		testFindNode(actorsGraph, "haha");
 		//actorsGraph.getNodeByName("haha");
 		//System.out.println(actorsGraph.getNodeByName("haha").getName());
