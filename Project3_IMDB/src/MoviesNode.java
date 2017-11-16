@@ -7,11 +7,19 @@ public class MoviesNode extends IMDBNode{
 		super(name);
 		this.neighbors = new ArrayList<ActorsNode>();
 	}
-	
+
+	/**
+	 *
+	 * @return this MovieNode's neighbors
+	 */
 	public ArrayList<ActorsNode> getNeighbors(){
 		return this.neighbors;
 	}
-	
+
+	/**
+	 * Adds an actor to this MovieNode's neighbors
+	 * @param actor ActorNode to add to this MovieNode
+	 */
 	public void addActors(ActorsNode actor){
 		this.neighbors.add(actor);
 	}
