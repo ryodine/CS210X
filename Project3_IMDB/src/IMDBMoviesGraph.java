@@ -8,7 +8,6 @@ public class IMDBMoviesGraph extends IMDBGraph{
 	}
 
 	/**
-	 *
 	 * @return a Collection of MovieNodes provided by the superclass IMDBGraph
 	 */
 	public Collection<? extends Node> getNodes (){
@@ -16,7 +15,6 @@ public class IMDBMoviesGraph extends IMDBGraph{
 	}
 
 	/**
-	 *
 	 * @param name the name of the requested Node
 	 * @return the MovieNode associated with that name
 	 */
