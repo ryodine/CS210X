@@ -46,7 +46,11 @@ public class ExperimentRunner {
 		System.out.println(N + "\t" + elapsed);
 
 
-		testSearch(2);
+		testGetMax(0);
+		testGetMax(1);
+		testGetMax(2);
+		testGetMax(3);
+		testGetMax(4);
 
 	}
 
@@ -86,51 +90,63 @@ public class ExperimentRunner {
 		}
 	}
 
-	public static void testGetMax(int ind) {
-		final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+    public static void testGetMax(int ind) {
+        final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+        final Random random = new Random();
 
-		startTest("getMax test on " + ind);
-		logLine("Size", "CPUTime");
+        int max = Integer.MIN_VALUE;
 
-		for(int n: Ns) {
-			Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
+        startTest("getMax test on " + ind);
+        logLine("Size", "CPUTime");
 
-			for (int i = 0; i < n; i++) {
-				c.add(new Integer(i));
-			}
+        for(int n: Ns) {
+            Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
 
-			final long start = CPUClock.getNumTicks();
-			c.contains(c.size() - 1);
-			final long end = CPUClock.getNumTicks();
-			final long elapsed = end - start;
+            for (int i = 0; i < n; i++) {
+                int randomint = random.nextInt(n);
+                if(randomint > max)
+                    max = randomint;
+                c.add(randomint);
+            }
 
-			logLine("" + n, new Long(elapsed).toString());
-		}
+            final long start = CPUClock.getNumTicks();
+            c.contains(max);
+            final long end = CPUClock.getNumTicks();
+            final long elapsed = end - start;
 
-	}
+            logLine("" + n, new Long(elapsed).toString());
+        }
 
-	public static void testGetMin(int ind) {
-		final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+    }
 
-		startTest("getMin test on " + ind);
-		logLine("Size", "CPUTime");
+    public static void testGetMin(int ind) {
+        final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+        final Random random = new Random();
 
-		for(int n: Ns) {
-			Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
+        int min = Integer.MAX_VALUE;
 
-			for (int i = 0; i < n; i++) {
-				c.add(new Integer(i));
-			}
+        startTest("getMin test on " + ind);
+        logLine("Size", "CPUTime");
 
-			final long start = CPUClock.getNumTicks();
-			c.contains(0);
-			final long end = CPUClock.getNumTicks();
-			final long elapsed = end - start;
+        for(int n: Ns) {
+            Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
 
-			logLine("" + n, new Long(elapsed).toString());
-		}
+            for (int i = 0; i < n; i++) {
+                int randomint = random.nextInt(n);
+                if(randomint < min)
+                    min = randomint;
+                c.add(randomint);
+            }
 
-	}
+            final long start = CPUClock.getNumTicks();
+            c.contains(min);
+            final long end = CPUClock.getNumTicks();
+            final long elapsed = end - start;
+
+            logLine("" + n, new Long(elapsed).toString());
+        }
+
+    }
 
 
 	public static void startTest(String name) {
