@@ -46,40 +46,43 @@ public class ExperimentRunner {
 		System.out.println(N + "\t" + elapsed);
 
 
-		testSearch(0);
+		testSearch(2);
 
 	}
 
 	public static void testSearch(int index) {
-		Collection210X<Integer> dataStructure = mysteryDataStructures[index];
 
-		final int TEST_SIZE = 50;
-		final int TEST_INCREMENT_LENGTH = 10;
-		final int AVERAGE_SIZE = 30;
+		final int TEST_SIZE = 500;
+		final int TEST_INCREMENT_LENGTH = 100;
+		final int AVERAGE_SIZE = 120;
 		final Random random = new Random();
 
-		ArrayList<Integer> orderedInput = new ArrayList<>();
-
 		startTest("Random Access Test on " + index);
-		logLine("index out of " + TEST_SIZE, "CPUTime");
+		logLine("length (N)", "CPUTime");
 
 
-		ArrayList<>
+		for (int i = 1; i <= TEST_SIZE; i++) {
+			final int N = i*TEST_INCREMENT_LENGTH;
 
-		//set up the test
-		for (int i = 0; i < TEST_SIZE; i++) {
-			final int rand = random.nextInt(TEST_SIZE);
-			orderedInput.add(rand);
-			dataStructure.add(rand);
-		}
+			long sum = 0;
+			Collection210X<Integer> dataStructure = mysteryDataStructures[index];
 
-		for (int i = 0; i < TEST_SIZE; i++) {
-			final long start = CPUClock.getNumTicks();
-			dataStructure.contains(orderedInput.get(i));
-			final long end = CPUClock.getNumTicks();
-			final long elapsed = end - start;
+			for (int j = 0; j < TEST_SIZE; j++) {
+				final int rand = random.nextInt(TEST_SIZE);
+				dataStructure.add(rand);
+			}
 
-			logLine(new Integer(i).toString(), new Long(elapsed).toString());
+			for (int j = 0; j < AVERAGE_SIZE; j++) {
+				final int rand = random.nextInt(N);
+				final long start = CPUClock.getNumTicks();
+				dataStructure.contains(rand);
+				final long end = CPUClock.getNumTicks();
+				final long elapsed = end - start;
+				sum+=elapsed;
+			}
+
+			logLine(new Integer(N).toString(), String.format("%2f",sum * 1.0 / AVERAGE_SIZE));
+
 		}
 	}
 
