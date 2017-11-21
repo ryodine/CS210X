@@ -8,7 +8,7 @@ public class ExperimentRunner {
 	private static final int NUM_DATA_STRUCTURES_TO_DEDUCE = 5;
 
 	public static void main (String[] args) {
-		final String cs210XTeamIDForProject4 = "YOUR_LOGIN_ID"; // TODO CHANGE THIS TO THE TEAM ID YOU USE TO SUBMIT YOUR PROJECT3 ON INSTRUCT-ASSIST.
+		final String cs210XTeamIDForProject4 = "rdjohnson";
 
 		// Fetch the collections whose type you must deduce.
 		// Note -- you are free to change the type parameter from Integer to whatever you want. In this
@@ -42,5 +42,34 @@ public class ExperimentRunner {
 		// a collection of N data.
 		System.out.println("N\tT (contains(o))");
 		System.out.println(N + "\t" + elapsed);
+
+	}
+
+	public void testRandomAccess() {
+		startTest("Random Access Test");
+		logLine("index out of 1000", "CPUTime");
+
+		//for (....) {
+		//	logLine(i, CPUTime);
+		//}
+	}
+
+	public void testSearch() {
+
+	}
+
+	public static void startTest(String name) {
+		System.out.println("!!!!! Starting test: " + name);
+	}
+
+	public static void logLine(String ... lines) {
+		for (int i = 0; i < lines.length; i++) {
+			System.out.print(lines[i]);
+			if (i != lines.length - 1) {
+				System.out.print(", ");
+			} else {
+				System.out.println();
+			}
+		}
 	}
 }
