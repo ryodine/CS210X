@@ -7,6 +7,9 @@ import com.cs210x.*;
 public class ExperimentRunner {
 	private static final int NUM_DATA_STRUCTURES_TO_DEDUCE = 5;
 
+	@SuppressWarnings("unchecked")
+	public final static Collection210X<Integer>[] mysteryDataStructures = (Collection210X<Integer>[]) new Collection210X[NUM_DATA_STRUCTURES_TO_DEDUCE];
+
 	public static void main (String[] args) {
 		final String cs210XTeamIDForProject4 = "rdjohnson";
 
@@ -15,8 +18,7 @@ public class ExperimentRunner {
 		// case, make sure to replace (over the next 4 lines of code) Integer with whatever class you prefer.
 		// In addition, you'll need to pass the method getMysteryDataStructure a "sample" (an instance) of 
 		// the class you want the collection to store.
-		@SuppressWarnings("unchecked")
-		final Collection210X<Integer>[] mysteryDataStructures = (Collection210X<Integer>[]) new Collection210X[NUM_DATA_STRUCTURES_TO_DEDUCE];
+
 		for (int i = 0; i < NUM_DATA_STRUCTURES_TO_DEDUCE; i++) {
 			mysteryDataStructures[i] = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), i, new Integer(0));
 		}
@@ -43,20 +45,44 @@ public class ExperimentRunner {
 		System.out.println("N\tT (contains(o))");
 		System.out.println(N + "\t" + elapsed);
 
-	}
 
-	public void testRandomAccess() {
-		startTest("Random Access Test");
-		logLine("index out of 1000", "CPUTime");
-
-		//for (....) {
-		//	logLine(i, CPUTime);
-		//}
-	}
-
-	public void testSearch() {
+		testSearch(0);
 
 	}
+
+	public static void testSearch(int index) {
+		Collection210X<Integer> dataStructure = mysteryDataStructures[index];
+
+		final int TEST_SIZE = 50;
+		final int TEST_INCREMENT_LENGTH = 10;
+		final int AVERAGE_SIZE = 30;
+		final Random random = new Random();
+
+		ArrayList<Integer> orderedInput = new ArrayList<>();
+
+		startTest("Random Access Test on " + index);
+		logLine("index out of " + TEST_SIZE, "CPUTime");
+
+
+		ArrayList<>
+
+		//set up the test
+		for (int i = 0; i < TEST_SIZE; i++) {
+			final int rand = random.nextInt(TEST_SIZE);
+			orderedInput.add(rand);
+			dataStructure.add(rand);
+		}
+
+		for (int i = 0; i < TEST_SIZE; i++) {
+			final long start = CPUClock.getNumTicks();
+			dataStructure.contains(orderedInput.get(i));
+			final long end = CPUClock.getNumTicks();
+			final long elapsed = end - start;
+
+			logLine(new Integer(i).toString(), new Long(elapsed).toString());
+		}
+	}
+
 
 	public static void startTest(String name) {
 		System.out.println("!!!!! Starting test: " + name);
@@ -66,7 +92,7 @@ public class ExperimentRunner {
 		for (int i = 0; i < lines.length; i++) {
 			System.out.print(lines[i]);
 			if (i != lines.length - 1) {
-				System.out.print(", ");
+				System.out.print("\t");
 			} else {
 				System.out.println();
 			}
