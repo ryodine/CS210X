@@ -53,9 +53,12 @@ public class ExperimentRunner {
 		testGetMax(4);
 		*/
 		
+		
 		for (int i = 0; i < 5; i++) {
-			testRemoveMax(i);
+			testAddMin(i);
+			
 		}
+		
 	}
 
 	public static void testSearch(int index) {
@@ -191,8 +194,105 @@ public class ExperimentRunner {
 			}
 		}
 	}
+    
+    public static void testAddRandom (int index) {
+    	startTest("Random Access Test on " + index);
+		logLine("length (N)", "CPUTime");
+		
+		Collection210X<Integer> dataStructure = mysteryDataStructures[index];
+		dataStructure.clear();
+		
+		for (int n = 0; n <= 10000; n += 50) {
+			double sum = 0;
+			for (int count = 0; count < 200; count ++) {
+				dataStructure.clear();
+				
+				for (int i = 0; i < n; i++) {
+					int random = (int) (Math.random() * 20000);
+					dataStructure.add(random);
+				}
+				
+				int random = (int) (Math.random() * 20000);
+				final long start = CPUClock.getNumTicks();
+				dataStructure.add(random);
+				final long end = CPUClock.getNumTicks();
+				final long elapsed = end - start;
+				
+				sum += elapsed;
+				
+				if (count == 199) {
+					double average = sum * 1.0 / 50;
+					logLine(new Integer(n).toString(), new Double(average).toString());
+				}
+			}
+		}
+    }
+    
+    public static void testAddMax (int index) {
+    	startTest("Random Access Test on " + index);
+		logLine("length (N)", "CPUTime");
+		
+		Collection210X<Integer> dataStructure = mysteryDataStructures[index];
+		dataStructure.clear();
+		
+		for (int n = 0; n <= 10000; n += 50) {
+			double sum = 0;
+			for (int count = 0; count < 200; count ++) {
+				dataStructure.clear();
+				
+				for (int i = 0; i < n; i++) {
+					int random = (int) (Math.random() * 20000);
+					dataStructure.add(random);
+				}
+				int max = 25000;
+				
+				final long start = CPUClock.getNumTicks();
+				dataStructure.add(max);
+				final long end = CPUClock.getNumTicks();
+				final long elapsed = end - start;
+				
+				sum += elapsed;
+				
+				if (count == 199) {
+					double average = sum * 1.0 / 50;
+					logLine(new Integer(n).toString(), new Double(average).toString());
+				}
+			}
+		}
+    }
 
-
+    public static void testAddMin (int index) {
+    	startTest("Random Access Test on " + index);
+		logLine("length (N)", "CPUTime");
+		
+		Collection210X<Integer> dataStructure = mysteryDataStructures[index];
+		dataStructure.clear();
+		
+		for (int n = 0; n <= 10000; n += 50) {
+			double sum = 0;
+			for (int count = 0; count < 200; count ++) {
+				dataStructure.clear();
+				
+				for (int i = 0; i < n; i++) {
+					int random = 1000 + (int) (Math.random() * 20000);
+					dataStructure.add(random);
+				}
+				int min = 5;
+				
+				final long start = CPUClock.getNumTicks();
+				dataStructure.add(min);
+				final long end = CPUClock.getNumTicks();
+				final long elapsed = end - start;
+				
+				sum += elapsed;
+				
+				if (count == 199) {
+					double average = sum * 1.0 / 50;
+					logLine(new Integer(n).toString(), new Double(average).toString());
+				}
+			}
+		}
+    }
 	public static void startTest(String name) {
 		System.out.println("!!!!! Starting test: " + name);
 	}
