@@ -42,8 +42,8 @@ public class ExperimentRunner {
 		// Write a table of numbers (for different N -- here, we are just showing one value for simplicity) showing
 		// the relationship between N and the time-cost associated with searching (with the contains method) through
 		// a collection of N data.
-		System.out.println("N\tT (contains(o))");
-		System.out.println(N + "\t" + elapsed);
+		//System.out.println("N\tT (contains(o))");
+		//System.out.println(N + "\t" + elapsed);
 
 
 		testSearch(2);
