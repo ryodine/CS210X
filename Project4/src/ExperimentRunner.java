@@ -45,20 +45,8 @@ public class ExperimentRunner {
 		//System.out.println("N\tT (contains(o))");
 		//System.out.println(N + "\t" + elapsed);
 
-		/*
-		testGetMax(0);
-		testGetMax(1);
-		testGetMax(2);
-		testGetMax(3);
-		testGetMax(4);
-		*/
-		
-		
-		for (int i = 0; i < 5; i++) {
-			testAddMin(i);
-			
-		}
-		
+		testGetMin(4);
+
 	}
 
 	public static void testSearch(int index) {
@@ -98,8 +86,11 @@ public class ExperimentRunner {
 	}
 
     public static void testGetMax(int ind) {
-        final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+        int[] Ns = new int[500];
         final Random random = new Random();
+
+        for(int i = 0; i < Ns.length; i++)
+            Ns[i] = 5 * i;
 
         int max = Integer.MIN_VALUE;
 
@@ -107,28 +98,36 @@ public class ExperimentRunner {
         logLine("Size", "CPUTime");
 
         for(int n: Ns) {
-            Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
 
-            for (int i = 0; i < n; i++) {
-                int randomint = random.nextInt(n);
-                if(randomint > max)
-                    max = randomint;
-                c.add(randomint);
+            long sum = 0;
+            for (int j = 0; j < 100; j++) {
+                Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
+
+                for (int i = 0; i < n; i++) {
+                    int randomint = random.nextInt(10000);
+                    if (randomint > max)
+                        max = randomint;
+                    c.add(randomint);
+                }
+
+                final long start = CPUClock.getNumTicks();
+                c.contains(max);
+                final long end = CPUClock.getNumTicks();
+                final long elapsed = end - start;
+                sum += elapsed;
             }
 
-            final long start = CPUClock.getNumTicks();
-            c.contains(max);
-            final long end = CPUClock.getNumTicks();
-            final long elapsed = end - start;
-
-            logLine("" + n, new Long(elapsed).toString());
+            logLine("" + n, Long.toString(sum/100));
         }
 
     }
 
     public static void testGetMin(int ind) {
-        final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+        int[] Ns = new int[500];
         final Random random = new Random();
+
+        for(int i = 0; i < Ns.length; i++)
+            Ns[i] = 5 * i;
 
         int min = Integer.MAX_VALUE;
 
@@ -136,21 +135,26 @@ public class ExperimentRunner {
         logLine("Size", "CPUTime");
 
         for(int n: Ns) {
-            Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
 
-            for (int i = 0; i < n; i++) {
-                int randomint = random.nextInt(n);
-                if(randomint < min)
-                    min = randomint;
-                c.add(randomint);
+            long sum = 0;
+
+            for (int j = 0; j < 100; j++) {
+                Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
+                for (int i = 0; i < n; i++) {
+                    int randomint = random.nextInt(10000);
+                    if (randomint < min)
+                        min = randomint;
+                    c.add(randomint);
+                }
+
+                final long start = CPUClock.getNumTicks();
+                c.contains(min);
+                final long end = CPUClock.getNumTicks();
+                final long elapsed = end - start;
+                sum += elapsed;
             }
 
-            final long start = CPUClock.getNumTicks();
-            c.contains(min);
-            final long end = CPUClock.getNumTicks();
-            final long elapsed = end - start;
-
-            logLine("" + n, new Long(elapsed).toString());
+            logLine("" + n, Long.toString(sum/100));
         }
 
     }
