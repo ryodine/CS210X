@@ -9,9 +9,9 @@ public class ExperimentRunner {
 
 	@SuppressWarnings("unchecked")
 	public final static Collection210X<Integer>[] mysteryDataStructures = (Collection210X<Integer>[]) new Collection210X[NUM_DATA_STRUCTURES_TO_DEDUCE];
+	public final static String cs210XTeamIDForProject4 = "rdjohnson";
 
 	public static void main (String[] args) {
-		final String cs210XTeamIDForProject4 = "rdjohnson";
 
 		// Fetch the collections whose type you must deduce.
 		// Note -- you are free to change the type parameter from Integer to whatever you want. In this
@@ -81,6 +81,52 @@ public class ExperimentRunner {
 
 			logLine(new Integer(i).toString(), new Long(elapsed).toString());
 		}
+	}
+
+	public static void testGetMax(int ind) {
+		final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+
+		startTest("getMax test on " + ind);
+		logLine("Size", "CPUTime");
+
+		for(int n: Ns) {
+			Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
+
+			for (int i = 0; i < n; i++) {
+				c.add(new Integer(i));
+			}
+
+			final long start = CPUClock.getNumTicks();
+			c.contains(c.size() - 1);
+			final long end = CPUClock.getNumTicks();
+			final long elapsed = end - start;
+
+			logLine("" + n, new Long(elapsed).toString());
+		}
+
+	}
+
+	public static void testGetMin(int ind) {
+		final int[] Ns = { 1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+
+		startTest("getMin test on " + ind);
+		logLine("Size", "CPUTime");
+
+		for(int n: Ns) {
+			Collection210X<Integer> c = MysteryDataStructure.getMysteryDataStructure(cs210XTeamIDForProject4.hashCode(), ind, new Integer(0));
+
+			for (int i = 0; i < n; i++) {
+				c.add(new Integer(i));
+			}
+
+			final long start = CPUClock.getNumTicks();
+			c.contains(0);
+			final long end = CPUClock.getNumTicks();
+			final long elapsed = end - start;
+
+			logLine("" + n, new Long(elapsed).toString());
+		}
+
 	}
 
 
