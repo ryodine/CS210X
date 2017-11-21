@@ -45,13 +45,17 @@ public class ExperimentRunner {
 		//System.out.println("N\tT (contains(o))");
 		//System.out.println(N + "\t" + elapsed);
 
-
+		/*
 		testGetMax(0);
 		testGetMax(1);
 		testGetMax(2);
 		testGetMax(3);
 		testGetMax(4);
-
+		*/
+		
+		for (int i = 0; i < 5; i++) {
+			testRemoveMax(i);
+		}
 	}
 
 	public static void testSearch(int index) {
@@ -147,6 +151,46 @@ public class ExperimentRunner {
         }
 
     }
+    
+    
+    /**
+     * test the CPU time for the data structure chosen, given the index
+     * @param index: index of the data structure which we want to test
+     */
+    public static void testRemoveMax (int index) {
+    	startTest("Random Access Test on " + index);
+		logLine("length (N)", "CPUTime");
+		
+		Collection210X<Integer> dataStructure = mysteryDataStructures[index];
+		dataStructure.clear();
+		
+		for (int n = 50; n <= 10000; n += 50) {  // n varies from 50 to 10000
+			double sum = 0;
+			for (int count = 0; count < 100; count ++) { // average the elapsed time for n size
+															// for 100 times 
+				dataStructure.clear();
+				int max = 5000;
+				
+				for (int i = 0; i < n - 1; i++) {
+					int random = (int) (Math.random() * 4900);
+					dataStructure.add(random);
+				}
+				dataStructure.add(max);
+				
+				final long start = CPUClock.getNumTicks();
+				dataStructure.remove(max);
+				final long end = CPUClock.getNumTicks();
+				final long elapsed = end - start;
+				
+				sum += elapsed;
+				
+				if (count == 99) {
+					double average = sum * 1.0 / 50;
+					logLine(new Integer(n).toString(), new Double(average).toString());
+				}
+			}
+		}
+	}
 
 
 	public static void startTest(String name) {
