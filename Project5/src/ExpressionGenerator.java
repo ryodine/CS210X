@@ -24,16 +24,17 @@ public class ExpressionGenerator {
 
     public static String createExpression() {
         Double random = rng.nextDouble();
+        String rterm = rng.nextInt(10) + ((random > 0.5)? "x" : "");
         if (random < 0.1) {
-            return "x";
+            return rterm;
         } else if (random > 0.85) {
-            return "x + " + createExpression();
+            return rterm + " + " + createExpression();
         } else if (random > 0.7) {
-            return "x * " + createExpression();
+            return rterm + " * " + createExpression();
         } else if (random > 0.55) {
-            return createExpression() + " * x";
+            return createExpression() + " * " + rterm;
         } else if (random > 0.4) {
-            return createExpression() + " + x";
+            return createExpression() + " + " + rterm;
         } else {
             return "(" + createExpression() + ")";
         }
