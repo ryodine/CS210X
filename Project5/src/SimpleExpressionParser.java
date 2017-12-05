@@ -1,3 +1,4 @@
+import java.lang.reflect.Parameter;
 import java.util.function.Function;
 
 /**
@@ -38,14 +39,28 @@ public class SimpleExpressionParser implements ExpressionParser {
 
 
 	private static Expression parserHelper (String str, char operator, Function<String, Expression> parseFn1, Function<String, Expression> parseFn2) {
+		AbstractCompoundExpression expr;
+		switch (operator) {
+			case '*':
+				expr = new MultiplicativeExpression();
+				break;
+			case '+':
+				expr = new AdditiveExpression();
+				break;
+			default:
+				return null;
+		}
+
 		int idxOfOp = str.indexOf(operator);
+
 		while (idxOfOp >= 0) {
 			Expression resultFn1 = parseFn1.apply(str.substring(0, idxOfOp));
 			Expression resultFn2 = parseFn2.apply(str.substring(idxOfOp+1));
 			if (resultFn1 != null && resultFn2 != null) {
+				expr.addSubexpression(resultFn1);
+				expr.addSubexpression(resultFn2);
 
-				//Create a node of type operator
-				//Add children from resultFn1 and 2
+				return expr;
 			}
 
 			idxOfOp = str.indexOf('+', idxOfOp+1);
@@ -53,25 +68,39 @@ public class SimpleExpressionParser implements ExpressionParser {
 
 		//Alternate case
 		Expression altResult = parseFn2.apply(str);
-		if (altResult != null) {
-			return altResult;
-		}
-
-		return null;
+		return altResult;
 	}
 
+	//Addition
 	private static Expression parseE(String str) {
 		return parserHelper(str, '+', SimpleExpressionParser::parseE, SimpleExpressionParser::parseM);
 	}
 
+	//Multiplicative
 	private static Expression parseM(String str) {
 		return parserHelper(str, '*', SimpleExpressionParser::parseM, SimpleExpressionParser::parseX);
 	}
 
+	//Parens
 	private static Expression parseX(String str) {
-		return null;
+		if (str.substring(0,1).equals("(") && str.substring(str.length()-1, str.length()).equals(")")) {
+
+			Expression sub = parseE(str.substring(1, str.length()-1));
+
+			if (sub != null) {
+				// return a paren expression
+				ParentheticalExpression expr = new ParentheticalExpression();
+				expr.addSubexpression(sub);
+				return expr;
+			}
+		}
+
+		Expression altsub = parseL(str);
+
+		return altsub;
 	}
 
+	//Literal
 	private static Expression parseL(String str) {
 		if (isLetter(str) || isNumber(str)) {
 			return new LiteralExpression(str);
