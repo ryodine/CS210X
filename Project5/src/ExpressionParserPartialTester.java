@@ -83,7 +83,7 @@ public class ExpressionParserPartialTester {
 	 */
 	public void testException1 () throws ExpressionParseException {
 		final String expressionStr = "1+2+";
-		_parser.parse(expressionStr, false);
+		System.out.println(_parser.parse(expressionStr, false).convertToString(0));
 	}
 
 	@Test(expected = ExpressionParseException.class) 

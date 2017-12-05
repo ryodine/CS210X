@@ -40,7 +40,10 @@ public class AbstractCompoundExpression implements CompoundExpression {
 		for (int i = 0; i < indentLevel; i ++){
 			result += "\t";
 		}
-		result += this.name;
+		result += this.name + "\n";
+		for (Expression child : children) {
+			result += child.convertToString(indentLevel + 1);
+		}
 		return result;
 	}
 	@Override

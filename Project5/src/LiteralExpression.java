@@ -47,7 +47,7 @@ public class LiteralExpression implements Expression {
 		for (int i = 0; i < indentLevel; i ++){
 			result += "\t";
 		}
-		result += this.name;
+		result += this.name  + "\n";
 		return result;
 	}
 	

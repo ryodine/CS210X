@@ -37,15 +37,15 @@ public class SimpleExpressionParserClone implements ExpressionParser {
 	}
 
 	private Expression parseE(String str) {
-		
+		return null;
 	}
 	
 	private Expression parseM(String str) {
-		
+		return null;
 	}
 	
 	private Expression parseX(String str) {
-		
+		return null;
 	}
 	
 	private Expression parseL(String str) {
