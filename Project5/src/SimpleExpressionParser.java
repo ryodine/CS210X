@@ -1,8 +1,9 @@
+import java.util.function.Function;
+
 /**
- * Starter code to implement an ExpressionParser. Your parser methods should use the following grammar:
- * E := A | X
- * A := A+M | M
- * M := M*M | X
+ * Starter code to implement an ExpressionParser. Your parser methods should use the following grammar: (updated)
+ * E := E+M | m
+ * M := M*X | X
  * X := (E) | L
  * L := [0-9]+ | [a-z]
  */
@@ -32,6 +33,46 @@ public class SimpleExpressionParser implements ExpressionParser {
 		Expression expression;
 		
 		// TODO implement me
+		return null;
+	}
+
+
+	private static Expression parserHelper (String str, char operator, Function<String, Expression> parseFn1, Function<String, Expression> parseFn2) {
+		int idxOfOp = str.indexOf(operator);
+		while (idxOfOp >= 0) {
+			Expression resultFn1 = parseFn1.apply(str.substring(0, idxOfOp));
+			Expression resultFn2 = parseFn2.apply(str.substring(idxOfOp+1));
+			if (resultFn1 != null && resultFn2 != null) {
+
+				//Create a node of type operator
+				//Add children from resultFn1 and 2
+			}
+
+			idxOfOp = str.indexOf('+', idxOfOp+1);
+		}
+
+		//Alternate case
+		Expression altResult = parseFn2.apply(str);
+		if (altResult != null) {
+			return altResult;
+		}
+
+		return null;
+	}
+
+	private static Expression parseE(String str) {
+		return parserHelper(str, '+', SimpleExpressionParser::parseE, SimpleExpressionParser::parseM);
+	}
+
+	private static Expression parseM(String str) {
+		return parserHelper(str, '*', SimpleExpressionParser::parseM, SimpleExpressionParser::parseX);
+	}
+
+	private static Expression parseX(String str) {
+		return null;
+	}
+
+	private static Expression parseL(String str) {
 		return null;
 	}
 }
