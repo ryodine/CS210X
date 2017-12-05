@@ -31,10 +31,9 @@ public class SimpleExpressionParser implements ExpressionParser {
 	}
 	
 	protected Expression parseExpression (String str) {
-		Expression expression;
-		
-		// TODO implement me
-		return null;
+		Expression expr = parseE(str);
+
+		return expr;
 	}
 
 
@@ -83,7 +82,7 @@ public class SimpleExpressionParser implements ExpressionParser {
 
 	//Parens
 	private static Expression parseX(String str) {
-		if (str.substring(0,1).equals("(") && str.substring(str.length()-1, str.length()).equals(")")) {
+		if (str.length() >= 3 && str.substring(0,1).equals("(") && str.substring(str.length()-1, str.length()).equals(")")) {
 
 			Expression sub = parseE(str.substring(1, str.length()-1));
 
@@ -121,7 +120,7 @@ public class SimpleExpressionParser implements ExpressionParser {
 				return false;
 			}
 		}
-		return true;
+		return (str.length() > 0);
 	}
 	
 	private static boolean isNumber(String str){
@@ -135,6 +134,6 @@ public class SimpleExpressionParser implements ExpressionParser {
 				return false;
 			}
 		}
-		return true;
+		return (str.length() > 0);
 	}
 }
