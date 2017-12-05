@@ -25,10 +25,24 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	
 	@Override
 	public Expression deepCopy() {
-		// TODO Auto-generated method stub
-		return null;
+		AbstractCompoundExpression copy = new AbstractCompoundExpression();
+		copy.setName(this.name);
+		copy.setParent(null); //might change this later
+
+		for(Expression e: this.children) {
+			Expression ecopy = e.deepCopy();
+			ecopy.setParent(copy);
+			copy.children.add(ecopy);
+		}
+
+		return copy;
 	}
-	
+
+	// TODO delete this
+	public LinkedList<Expression> getChildren() {
+		return children;
+	}
+
 	@Override
 	public void flatten() {
 		// TODO Auto-generated method stub

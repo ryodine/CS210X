@@ -103,4 +103,29 @@ public class ExpressionParserPartialTester {
 		final String expressionStr = "()()";
 		_parser.parse(expressionStr, false);
 	}
+
+	@Test
+	/**
+	 * Verifies that the deep copy is not attached to the original copy
+	 */
+	public void testdeepCopy () {
+		AbstractCompoundExpression plus = new AbstractCompoundExpression();
+		plus.setName("+");
+		plus.setParent(null);
+		AbstractCompoundExpression a = new AbstractCompoundExpression();
+		a.setName("a");
+		a.setParent(plus);
+		plus.getChildren().add(a);
+		AbstractCompoundExpression b = new AbstractCompoundExpression();
+		b.setName("b");
+		b.setParent(plus);
+		plus.getChildren().add(b);
+		System.out.println(plus.convertToString(0));
+		AbstractCompoundExpression copy = (AbstractCompoundExpression) plus.deepCopy();
+		System.out.println(copy.convertToString(0));
+
+		assertEquals(copy, plus); //should error
+
+	}
+
 }
