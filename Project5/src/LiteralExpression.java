@@ -29,7 +29,6 @@ public class LiteralExpression implements Expression {
 
 	@Override
 	public Expression deepCopy() {
-		// TODO Auto-generated method stub
 		String newName = new String(this.name);
 		Expression copy = new LiteralExpression(newName);
 		return copy;
@@ -37,12 +36,12 @@ public class LiteralExpression implements Expression {
 
 	@Override
 	public void flatten() {
-		// TODO Auto-generated method stub
+		//Literals are not to be flattened!
+		return;
 	}
 
 	@Override
 	public String convertToString(int indentLevel) {
-		// TODO Auto-generated method stub
 		String result = "";
 		for (int i = 0; i < indentLevel; i ++){
 			result += "\t";

@@ -77,6 +77,16 @@ public class ExpressionParserPartialTester {
 		assertEquals(parseTreeStr, _parser.parse(expressionStr, false).convertToString(0).replace('*', '·'));
 	}
 
+	@Test
+	/**
+	 * Verifies that a specific expression is parsed into the correct parse tree.
+	 */
+	public void testExpressionAndFlatten3 () throws ExpressionParseException {
+		final String expressionStr = "3+4+5+6+7+8+9+10";
+		final String parseTreeStr = "+\n\t3\n\t4\n\t5\n\t6\n\t7\n\t8\n\t9\n\t10\n";
+		assertEquals(parseTreeStr, _parser.parse(expressionStr, false).convertToString(0).replace('*', '·'));
+	}
+
 	@Test(expected = ExpressionParseException.class) 
 	/**
 	 * Verifies that a specific expression is parsed into the correct parse tree.
@@ -120,11 +130,11 @@ public class ExpressionParserPartialTester {
 		b.setName("b");
 		b.setParent(plus);
 		plus.getChildren().add(b);
-		System.out.println(plus.convertToString(0));
 		AbstractCompoundExpression copy = (AbstractCompoundExpression) plus.deepCopy();
-		System.out.println(copy.convertToString(0));
+		a.setName("b");
 
-		assertEquals(copy, plus); //should error
+
+		assertNotEquals(copy, plus);
 
 	}
 
