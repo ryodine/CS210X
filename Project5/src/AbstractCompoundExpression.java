@@ -28,7 +28,7 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	public Expression deepCopy() {
 		AbstractCompoundExpression copy = new AbstractCompoundExpression();
 		copy.setName(this.name);
-		copy.setParent(null); //might change this later
+		copy.setParent(null); // might change this later in R2
 
 		for(Expression e: this.children) {
 			Expression ecopy = e.deepCopy();
@@ -39,8 +39,11 @@ public class AbstractCompoundExpression implements CompoundExpression {
 		return copy;
 	}
 
-	// TODO delete this
-	public LinkedList<Expression> getChildren() {
+	/**
+	 * Helper method for flatten() in SimpleCompoundExpression
+	 * @return a list of all subExpressions
+	 */
+	protected LinkedList<Expression> getChildren() {
 		return children;
 	}
 
@@ -59,6 +62,7 @@ public class AbstractCompoundExpression implements CompoundExpression {
 		}
 		return result;
 	}
+	
 	@Override
 	public void addSubexpression(Expression subexpression) {
 		this.children.add(subexpression);

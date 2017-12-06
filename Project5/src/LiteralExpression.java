@@ -1,18 +1,35 @@
-
+/**
+ * Completed class for Literal Expression
+ * Literal Expression will always be a leaf node in the expression tree
+ * Therefore it has no children
+ */
 public class LiteralExpression implements Expression {
 	private String name;
 	private CompoundExpression parent; 
 	
+	/**
+	 * Constructor
+	 * @param name
+	 */
 	public LiteralExpression (String name) {
 		this.name = name;
 		parent = null;
 	}
 	
+	/**
+	 * Constructor (overloading)
+	 * @param name
+	 * @param parent
+	 */
 	public LiteralExpression (String name, CompoundExpression parent) {
 		this.name = name;
 		this.parent = parent; 
 	}
 	
+	/**
+	 * This is here for testing the deepCopy() method if necessary
+	 * @param name
+	 */
 	protected void setName(String name) {
 		this.name = name;
 	}
