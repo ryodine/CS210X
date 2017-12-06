@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class AbstractCompoundExpression implements CompoundExpression {
 	protected String name;
@@ -44,9 +45,7 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	}
 
 	@Override
-	public void flatten() {
-		// TODO Auto-generated method stub
-	}
+	public void flatten() {};
 	
 	@Override
 	public String convertToString(int indentLevel) {
