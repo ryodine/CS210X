@@ -23,7 +23,11 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	public void setParent(CompoundExpression parent) {
 		this.parent = parent;
 	}
-	
+
+	/**
+	 *
+	 * @return A "deep copy" of this Expression
+	 */
 	@Override
 	public Expression deepCopy() {
 		AbstractCompoundExpression copy = new AbstractCompoundExpression();
