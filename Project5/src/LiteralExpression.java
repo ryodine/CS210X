@@ -1,3 +1,6 @@
+import javafx.scene.Node;
+import javafx.scene.text.Text;
+
 /**
  * Completed class for Literal Expression
  * Literal Expression will always be a leaf node in the expression tree
@@ -49,6 +52,20 @@ public class LiteralExpression implements Expression {
 		String newName = new String(this.name);
 		Expression copy = new LiteralExpression(newName);
 		return copy;
+	}
+
+	@Override
+	public Node getNode() {
+		Text literal = new Text();
+
+		if (SimpleExpressionParser.isLetter(name)) {
+			literal.setFont(Expression.italicfont);
+		} else {
+			literal.setFont(Expression.font);
+		}
+		literal.setText(name);
+		return literal;
+		//TODO: IMPLEMENT
 	}
 
 	@Override
