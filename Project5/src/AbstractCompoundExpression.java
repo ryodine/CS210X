@@ -1,3 +1,9 @@
+import javafx.scene.Node;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
@@ -41,6 +47,23 @@ public class AbstractCompoundExpression implements CompoundExpression {
 		}
 
 		return copy;
+	}
+
+	@Override
+	public Node getNode() {
+		Pane p = new HBox();
+
+		for (int i = 0; i < children.size()-1; i++) {
+			p.getChildren().add(children.get(i).getNode());
+
+			Text oper = new Text();
+			oper.setFont(Expression.font);
+			oper.setText(name);
+			p.getChildren().add(oper);
+		}
+		p.getChildren().add(children.get(children.size()-1).getNode());
+		return p;
+		//TODO: IMPLEMENT
 	}
 
 	/**

@@ -146,7 +146,7 @@ public class SimpleExpressionParser implements ExpressionParser {
 	 * @param str: String input 
 	 * @return true if it is a valid letter, false otherwise
 	 */
-	private static boolean isLetter(String str) {
+	public static boolean isLetter(String str) {
 		String name = str.toLowerCase();
 		int length = str.length();
 		for (int i = 0; i < length; i++) {
