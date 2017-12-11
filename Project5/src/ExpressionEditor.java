@@ -1,5 +1,7 @@
 import javafx.application.Application;
 import java.util.*;
+
+import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
@@ -22,19 +24,68 @@ public class ExpressionEditor extends Application {
 		launch(args);
 	}
 
+	private static Expression focus;
+
 	/**
 	 * Mouse event handler for the entire pane that constitutes the ExpressionEditor
 	 */
 	private static class MouseEventHandler implements EventHandler<MouseEvent> {
+		private static Pane pane;
+		private static CompoundExpression rootExpression;
+
 		MouseEventHandler (Pane pane_, CompoundExpression rootExpression_) {
+			pane = pane_;
+			rootExpression = rootExpression_;
+			focus = null;
 		}
 
 		public void handle (MouseEvent event) {
 			if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
+				if (focus == null) {
+					focus = rootExpression;
+				}
+				if (inNode(event, focus.getNode())) {
+					if (focus instanceof AbstractCompoundExpression) {
+						AbstractCompoundExpression expr = (AbstractCompoundExpression) focus;
+						boolean found = false;
+						for (Expression child : expr.getChildren()) {
+							if (inNode(event, child.getNode())) {
+								focus = child;
+								found = true;
+								((Pane)focus.getNode().getParent()).setBorder(Expression.NO_BORDER);
+							} else {
+								((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
+							}
+						}
+						if (!found) {
+							focus = null;
+							((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
+						}
+
+					} else {
+						((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
+						focus = null;
+					}
+				} else {
+					((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
+					focus = null;
+				}
+
+				if (focus != null) {
+					((Pane) focus.getNode()).setBorder(Expression.RED_BORDER);
+				}
 			} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
 			} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
 			}
 		}
+	}
+
+	private static boolean inNode(MouseEvent e, Node n) {
+
+		Bounds boundsInScene = n.localToScene(n.getBoundsInLocal());
+		//System.out.println("x: " + e.getSceneX() + ", y: " + e.getSceneY() + ".   Bounds: " + boundsInScene);
+
+		return boundsInScene.contains(new Point2D(e.getSceneX(),e.getSceneY()));
 	}
 
 	/**

@@ -1,4 +1,6 @@
 import javafx.scene.Node;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 /**
@@ -9,7 +11,7 @@ import javafx.scene.text.Text;
 public class LiteralExpression implements Expression {
 	private String name;
 	private CompoundExpression parent;
-	private Text javaFXView;
+	private Pane javaFXView;
 	
 	/**
 	 * Constructor
@@ -58,14 +60,15 @@ public class LiteralExpression implements Expression {
 	@Override
 	public Node getNode() {
 		if (javaFXView == null) {
-			javaFXView = new Text();
-
+			javaFXView = new HBox();
+			Text text = new Text();
 			if (SimpleExpressionParser.isLetter(name)) {
-				javaFXView.setFont(Expression.italicfont);
+				text.setFont(Expression.italicfont);
 			} else {
-				javaFXView.setFont(Expression.font);
+				text.setFont(Expression.font);
 			}
-			javaFXView.setText(name);
+			text.setText(name);
+			javaFXView.getChildren().add(text);
 		}
 		return javaFXView;
 	}
