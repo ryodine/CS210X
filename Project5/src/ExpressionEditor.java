@@ -58,8 +58,8 @@ public class ExpressionEditor extends Application {
 							}
 						}
 						if (!found) {
-							focus = null;
 							((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
+							focus = null;
 						}
 
 					} else {
