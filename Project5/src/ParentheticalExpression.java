@@ -4,6 +4,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class ParentheticalExpression extends AbstractCompoundExpression{
+	private Pane javaFXView;
+
 	public ParentheticalExpression() {
 		this.setName("()");
 	}
@@ -15,18 +17,20 @@ public class ParentheticalExpression extends AbstractCompoundExpression{
 
 	@Override
 	public Node getNode() {
-		Pane p = new HBox();
-		Text lparen = new Text();
-		lparen.setFont(Expression.font);
-		lparen.setText("(");
+		if (javaFXView == null) {
+			javaFXView = new HBox();
+			Text lparen = new Text();
+			lparen.setFont(Expression.font);
+			lparen.setText("(");
 
-		Text rparen = new Text();
-		rparen.setFont(Expression.font);
-		rparen.setText(")");
+			Text rparen = new Text();
+			rparen.setFont(Expression.font);
+			rparen.setText(")");
 
-		p.getChildren().add(lparen);
-		p.getChildren().add(getChildren().get(0).getNode());
-		p.getChildren().add(rparen);
-		return p;
+			javaFXView.getChildren().add(lparen);
+			javaFXView.getChildren().add(getChildren().get(0).getNode());
+			javaFXView.getChildren().add(rparen);
+		}
+		return javaFXView;
 	}
 }
