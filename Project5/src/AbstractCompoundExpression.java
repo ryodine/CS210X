@@ -11,7 +11,8 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	protected String name;
 	private LinkedList<Expression> children;
 	private CompoundExpression parent;
-	
+	private Pane javaFXView;
+
 	public AbstractCompoundExpression () {
 		children = new LinkedList<Expression>();
 	}
@@ -51,19 +52,20 @@ public class AbstractCompoundExpression implements CompoundExpression {
 
 	@Override
 	public Node getNode() {
-		Pane p = new HBox();
+		if (javaFXView == null) {
+			javaFXView = new HBox();
 
-		for (int i = 0; i < children.size()-1; i++) {
-			p.getChildren().add(children.get(i).getNode());
+			for (int i = 0; i < children.size() - 1; i++) {
+				javaFXView.getChildren().add(children.get(i).getNode());
 
-			Text oper = new Text();
-			oper.setFont(Expression.font);
-			oper.setText(name);
-			p.getChildren().add(oper);
+				Text oper = new Text();
+				oper.setFont(Expression.font);
+				oper.setText(name);
+				javaFXView.getChildren().add(oper);
+			}
+			javaFXView.getChildren().add(children.get(children.size() - 1).getNode());
 		}
-		p.getChildren().add(children.get(children.size()-1).getNode());
-		return p;
-		//TODO: IMPLEMENT
+		return javaFXView;
 	}
 
 	/**

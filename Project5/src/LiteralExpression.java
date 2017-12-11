@@ -8,7 +8,8 @@ import javafx.scene.text.Text;
  */
 public class LiteralExpression implements Expression {
 	private String name;
-	private CompoundExpression parent; 
+	private CompoundExpression parent;
+	private Text javaFXView;
 	
 	/**
 	 * Constructor
@@ -56,16 +57,17 @@ public class LiteralExpression implements Expression {
 
 	@Override
 	public Node getNode() {
-		Text literal = new Text();
+		if (javaFXView == null) {
+			javaFXView = new Text();
 
-		if (SimpleExpressionParser.isLetter(name)) {
-			literal.setFont(Expression.italicfont);
-		} else {
-			literal.setFont(Expression.font);
+			if (SimpleExpressionParser.isLetter(name)) {
+				javaFXView.setFont(Expression.italicfont);
+			} else {
+				javaFXView.setFont(Expression.font);
+			}
+			javaFXView.setText(name);
 		}
-		literal.setText(name);
-		return literal;
-		//TODO: IMPLEMENT
+		return javaFXView;
 	}
 
 	@Override
