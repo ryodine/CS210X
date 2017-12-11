@@ -3,14 +3,15 @@ import javafx.scene.paint.Color;
 import javafx.scene.Node;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 
 interface Expression {
 
 	/**
 	 * Font settings
 	 */
-	public static Font font = Font.font("Times New Roman", 25);
-	public static Font italicfont = Font.font("Times New Roman", FontPosture.ITALIC, 25);
+	public static Font font = Font.font("Times New Roman", FontWeight.BLACK, 25);
+	public static Font italicfont = Font.font("Times New Roman", FontWeight.BLACK, FontPosture.ITALIC, 25);
 
 
 	/**
