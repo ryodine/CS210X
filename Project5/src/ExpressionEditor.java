@@ -32,50 +32,97 @@ public class ExpressionEditor extends Application {
 	private static class MouseEventHandler implements EventHandler<MouseEvent> {
 		private static Pane pane;
 		private static CompoundExpression rootExpression;
+		double _lastX, _lastY;
+		
+		private static boolean isFocused = false;
+		private static boolean isDragged = false;
 
 		MouseEventHandler (Pane pane_, CompoundExpression rootExpression_) {
 			pane = pane_;
 			rootExpression = rootExpression_;
 			focus = null;
+			isFocused = false;
+			isDragged = false;
 		}
 
 		public void handle (MouseEvent event) {
+			final double sceneX = event.getSceneX();
+			final double sceneY = event.getSceneY();
+			//System.out.println(isDragged);
 			if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
-				if (focus == null) {
-					focus = rootExpression;
+				if (isFocused == true) {
+					// TODO create an underlying deep copy here
 				}
-				if (inNode(event, focus.getNode())) {
-					if (focus instanceof AbstractCompoundExpression) {
-						AbstractCompoundExpression expr = (AbstractCompoundExpression) focus;
-						boolean found = false;
-						for (Expression child : expr.getChildren()) {
-							if (inNode(event, child.getNode())) {
-								focus = child;
-								found = true;
-								((Pane)focus.getNode().getParent()).setBorder(Expression.NO_BORDER);
-							} else {
-								((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
-							}
-						}
-						if (!found) {
+			} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
+				if (focus != null && isFocused && inNode(event, focus.getNode())) {
+					focus.getNode().setTranslateX(focus.getNode().getTranslateX() + (sceneX - _lastX));
+					focus.getNode().setTranslateY(focus.getNode().getTranslateY() + (sceneY - _lastY));
+					//System.out.println("Is dragged");
+					//System.out.println(focus.getNode().getTranslateX());
+					//System.out.println(focus.getNode().getTranslateY());
+					isDragged = true;
+				}
+			} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
+				if (isDragged) {
+					//System.out.println("This is executed");
+					Node current = focus.getNode();
+					current.setLayoutX(current.getLayoutX() + current.getTranslateX());
+					current.setLayoutY(current.getLayoutY() + current.getTranslateY());
+					current.setTranslateX(0);
+					current.setTranslateY(0);
+					isDragged = false;
+				}
+				else {
+					helper(event); 
+				}
+			}
+			_lastX = sceneX;
+			_lastY = sceneY;
+		}
+		
+		/**
+		 * Helper method for focus
+		 * @param event
+		 */
+		public void helper(MouseEvent event) {
+			if (focus == null) {
+				focus = rootExpression;
+				isFocused = false;
+			}
+			if (inNode(event, focus.getNode())) {
+				if (focus instanceof AbstractCompoundExpression) {
+					AbstractCompoundExpression expr = (AbstractCompoundExpression) focus;
+					boolean found = false;
+					for (Expression child : expr.getChildren()) {
+						if (inNode(event, child.getNode())) {
+							focus = child;
+							found = true;
+							((Pane)focus.getNode().getParent()).setBorder(Expression.NO_BORDER);
+						} else {
 							((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
-							focus = null;
 						}
-
-					} else {
+					}
+					if (!found) {
 						((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
 						focus = null;
 					}
+
 				} else {
 					((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
 					focus = null;
 				}
+			} else {
+				((Pane)focus.getNode()).setBorder(Expression.NO_BORDER);
+				focus = null;
+				isFocused = false;
+			}
 
-				if (focus != null) {
-					((Pane) focus.getNode()).setBorder(Expression.RED_BORDER);
-				}
-			} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
-			} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
+			if (focus != null) {
+				((Pane) focus.getNode()).setBorder(Expression.RED_BORDER);
+				isFocused = true;
+			}
+			else {
+				isFocused = false;
 			}
 		}
 	}
