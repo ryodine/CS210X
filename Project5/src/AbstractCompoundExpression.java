@@ -37,8 +37,16 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	 */
 	@Override
 	public Expression deepCopy() {
-		AbstractCompoundExpression copy = new AbstractCompoundExpression();
-		copy.setName(this.name);
+		AbstractCompoundExpression copy;
+
+		if (this instanceof ParentheticalExpression) {
+			copy = new ParentheticalExpression();
+		} else {
+			copy = new AbstractCompoundExpression();
+			copy.setName(this.name);
+		}
+
+
 		copy.setParent(null); // might change this later in R2
 
 		for(Expression e: this.children) {
