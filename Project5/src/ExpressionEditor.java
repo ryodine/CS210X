@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
@@ -37,17 +38,17 @@ public class ExpressionEditor extends Application {
 		private static CompoundExpression rootExpression;
 		double _lastX, _lastY;
 
-		Point2D dragStart;
+		Expression _leftDragSibling, _rightDragSibling;
 		
 		private static boolean isFocused = false;
 		private static boolean isDragged = false;
 
 		MouseEventHandler (Pane pane_, CompoundExpression rootExpression_) {
 			pane = pane_;
-			pane.setBorder(Expression.RED_BORDER);
+			//pane.setBorder(Expression.RED_BORDER);
 			
 			rootExpression = rootExpression_;
-			((Pane) rootExpression.getNode()).setBorder(Expression.RED_BORDER);
+			//((Pane) rootExpression.getNode()).setBorder(Expression.RED_BORDER);
 			focus = null;
 			isFocused = false;
 			isDragged = false;
@@ -74,23 +75,20 @@ public class ExpressionEditor extends Application {
 		public void handle (MouseEvent event) {
 			final double sceneX = event.getSceneX();
 			final double sceneY = event.getSceneY();
-			System.out.println(isDragged);
 			if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
 				
 				if (isFocused == true && inNode(event, focus.getNode())) {
-					dragStart = new Point2D(event.getX(), event.getY());
-
 
 
 					//System.out.println("This is good");
 					// create an underlying deep copy
 					changeColor(focus.getNode(), Expression.GHOST_COLOR);
 					deepCopy = focus.deepCopy();
-					System.out.println(deepCopy.convertToString(0));
+					//System.out.println(deepCopy.convertToString(0));
 					//((Pane)rootExpression.getNode()).getChildren().add(deepCopy.getNode());
 					pane.getChildren().add(deepCopy.getNode());
-					System.out.println(focus.getNode().getLayoutX());
-					System.out.println(focus.getNode().getLayoutY());
+					//System.out.println(focus.getNode().getLayoutX());
+					//System.out.println(focus.getNode().getLayoutY());
 					//deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX());
 					//deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY());
 					//deepCopy.getNode().setTranslateX(focus.getNode().getTranslateX());
@@ -98,6 +96,9 @@ public class ExpressionEditor extends Application {
 
 
 					Bounds focusBounds = focus.getNode().localToScene(focus.getNode().getBoundsInLocal());
+
+					_leftDragSibling = getLeftSibling(focus);
+					_rightDragSibling = getRightSibling(focus);
 
 					//deepCopy.getNode().setLayoutX(focusBounds.getMinX());
 					//deepCopy.getNode().setLayoutY(focusBounds.getMinY());
@@ -107,9 +108,7 @@ public class ExpressionEditor extends Application {
 					//MARK: ryan comment
 					//deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX() + rootExpression.getNode().getLayoutX());
 					//deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY() + rootExpression.getNode().getLayoutY());
-					
-					System.out.println(deepCopy.getNode().getLayoutX());
-					System.out.println(deepCopy.getNode().getLayoutY());
+
 					
 					//System.out.println(deepCopy);
 					
@@ -120,10 +119,31 @@ public class ExpressionEditor extends Application {
 				if (focus != null && deepCopy != null && isFocused /*&& inNode(event, deepCopy.getNode())*/) {
 					deepCopy.getNode().setTranslateX(deepCopy.getNode().getTranslateX() + (sceneX - _lastX));
 					deepCopy.getNode().setTranslateY(deepCopy.getNode().getTranslateY() + (sceneY - _lastY));
-					System.out.println("Is dragged");
-					System.out.println(deepCopy.getNode().getTranslateX());
-					System.out.println(deepCopy.getNode().getTranslateY());
 					isDragged = true;
+
+					double deepcopyx = deepCopy.getNode().getLayoutX() + deepCopy.getNode().getTranslateX() + deepCopy.getNode().getBoundsInLocal().getWidth()/2;
+
+					if (_leftDragSibling != null) {
+						double leftcenterx = _leftDragSibling.getNode().localToScene(_leftDragSibling.getNode().getBoundsInLocal()).getMinX() + _leftDragSibling.getNode().getBoundsInLocal().getWidth()/2;
+						if (deepcopyx < leftcenterx) {
+							swapSiblings(_leftDragSibling, focus);
+							_leftDragSibling = getLeftSibling(focus);
+							_rightDragSibling = getRightSibling(focus);
+
+						}
+					}
+
+
+
+					if (_rightDragSibling != null) {
+						double rightcenterx = _rightDragSibling.getNode().localToScene(_rightDragSibling.getNode().getBoundsInLocal()).getMinX() + _rightDragSibling.getNode().getBoundsInLocal().getWidth() / 2;
+						if (rightcenterx < deepcopyx) {
+							swapSiblings(_rightDragSibling, focus);
+							_leftDragSibling = getLeftSibling(focus);
+							_rightDragSibling = getRightSibling(focus);
+						}
+					}
+
 				}
 				/*
 				if (focus != null && inNode(event, focus.getNode())) {
@@ -141,7 +161,6 @@ public class ExpressionEditor extends Application {
 				}
 				if (isDragged) {
 					
-					System.out.println("This is executed");
 					/*
 					Node current = deepCopy.getNode();
 					current.setLayoutX(current.getLayoutX() + current.getTranslateX());
@@ -149,6 +168,9 @@ public class ExpressionEditor extends Application {
 					current.setTranslateX(0);
 					current.setTranslateY(0);
 					*/
+
+					System.out.println("New tree structure:");
+					System.out.println(rootExpression.convertToString(0));
 					isDragged = false;
 				}
 				else {
@@ -167,6 +189,42 @@ public class ExpressionEditor extends Application {
 			}
 			_lastX = sceneX;
 			_lastY = sceneY;
+		}
+
+		private List<Expression> getAllSiblingsAndExpr(Expression e) {
+			List<Expression> all = ((AbstractCompoundExpression)e.getParent()).getChildren();
+			return all;
+		}
+
+		private Expression getLeftSibling(Expression e) {
+			List<Expression> all = getAllSiblingsAndExpr(e);
+
+			Expression last = null;
+			for (Expression expr : all) {
+				if (expr == e) {
+					return last;
+				} else {
+					last = expr;
+				}
+			}
+			return null;
+		}
+
+		private Expression getRightSibling(Expression e) {
+			List<Expression> all = getAllSiblingsAndExpr(e);
+
+			boolean returnNext = false;
+			for (Expression expr : all) {
+				if (returnNext) return expr;
+				returnNext = (expr == e);
+			}
+			return null;
+		}
+
+		private void swapSiblings(Expression a, Expression b) {
+			List<Expression> all = getAllSiblingsAndExpr(a);
+			Collections.swap(all, all.indexOf(a), all.indexOf(b) );
+			a.getParent().recalculateNode();
 		}
 		
 		public void helper(MouseEvent event) {
