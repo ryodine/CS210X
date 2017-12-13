@@ -17,6 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.event.EventHandler;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class ExpressionEditor extends Application {
@@ -25,6 +27,7 @@ public class ExpressionEditor extends Application {
 	}
 
 	private static Expression focus;
+	private static Expression deepCopy;
 
 	/**
 	 * Mouse event handler for the entire pane that constitutes the ExpressionEditor
@@ -39,51 +42,117 @@ public class ExpressionEditor extends Application {
 
 		MouseEventHandler (Pane pane_, CompoundExpression rootExpression_) {
 			pane = pane_;
+			pane.setBorder(Expression.RED_BORDER);
+			
 			rootExpression = rootExpression_;
+			((Pane) rootExpression.getNode()).setBorder(Expression.RED_BORDER);
 			focus = null;
 			isFocused = false;
 			isDragged = false;
+		}
+		
+		/**
+		 * Helper method for changing color
+		 * @param n
+		 * @param color
+		 */
+		public void changeColor(Node n, Color color) {
+			if (n instanceof Text) {
+				Text text = (Text) n;
+				text.setFill(color);
+			}
+			else {
+				HBox hbox = (HBox) n;
+				for (Node child : hbox.getChildren()) {
+					changeColor(child, color);
+				}
+			}
 		}
 
 		public void handle (MouseEvent event) {
 			final double sceneX = event.getSceneX();
 			final double sceneY = event.getSceneY();
-			//System.out.println(isDragged);
+			System.out.println(isDragged);
 			if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
-				if (isFocused == true) {
-					// TODO create an underlying deep copy here
+				
+				if (isFocused == true && inNode(event, focus.getNode())) {
+					//System.out.println("This is good");
+					// create an underlying deep copy
+					changeColor(focus.getNode(), Expression.GHOST_COLOR);
+					deepCopy = focus.deepCopy();
+					//((Pane)rootExpression.getNode()).getChildren().add(deepCopy.getNode());
+					pane.getChildren().add(deepCopy.getNode());
+					System.out.println(focus.getNode().getLayoutX());
+					System.out.println(focus.getNode().getLayoutY());
+					//deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX());
+					//deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY());
+					//deepCopy.getNode().setTranslateX(focus.getNode().getTranslateX());
+					//deepCopy.getNode().setTranslateY(focus.getNode().getTranslateY());
+					
+					deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX() + rootExpression.getNode().getLayoutX());
+					deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY() + rootExpression.getNode().getLayoutY());
+					
+					System.out.println(deepCopy.getNode().getLayoutX());
+					System.out.println(deepCopy.getNode().getLayoutY());
+					
+					//System.out.println(deepCopy);
+					
 				}
+				
+				
 			} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
-				if (focus != null && isFocused && inNode(event, focus.getNode())) {
-					focus.getNode().setTranslateX(focus.getNode().getTranslateX() + (sceneX - _lastX));
-					focus.getNode().setTranslateY(focus.getNode().getTranslateY() + (sceneY - _lastY));
-					//System.out.println("Is dragged");
-					//System.out.println(focus.getNode().getTranslateX());
-					//System.out.println(focus.getNode().getTranslateY());
+				if (focus != null && deepCopy != null && isFocused && inNode(event, deepCopy.getNode())) {
+					deepCopy.getNode().setTranslateX(deepCopy.getNode().getTranslateX() + (sceneX - _lastX));
+					deepCopy.getNode().setTranslateY(deepCopy.getNode().getTranslateY() + (sceneY - _lastY));
+					System.out.println("Is dragged");
+					System.out.println(deepCopy.getNode().getTranslateX());
+					System.out.println(deepCopy.getNode().getTranslateY());
 					isDragged = true;
 				}
-			} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
-				if (isDragged) {
-					//System.out.println("This is executed");
+				/*
+				if (focus != null && inNode(event, focus.getNode())) {
+					isDragged = true;
 					Node current = focus.getNode();
+					current.setTranslateX(current.getTranslateX() + (sceneX - _lastX));
+					current.setTranslateY(current.getTranslateY() + (sceneY - _lastY));
+				}
+				*/
+			} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
+				if (focus != null && deepCopy != null) {
+					pane.getChildren().remove(deepCopy.getNode());
+					deepCopy = null;
+					changeColor(focus.getNode(), Color.BLACK);
+				}
+				if (isDragged) {
+					
+					System.out.println("This is executed");
+					/*
+					Node current = deepCopy.getNode();
 					current.setLayoutX(current.getLayoutX() + current.getTranslateX());
 					current.setLayoutY(current.getLayoutY() + current.getTranslateY());
 					current.setTranslateX(0);
 					current.setTranslateY(0);
+					*/
 					isDragged = false;
 				}
 				else {
+					
 					helper(event); 
+					//if (focus != null) {
+						//System.out.println(focus.convertToString(0));
+						//System.out.println(focus.getNode());
+						//System.out.println(focus.getNode());
+						//System.out.println(isFocused);
+						//System.out.println("--------------");
+					//}
+					//System.out.println(isFocused);
+					
 				}
 			}
 			_lastX = sceneX;
 			_lastY = sceneY;
 		}
 		
-		/**
-		 * Helper method for focus
-		 * @param event
-		 */
 		public void helper(MouseEvent event) {
 			if (focus == null) {
 				focus = rootExpression;
