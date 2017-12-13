@@ -86,4 +86,9 @@ interface Expression {
 			sb.append('\t');
 		}
 	}
+
+	/**
+	 * Recalculate the javafx node for when the underlying tree changes
+	 */
+	public void recalculateNode();
 }

@@ -88,6 +88,11 @@ public class LiteralExpression implements Expression {
 		result += this.name  + "\n";
 		return result;
 	}
-	
-	
+
+	@Override
+	public void recalculateNode() {
+		//Nothing to do here!
+	}
+
+
 }

@@ -71,6 +71,8 @@ public class SimpleExpressionParser implements ExpressionParser {
 			if (resultFn1 != null && resultFn2 != null) {
 				expr.addSubexpression(resultFn1);
 				expr.addSubexpression(resultFn2);
+				resultFn1.setParent(expr);
+				resultFn2.setParent(expr);
 				return expr;
 			}
 			idxOfOp = str.indexOf(operator, idxOfOp+1);
@@ -116,6 +118,7 @@ public class SimpleExpressionParser implements ExpressionParser {
 				// return a paren expression
 				ParentheticalExpression expr = new ParentheticalExpression();
 				expr.addSubexpression(sub);
+				sub.setParent(expr);
 				return expr;
 			}
 		}

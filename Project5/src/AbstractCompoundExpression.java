@@ -16,6 +16,21 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	public AbstractCompoundExpression () {
 		children = new LinkedList<Expression>();
 	}
+
+	public void recalculateNode() {
+		if (javaFXView != null) {
+			javaFXView.getChildren().clear();
+			for (int i = 0; i < children.size() - 1; i++) {
+				javaFXView.getChildren().add(children.get(i).getNode());
+
+				Text oper = new Text();
+				oper.setFont(Expression.font);
+				oper.setText(name);
+				javaFXView.getChildren().add(oper);
+			}
+			javaFXView.getChildren().add(children.get(children.size() - 1).getNode());
+		}
+	}
 	
 	protected void setName(String name) {
 		this.name = name;
