@@ -86,6 +86,7 @@ public class ExpressionEditor extends Application {
 					// create an underlying deep copy
 					changeColor(focus.getNode(), Expression.GHOST_COLOR);
 					deepCopy = focus.deepCopy();
+					System.out.println(deepCopy.convertToString(0));
 					//((Pane)rootExpression.getNode()).getChildren().add(deepCopy.getNode());
 					pane.getChildren().add(deepCopy.getNode());
 					System.out.println(focus.getNode().getLayoutX());
@@ -98,9 +99,10 @@ public class ExpressionEditor extends Application {
 
 					Bounds focusBounds = focus.getNode().localToScene(focus.getNode().getBoundsInLocal());
 
-					deepCopy.getNode().setLayoutX(focusBounds.getMinX());
-					deepCopy.getNode().setLayoutY(focusBounds.getMinY());
-					deepCopy.getNode().set
+					//deepCopy.getNode().setLayoutX(focusBounds.getMinX());
+					//deepCopy.getNode().setLayoutY(focusBounds.getMinY());
+					deepCopy.getNode().relocate(focusBounds.getMinX() - (pane.getScene().getWidth()- pane.getWidth()),
+							focusBounds.getMinY()- (pane.getScene().getHeight()- pane.getHeight()));
 
 					//MARK: ryan comment
 					//deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX() + rootExpression.getNode().getLayoutX());
@@ -115,7 +117,7 @@ public class ExpressionEditor extends Application {
 				
 				
 			} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
-				if (focus != null && deepCopy != null && isFocused && inNode(event, deepCopy.getNode())) {
+				if (focus != null && deepCopy != null && isFocused /*&& inNode(event, deepCopy.getNode())*/) {
 					deepCopy.getNode().setTranslateX(deepCopy.getNode().getTranslateX() + (sceneX - _lastX));
 					deepCopy.getNode().setTranslateY(deepCopy.getNode().getTranslateY() + (sceneY - _lastY));
 					System.out.println("Is dragged");
