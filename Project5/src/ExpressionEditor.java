@@ -36,6 +36,8 @@ public class ExpressionEditor extends Application {
 		private static Pane pane;
 		private static CompoundExpression rootExpression;
 		double _lastX, _lastY;
+
+		Point2D dragStart;
 		
 		private static boolean isFocused = false;
 		private static boolean isDragged = false;
@@ -76,6 +78,10 @@ public class ExpressionEditor extends Application {
 			if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
 				
 				if (isFocused == true && inNode(event, focus.getNode())) {
+					dragStart = new Point2D(event.getX(), event.getY());
+
+
+
 					//System.out.println("This is good");
 					// create an underlying deep copy
 					changeColor(focus.getNode(), Expression.GHOST_COLOR);
@@ -88,9 +94,17 @@ public class ExpressionEditor extends Application {
 					//deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY());
 					//deepCopy.getNode().setTranslateX(focus.getNode().getTranslateX());
 					//deepCopy.getNode().setTranslateY(focus.getNode().getTranslateY());
-					
-					deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX() + rootExpression.getNode().getLayoutX());
-					deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY() + rootExpression.getNode().getLayoutY());
+
+
+					Bounds focusBounds = focus.getNode().localToScene(focus.getNode().getBoundsInLocal());
+
+					deepCopy.getNode().setLayoutX(focusBounds.getMinX());
+					deepCopy.getNode().setLayoutY(focusBounds.getMinY());
+					deepCopy.getNode().set
+
+					//MARK: ryan comment
+					//deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX() + rootExpression.getNode().getLayoutX());
+					//deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY() + rootExpression.getNode().getLayoutY());
 					
 					System.out.println(deepCopy.getNode().getLayoutX());
 					System.out.println(deepCopy.getNode().getLayoutY());
