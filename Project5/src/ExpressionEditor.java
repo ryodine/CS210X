@@ -26,8 +26,11 @@ public class ExpressionEditor extends Application {
 	public static void main (String[] args) {
 		launch(args);
 	}
-
+	
+	// Instance variable for the focus expression
 	private static Expression focus;
+	
+	// Instance variable for the focus's deepCopy
 	private static Expression deepCopy;
 
 	/**
@@ -37,25 +40,20 @@ public class ExpressionEditor extends Application {
 		private static Pane pane;
 		private static CompoundExpression rootExpression;
 		double _lastX, _lastY;
-
 		Expression _leftDragSibling, _rightDragSibling;
-		
 		private static boolean isFocused = false;
 		private static boolean isDragged = false;
 
 		MouseEventHandler (Pane pane_, CompoundExpression rootExpression_) {
 			pane = pane_;
-			
 			rootExpression = rootExpression_;
 			focus = null;
-			isFocused = false;
-			isDragged = false;
 		}
 		
 		/**
 		 * Helper method for changing color
-		 * @param n
-		 * @param color
+		 * @param n: the Node specified to change the color 
+		 * @param color: the specified color to use
 		 */
 		public void changeColor(Node n, Color color) {
 			if (n instanceof Text) {
@@ -73,10 +71,9 @@ public class ExpressionEditor extends Application {
 		public void handle (MouseEvent event) {
 			final double sceneX = event.getSceneX();
 			final double sceneY = event.getSceneY();
+			
 			if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
-				
 				if (isFocused == true && inNode(event, focus.getNode())) {
-
 					changeColor(focus.getNode(), Expression.GHOST_COLOR);
 					deepCopy = focus.deepCopy();
 					pane.getChildren().add(deepCopy.getNode());
@@ -85,11 +82,10 @@ public class ExpressionEditor extends Application {
 					_rightDragSibling = getRightSibling(focus);
 					deepCopy.getNode().relocate(focusBounds.getMinX() - (pane.getScene().getWidth()- pane.getWidth()),
 							focusBounds.getMinY()- (pane.getScene().getHeight()- pane.getHeight()));
-
 				}
-				
-				
-			} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
+			}
+			
+			else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
 				if (focus != null && deepCopy != null && isFocused) {
 					deepCopy.getNode().setTranslateX(deepCopy.getNode().getTranslateX() + (sceneX - _lastX));
 					deepCopy.getNode().setTranslateY(deepCopy.getNode().getTranslateY() + (sceneY - _lastY));
@@ -115,8 +111,9 @@ public class ExpressionEditor extends Application {
 					}
 
 				}
-
-			} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
+			} 
+			
+			else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
 				if (focus != null && deepCopy != null) {
 					pane.getChildren().remove(deepCopy.getNode());
 					deepCopy = null;
@@ -128,18 +125,29 @@ public class ExpressionEditor extends Application {
 					isDragged = false;
 				}
 				else {
-					helper(event);
+					chooseFocus(event);
 				}
 			}
+			
 			_lastX = sceneX;
 			_lastY = sceneY;
 		}
 
+		/**
+		 * Get all the siblings of the given Expression
+		 * @param e: given Expression
+		 * @return the list of the expression's siblings and the expression itself.
+		 */
 		private List<Expression> getAllSiblingsAndExpr(Expression e) {
 			List<Expression> all = ((AbstractCompoundExpression)e.getParent()).getChildren();
 			return all;
 		}
 
+		/**
+		 * Attempt to get the sibling to the left of the Expression
+		 * @param e: given Expression
+		 * @return the sibling to the left of the given Expression, return null if there is no left sibling.
+		 */
 		private Expression getLeftSibling(Expression e) {
 			List<Expression> all = getAllSiblingsAndExpr(e);
 
@@ -154,6 +162,11 @@ public class ExpressionEditor extends Application {
 			return null;
 		}
 
+		/**
+		 * Attempt to get the sibling to the right of the Expression
+		 * @param e: given Expression
+		 * @return the sibling to the right of the given Expression, return null if there is no right sibling.
+		 */
 		private Expression getRightSibling(Expression e) {
 			List<Expression> all = getAllSiblingsAndExpr(e);
 
@@ -165,13 +178,23 @@ public class ExpressionEditor extends Application {
 			return null;
 		}
 
+		/**
+		 * Swap the two given Expression in the list of siblings.
+		 * @param a: given Expression 
+		 * @param b: given Expression
+		 */
 		private void swapSiblings(Expression a, Expression b) {
 			List<Expression> all = getAllSiblingsAndExpr(a);
 			Collections.swap(all, all.indexOf(a), all.indexOf(b) );
 			a.getParent().recalculateNode();
 		}
 		
-		public void helper(MouseEvent event) {
+		/**
+		 * Helper method to get the focus.
+		 * If any focused is retrieved, make that focus's Node to have a red border. 
+		 * @param event
+		 */
+		public void chooseFocus(MouseEvent event) {
 			if (focus == null) {
 				focus = rootExpression;
 				isFocused = false;
@@ -214,11 +237,15 @@ public class ExpressionEditor extends Application {
 		}
 	}
 
+	/**
+	 * Check whether the MouseEvent happens inside the bounds of the given Node
+	 * @param e: given MouseEvent
+	 * @param n: given Node
+	 * @return true if the MouseEvent happens inside the bounds of the given Node, false otherwise.
+	 */
 	private static boolean inNode(MouseEvent e, Node n) {
-
 		Bounds boundsInScene = n.localToScene(n.getBoundsInLocal());
 		return boundsInScene.contains(new Point2D(e.getSceneX(),e.getSceneY()));
-
 	}
 
 	/**
