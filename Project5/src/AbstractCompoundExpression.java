@@ -3,7 +3,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
@@ -16,7 +15,11 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	public AbstractCompoundExpression () {
 		children = new LinkedList<Expression>();
 	}
-
+	
+	/**
+	 * Helper method for the ExpressionEditor
+	 * Re-render the whole Node after the user modifies it.
+	 */
 	public void recalculateNode() {
 		if (javaFXView != null) {
 			javaFXView.getChildren().clear();
@@ -47,7 +50,6 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	}
 
 	/**
-	 *
 	 * @return A "deep copy" of this Expression
 	 */
 	@Override
@@ -60,7 +62,6 @@ public class AbstractCompoundExpression implements CompoundExpression {
 			copy = new AbstractCompoundExpression();
 			copy.setName(this.name);
 		}
-
 
 		copy.setParent(null);
 
@@ -119,6 +120,4 @@ public class AbstractCompoundExpression implements CompoundExpression {
 	public void addSubexpression(Expression subexpression) {
 		this.children.add(subexpression);
 	}
-	
-	
 }
