@@ -62,7 +62,7 @@ public class AbstractCompoundExpression implements CompoundExpression {
 		}
 
 
-		copy.setParent(null); // might change this later in R2
+		copy.setParent(null);
 
 		for(Expression e: this.children) {
 			Expression ecopy = e.deepCopy();

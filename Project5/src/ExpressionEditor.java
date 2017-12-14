@@ -45,10 +45,8 @@ public class ExpressionEditor extends Application {
 
 		MouseEventHandler (Pane pane_, CompoundExpression rootExpression_) {
 			pane = pane_;
-			//pane.setBorder(Expression.RED_BORDER);
 			
 			rootExpression = rootExpression_;
-			//((Pane) rootExpression.getNode()).setBorder(Expression.RED_BORDER);
 			focus = null;
 			isFocused = false;
 			isDragged = false;
@@ -79,48 +77,23 @@ public class ExpressionEditor extends Application {
 				
 				if (isFocused == true && inNode(event, focus.getNode())) {
 
-
-					//System.out.println("This is good");
-					// create an underlying deep copy
 					changeColor(focus.getNode(), Expression.GHOST_COLOR);
 					deepCopy = focus.deepCopy();
-					//System.out.println(deepCopy.convertToString(0));
-					//((Pane)rootExpression.getNode()).getChildren().add(deepCopy.getNode());
 					pane.getChildren().add(deepCopy.getNode());
-					//System.out.println(focus.getNode().getLayoutX());
-					//System.out.println(focus.getNode().getLayoutY());
-					//deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX());
-					//deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY());
-					//deepCopy.getNode().setTranslateX(focus.getNode().getTranslateX());
-					//deepCopy.getNode().setTranslateY(focus.getNode().getTranslateY());
-
-
 					Bounds focusBounds = focus.getNode().localToScene(focus.getNode().getBoundsInLocal());
-
 					_leftDragSibling = getLeftSibling(focus);
 					_rightDragSibling = getRightSibling(focus);
-
-					//deepCopy.getNode().setLayoutX(focusBounds.getMinX());
-					//deepCopy.getNode().setLayoutY(focusBounds.getMinY());
 					deepCopy.getNode().relocate(focusBounds.getMinX() - (pane.getScene().getWidth()- pane.getWidth()),
 							focusBounds.getMinY()- (pane.getScene().getHeight()- pane.getHeight()));
 
-					//MARK: ryan comment
-					//deepCopy.getNode().setLayoutX(focus.getNode().getLayoutX() + rootExpression.getNode().getLayoutX());
-					//deepCopy.getNode().setLayoutY(focus.getNode().getLayoutY() + rootExpression.getNode().getLayoutY());
-
-					
-					//System.out.println(deepCopy);
-					
 				}
 				
 				
 			} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
-				if (focus != null && deepCopy != null && isFocused /*&& inNode(event, deepCopy.getNode())*/) {
+				if (focus != null && deepCopy != null && isFocused) {
 					deepCopy.getNode().setTranslateX(deepCopy.getNode().getTranslateX() + (sceneX - _lastX));
 					deepCopy.getNode().setTranslateY(deepCopy.getNode().getTranslateY() + (sceneY - _lastY));
 					isDragged = true;
-
 					double deepcopyx = deepCopy.getNode().getLayoutX() + deepCopy.getNode().getTranslateX() + deepCopy.getNode().getBoundsInLocal().getWidth()/2;
 
 					if (_leftDragSibling != null) {
@@ -129,11 +102,8 @@ public class ExpressionEditor extends Application {
 							swapSiblings(_leftDragSibling, focus);
 							_leftDragSibling = getLeftSibling(focus);
 							_rightDragSibling = getRightSibling(focus);
-
 						}
 					}
-
-
 
 					if (_rightDragSibling != null) {
 						double rightcenterx = _rightDragSibling.getNode().localToScene(_rightDragSibling.getNode().getBoundsInLocal()).getMinX() + _rightDragSibling.getNode().getBoundsInLocal().getWidth() / 2;
@@ -145,14 +115,7 @@ public class ExpressionEditor extends Application {
 					}
 
 				}
-				/*
-				if (focus != null && inNode(event, focus.getNode())) {
-					isDragged = true;
-					Node current = focus.getNode();
-					current.setTranslateX(current.getTranslateX() + (sceneX - _lastX));
-					current.setTranslateY(current.getTranslateY() + (sceneY - _lastY));
-				}
-				*/
+
 			} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
 				if (focus != null && deepCopy != null) {
 					pane.getChildren().remove(deepCopy.getNode());
@@ -160,31 +123,12 @@ public class ExpressionEditor extends Application {
 					changeColor(focus.getNode(), Color.BLACK);
 				}
 				if (isDragged) {
-					
-					/*
-					Node current = deepCopy.getNode();
-					current.setLayoutX(current.getLayoutX() + current.getTranslateX());
-					current.setLayoutY(current.getLayoutY() + current.getTranslateY());
-					current.setTranslateX(0);
-					current.setTranslateY(0);
-					*/
-
 					System.out.println("New tree structure:");
 					System.out.println(rootExpression.convertToString(0));
 					isDragged = false;
 				}
 				else {
-					
-					helper(event); 
-					//if (focus != null) {
-						//System.out.println(focus.convertToString(0));
-						//System.out.println(focus.getNode());
-						//System.out.println(focus.getNode());
-						//System.out.println(isFocused);
-						//System.out.println("--------------");
-					//}
-					//System.out.println(isFocused);
-					
+					helper(event);
 				}
 			}
 			_lastX = sceneX;
@@ -273,9 +217,8 @@ public class ExpressionEditor extends Application {
 	private static boolean inNode(MouseEvent e, Node n) {
 
 		Bounds boundsInScene = n.localToScene(n.getBoundsInLocal());
-		//System.out.println("x: " + e.getSceneX() + ", y: " + e.getSceneY() + ".   Bounds: " + boundsInScene);
-
 		return boundsInScene.contains(new Point2D(e.getSceneX(),e.getSceneY()));
+
 	}
 
 	/**
@@ -297,7 +240,6 @@ public class ExpressionEditor extends Application {
 	public void start (Stage primaryStage) {
 		primaryStage.setTitle("Expression Editor");
 
-		// Add the textbox and Parser button
 		final Pane queryPane = new HBox();
 		final TextField textField = new TextField(EXAMPLE_EXPRESSION);
 		final Button button = new Button("Parse");
@@ -305,12 +247,9 @@ public class ExpressionEditor extends Application {
 
 		final Pane expressionPane = new Pane();
 
-		// Add the callback to handle when the Parse button is pressed	
 		button.setOnMouseClicked(new EventHandler<MouseEvent>() {
 			public void handle (MouseEvent e) {
-				// Try to parse the expression
 				try {
-					// Success! Add the expression's Node to the expressionPane
 					final Expression expression = expressionParser.parse(textField.getText(), true);
 					System.out.println(expression.convertToString(0));
 					expressionPane.getChildren().clear();
@@ -318,7 +257,6 @@ public class ExpressionEditor extends Application {
 					expression.getNode().setLayoutX(WINDOW_WIDTH/4);
 					expression.getNode().setLayoutY(WINDOW_HEIGHT/2);
 
-					// If the parsed expression is a CompoundExpression, then register some callbacks
 					if (expression instanceof CompoundExpression) {
 						((Pane) expression.getNode()).setBorder(Expression.NO_BORDER);
 						final MouseEventHandler eventHandler = new MouseEventHandler(expressionPane, (CompoundExpression) expression);
@@ -327,14 +265,12 @@ public class ExpressionEditor extends Application {
 						expressionPane.setOnMouseReleased(eventHandler);
 					}
 				} catch (ExpressionParseException epe) {
-					// If we can't parse the expression, then mark it in red
 					textField.setStyle("-fx-text-fill: red");
 				}
 			}
 		});
 		queryPane.getChildren().add(button);
 
-		// Reset the color to black whenever the user presses a key
 		textField.setOnKeyPressed(e -> textField.setStyle("-fx-text-fill: black"));
 		
 		final BorderPane root = new BorderPane();
