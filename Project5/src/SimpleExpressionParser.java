@@ -115,7 +115,6 @@ public class SimpleExpressionParser implements ExpressionParser {
 			Expression sub = parseE(str.substring(1, str.length()-1));
 
 			if (sub != null) {
-				// return a paren expression
 				ParentheticalExpression expr = new ParentheticalExpression();
 				expr.addSubexpression(sub);
 				sub.setParent(expr);
