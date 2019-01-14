@@ -11,9 +11,9 @@ Afterwards, the user will be able to drag-and-drop different subexpressions -- a
 1. User enters mathematical expression and click 'Parse' button. 
 ![Expresssion is entered, get parsed, and displayed on screen](./Demo1.png)
 2. User click on an expression to "focus" on a sub-expression. 
-![A sub-expression is chosen](./Demo2.png)
+![A sub-expression is chosen](./Demo2.PNG)
 3. A sub-expression is moved around, without violating any mathematical rules. 
-![ A sub-expression is moved around, without violating any mathematical rules](./Demo3.png)
+![ A sub-expression is moved around, without violating any mathematical rules](./Demo3.PNG)
 
 ## Main process
 1. Build a parser:
@@ -25,12 +25,12 @@ Afterwards, the user will be able to drag-and-drop different subexpressions -- a
     - X → (E) | L
     - L → [a-z] | [0-9]+  
 - Example: 
-![Example of parsing an expression into a tree](./Tree1.png)
+![Example of parsing an expression into a tree](./Tree1.PNG)
 1. Implement different types of expressions (addition, multiplication, etc). 
 2. Flattening the Parsed Tree: 
 - Instead of having just a binary tree, we would flatten it as much as possible into an arbitrary-arity tree. 
 - Example: 
-![example of flattening a tree](./Tree2.png)
+![example of flattening a tree](./Tree2.PNG)
 3. Code the GUI: 
 - Allow users to enter a mathematical expression of their choice. 
 - Display the valid mathematical expression entered on the screen. 
